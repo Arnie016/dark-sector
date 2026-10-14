@@ -1,7 +1,9 @@
 # YYYY-MM-DD · one bounded question
 
-**Run ID:** YYYY-MM-DD-topic-v1  
-**Evidence state:** SOURCE_VERIFIED / DERIVED / SIMULATED / LOCAL_VERIFIED / HISTORICAL_REPORTED / DATA_INSUFFICIENT / REPRODUCED  
+**Run ID:** YYYY-MM-DD-topic-v1
+
+**Evidence state:** SOURCE_VERIFIED / DERIVED / SIMULATED / LOCAL_VERIFIED / HISTORICAL_REPORTED / DATA_INSUFFICIENT / REPRODUCED
+
 **Hypothesis ID:** stable ID
 
 ## Question and prediction
