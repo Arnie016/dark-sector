@@ -1,0 +1,7 @@
+ratio,numerator,denominator,value,marginal_error,display_decimals
+B/A,B,A,0.45,0.02,2
+C/A,C,A,0.35,0.02,2
+C/B,C,B,0.78,0.04,2
+D/A,D,A,0.070,0.004,3
+D/B,D,B,0.16,0.01,2
+D/C,D,C,0.20,0.015,2

@@ -1,0 +1,214 @@
+{
+  "run_id": "2026-10-14-ratio-closure-new-implementation-v1",
+  "input_kind": "PUBLISHED_ROUNDED_SUMMARY",
+  "covariance_kind": "ILLUSTRATIVE_NOT_MEASURED",
+  "source": "https://arxiv.org/html/2606.23808v1#S4.T2",
+  "row_order": [
+    "B/A",
+    "C/A",
+    "C/B",
+    "D/A",
+    "D/B",
+    "D/C"
+  ],
+  "incidence_matrix": [
+    [
+      -1.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      1.0,
+      0.0
+    ],
+    [
+      0.0,
+      -1.0,
+      1.0,
+      0.0
+    ],
+    [
+      -1.0,
+      0.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      -1.0,
+      0.0,
+      1.0
+    ],
+    [
+      0.0,
+      0.0,
+      -1.0,
+      1.0
+    ]
+  ],
+  "matrix_rank": 3,
+  "normalization_null_residual": 0.0,
+  "closure": [
+    {
+      "ratio": "B/A",
+      "published": 0.45,
+      "reconstructed": 0.45,
+      "residual": 0.0,
+      "display_tolerance": 0.005,
+      "agrees_at_display_precision": true
+    },
+    {
+      "ratio": "C/A",
+      "published": 0.35,
+      "reconstructed": 0.3499999999999999,
+      "residual": -5.551115123125783e-17,
+      "display_tolerance": 0.005,
+      "agrees_at_display_precision": true
+    },
+    {
+      "ratio": "C/B",
+      "published": 0.78,
+      "reconstructed": 0.7777777777777777,
+      "residual": -0.0022222222222223476,
+      "display_tolerance": 0.005,
+      "agrees_at_display_precision": true
+    },
+    {
+      "ratio": "D/A",
+      "published": 0.07,
+      "reconstructed": 0.07,
+      "residual": 0.0,
+      "display_tolerance": 0.0005,
+      "agrees_at_display_precision": true
+    },
+    {
+      "ratio": "D/B",
+      "published": 0.16,
+      "reconstructed": 0.15555555555555559,
+      "residual": -0.0044444444444444176,
+      "display_tolerance": 0.005,
+      "agrees_at_display_precision": true
+    },
+    {
+      "ratio": "D/C",
+      "published": 0.2,
+      "reconstructed": 0.20000000000000007,
+      "residual": 5.551115123125783e-17,
+      "display_tolerance": 0.005,
+      "agrees_at_display_precision": true
+    }
+  ],
+  "illustrative_log_flux_sd": 0.03,
+  "illustrative_log_ratio_covariance": [
+    [
+      0.0018,
+      0.0009,
+      -0.0009,
+      0.0009,
+      -0.0009,
+      0.0
+    ],
+    [
+      0.0009,
+      0.0018,
+      0.0009,
+      0.0009,
+      0.0,
+      -0.0009
+    ],
+    [
+      -0.0009,
+      0.0009,
+      0.0018,
+      0.0,
+      0.0009,
+      -0.0009
+    ],
+    [
+      0.0009,
+      0.0009,
+      0.0,
+      0.0018,
+      0.0009,
+      0.0009
+    ],
+    [
+      -0.0009,
+      0.0,
+      0.0009,
+      0.0009,
+      0.0018,
+      0.0009
+    ],
+    [
+      0.0,
+      -0.0009,
+      -0.0009,
+      0.0009,
+      0.0009,
+      0.0018
+    ]
+  ],
+  "illustrative_log_ratio_correlation": [
+    [
+      0.9999999999999999,
+      0.49999999999999994,
+      -0.49999999999999994,
+      0.49999999999999994,
+      -0.49999999999999994,
+      0.0
+    ],
+    [
+      0.49999999999999994,
+      0.9999999999999999,
+      0.49999999999999994,
+      0.49999999999999994,
+      0.0,
+      -0.49999999999999994
+    ],
+    [
+      -0.49999999999999994,
+      0.49999999999999994,
+      0.9999999999999999,
+      0.0,
+      0.49999999999999994,
+      -0.49999999999999994
+    ],
+    [
+      0.49999999999999994,
+      0.49999999999999994,
+      0.0,
+      0.9999999999999999,
+      0.49999999999999994,
+      0.49999999999999994
+    ],
+    [
+      -0.49999999999999994,
+      0.0,
+      0.49999999999999994,
+      0.49999999999999994,
+      0.9999999999999999,
+      0.49999999999999994
+    ],
+    [
+      0.0,
+      -0.49999999999999994,
+      -0.49999999999999994,
+      0.49999999999999994,
+      0.49999999999999994,
+      0.9999999999999999
+    ]
+  ],
+  "illustrative_covariance_rank": 3,
+  "rank_tolerance": 1e-12,
+  "seed": null,
+  "observational_likelihood_reproduced": false,
+  "sha256": {
+    "data/published/rxj1131_narrow_line.csv": "b17a85e968b8c1d51557c341fcb71521f46b0ba9a70edf8a7dd406d33fb1e2e5",
+    "experiments/ratio_closure/run.py": "7821b94f89ff71d82a3b44848aabe57d6715f3f5ea4a00310d0481e8ee2a16de",
+    "requirements.txt": "d322e88b2f6367f38a2e81d44d4aff471f0f8d14bb04aa5b9d0ddd6c9a5f7694"
+  }
+}
