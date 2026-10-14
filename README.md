@@ -14,11 +14,11 @@ This repository tracks mathematics, controlled experiments, competing explanatio
 
 ## Where we stand · 14 October 2026
 
-| Lane | What we have | What still blocks inference |
-| :--- | :--- | :--- |
-| **JWST lensing** | Six attributed narrow-line ratios from RXJ1131-1231; a locally checked algebraic audit | Joint flux posterior, warm-dust uncertainties, and lens-model posterior |
-| **Neutrino inference** | Recovered summaries of catalog/background and detector-coordinate toy studies | Original executable archives and an independently reproduced IceTracks-DR2-v2 baseline |
-| **Directional detectors** | Historical mention of a synthetic modulation study | Recoverable methods and material-specific sensitivity evidence |
+**JWST lensing:** six attributed narrow-line ratios from RXJ1131-1231 and a locally checked algebraic audit. The joint flux posterior, warm-dust uncertainties, and lens-model posterior are still needed.
+
+**Neutrino inference:** recovered summaries of catalog/background and detector-coordinate toy studies. Original archives and an independently reproduced IceTracks-DR2-v2 baseline are still needed.
+
+**Directional detectors:** a historical mention of a synthetic modulation study. Its methods and material-specific sensitivity evidence remain missing.
 
 **No new dark particle, SIDM cross-section, or observational Bayes factor has been established here.** The 29-quasar inference remains a [result reported by its authors](https://arxiv.org/abs/2609.35974v1), not a result reproduced by this repository.
 
