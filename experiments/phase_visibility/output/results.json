@@ -1,0 +1,53 @@
+{
+  "study_id": "N-03",
+  "version": "1.0.0",
+  "date": "2026-10-14",
+  "status": ["DERIVED", "SIMULATION_RESULT", "UNIDENTIFIABLE"],
+  "data_label": "SIMULATED MODEL; deterministic expectations, no sampled observations",
+  "seed": null,
+  "seed_reason": "Deterministic numerical quadrature; no random generator",
+  "generating_truth": {
+    "state": "rho=0.5*[[1,c],[c,1]], c in {1,0.25,0}",
+    "propagation": "D=diag(1,exp(i*delta)), vacuum phase set to zero for plot",
+    "fixed_delta": "a*cos(xi), xi uniform [0,2pi)",
+    "rayleigh_delta": "a*r*cos(xi), p(r)=2*r*exp(-r^2)",
+    "ordinary_noise_delta": "a*X, X Gaussian with mean 0 and variance 1/2"
+  },
+  "units": "a and delta are phases in radians (dimensionless); all probabilities dimensionless",
+  "domain": {"a_min": 0, "a_max": 6, "a_count": 61, "phase_nodes": 2048, "laguerre_nodes": 64, "gaussian_nodes": 160, "gaussian_domain": [-10,10]},
+  "max_abs_errors": {
+    "fixed_vs_J0": 2.2887833992611187e-16,
+    "rayleigh_vs_exp": 1.4155343563970746e-15,
+    "gaussian_vs_exp": 3.4416913763379853e-15,
+    "rayleigh_vs_gaussian": 3.3306690738754696e-15
+  },
+  "examples": [
+    {"a_radians": 0.0, "P_fixed_c1": 1.0, "P_rayleigh_or_gaussian_c1": 1.0, "P_c0": 0.5},
+    {"a_radians": 1.0, "P_fixed_c1": 0.8825988432789833, "P_rayleigh_or_gaussian_c1": 0.8894003915357025, "P_c0": 0.5},
+    {"a_radians": 2.0, "P_fixed_c1": 0.6119453895706178, "P_rayleigh_or_gaussian_c1": 0.6839397205857212, "P_c0": 0.5},
+    {"a_radians": 3.0, "P_fixed_c1": 0.3699740225490332, "P_rayleigh_or_gaussian_c1": 0.5526996122809321, "P_c0": 0.5},
+    {"a_radians": 4.0, "P_fixed_c1": 0.30142509506807635, "P_rayleigh_or_gaussian_c1": 0.5091578194443671, "P_c0": 0.5},
+    {"a_radians": 6.0, "P_fixed_c1": 0.5753226286254984, "P_rayleigh_or_gaussian_c1": 0.5000617049020434, "P_c0": 0.5}
+  ],
+  "first_zero_fixed_C_radians": 2.4048255576957724,
+  "checks": {
+    "fixed_phase_integral_matches_J0": true,
+    "phase_grid_converged": true,
+    "rayleigh_average_matches_exp": true,
+    "rayleigh_quadrature_converged": true,
+    "gaussian_noise_matches_same_exp": true,
+    "zero_perturbation_limit": true,
+    "positive_density_matrices": true,
+    "return_probabilities_bounded": true,
+    "unequal_mass_diagonal_state_invariant": true,
+    "mass_mixing_negative_control_changes_state": true,
+    "matched_variance_difference_starts_at_fourth_order": true,
+    "native_numpy_bool_serialization": true
+  },
+  "passed": 12,
+  "environment": {"python": "3.13.5", "numpy": "2.3.5", "scipy": "1.17.0", "platform": "Linux", "cpu_workers": 1},
+  "code_sha256": "c25c3e74e2242709259c086628b45e5588f968d26d62dec39d2aed6e8c70b4ab",
+  "csv_sha256": "83ee6e588d66f19d2f113b4f59d799c8fc7221c6327653514177b2e0adb2cf41",
+  "calculation_wall_seconds": 0.04326451399998632,
+  "not_claimed": ["Original missing run reproduced", "New particle signature", "Real neutrino fit", "Detector sensitivity", "Cross-section limit", "Full three-flavor or matter evolution", "Temporal likelihood equivalence", "Independent peer review"]
+}
