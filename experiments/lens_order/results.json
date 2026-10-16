@@ -1,0 +1,96 @@
+{
+  "study_id": "L-03",
+  "version": "1.0.0",
+  "as_of": "2026-10-16",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT"
+  ],
+  "data_kind": "SIMULATED local lens maps; zero observations",
+  "seed": null,
+  "randomness": "none; deterministic finite-domain audit",
+  "assumptions": [
+    "Two scalar thin-lens planes, flat-sky geometric optics.",
+    "Tidal matrices evaluated along the deflected ray; static lenses.",
+    "No near-horizon Kerr ray tracing, photon polarization rotation or quantum interference.",
+    "Changing algebraic order at fixed reduced strengths is not moving real lenses while preserving cosmological distances."
+  ],
+  "inputs": {
+    "kappa1": 0.2,
+    "gamma1": 0.1,
+    "kappa2": 0.15,
+    "gamma2": 0.08,
+    "distance_factor_b": 0.5,
+    "all_matrix_entries_dimensionless": true,
+    "scan_relative_angles_deg": [
+      -90,
+      90
+    ],
+    "scan_count": 181,
+    "nonlinear_control": {
+      "x_arcsec": [
+        0.1,
+        0.6
+      ],
+      "center1_arcsec": [
+        -0.5,
+        0.1
+      ],
+      "center2_arcsec": [
+        0.4,
+        -0.3
+      ],
+      "strength1_arcsec2": 0.02,
+      "strength2_arcsec2": 0.03
+    }
+  },
+  "example_at_45deg": {
+    "A_image_to_source": [
+      [
+        0.5724999999999999,
+        -0.076
+      ],
+      [
+        -0.068,
+        0.7575
+      ]
+    ],
+    "omega_dimensionless": 0.003999999999999997,
+    "omega_is_not_a_measured_angle": true
+  },
+  "errors": {
+    "max_angular_identity_error": 5.204170427930421e-18,
+    "nonlinear_finite_difference_h1e5_arcsec": 1.1928680265782532e-11,
+    "nonlinear_finite_difference_h5e6_arcsec": 6.346685330060886e-12
+  },
+  "checks": {
+    "no_lens_identity": true,
+    "one_scalar_plane_is_symmetric": true,
+    "zero_plane_separation_factor_null": true,
+    "aligned_axes_commute": true,
+    "perpendicular_axes_commute": true,
+    "angular_formula_181_points": true,
+    "transpose_on_algebraic_order_reversal": true,
+    "isotropic_terms_do_not_change_antisymmetry": true,
+    "proper_basis_rotation_preserves_omega": true,
+    "fixed_lens_count_different_geometry": true,
+    "nonlinear_ray_finite_difference": true
+  },
+  "checks_passed": 11,
+  "not_claimed": [
+    "Dark matter particle identification",
+    "Observed lens rotation",
+    "Fibonacci or pi-based lens law",
+    "Unique mass-map recovery",
+    "Number of physical lenses recovered",
+    "Full observational likelihood reproduction"
+  ],
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux",
+    "workers": 1
+  },
+  "code_sha256": "25cefebeabde6002c1b025389597274c7de13929a3006bec892d2e709f835609",
+  "csv_sha256": "2b5f2d1f3a3f853658e2a8a771f41290bae93ecfabc0ab8e11119e405642b2d0",
+  "core_wall_seconds": 0.0020024699999794393
+}
