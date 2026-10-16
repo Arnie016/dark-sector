@@ -1,0 +1,8 @@
+{
+  "canonical_study_id": "C-03",
+  "raw_execution_study_id": "C-02",
+  "reason": "Existing GitHub PR #7 already uses C-02 for a distinct acceleration-tomography study. The executed source is byte-identical. Numerical values and the provisional execution ID are preserved; the repository results JSON has formatting-only normalization. The original byte-level receipt is retained in the companion archive.",
+  "existing_C02_commit": "22555b79c21768d120cea451e1440a3fcfa725de",
+  "executed_code_sha256": "75f5848177a0d8747a946728ffb90a5640d9400b3fb20c2998f731251c83e57c",
+  "no_reexecution_or_numerical_change": true
+}
