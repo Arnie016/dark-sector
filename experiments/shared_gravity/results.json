@@ -1,0 +1,55 @@
+{
+  "study_id": "N-05",
+  "date": "2026-10-16",
+  "status": "DERIVED",
+  "data_kind": "SIMULATED illustrative theoretical scales; zero observational events",
+  "seed": null,
+  "randomness": "none",
+  "inputs": {
+    "rest_energy_eV": 0.05,
+    "mass_squared_splitting_eV2": 0.0025,
+    "H0_km_s_Mpc": 67.4,
+    "Omega_m": 0.315,
+    "Omega_Lambda": 0.685,
+    "radiation_omitted": true,
+    "z": 1,
+    "observed_energy_eV": 100000000000000.0
+  },
+  "results": {
+    "kernel_z1_seconds": 1.8689216660904986e+17,
+    "kernel_z1_Gyr": 5.922255387261701,
+    "phase_at_100TeV_z1_radians": 3549239812682477.5,
+    "phase_cycles": 564879060406969.0,
+    "fractional_energy_change_for_one_radian": 2.8175047412313644e-16,
+    "speed_deficit_10MeV": 1.2500000000000001e-17,
+    "speed_deficit_100TeV": 1.25e-31,
+    "mass_delay_10MeV_10kpc_seconds": 1.2865890631792376e-05,
+    "mass_delay_100TeV_z1_seconds": 2.336152082613124e-14,
+    "double_delay_example_seconds": 0.0020000000000095497
+  },
+  "checks": {
+    "zero_redshift_kernel": true,
+    "doubled_quadrature": true,
+    "low_redshift_limit": true,
+    "massless_speed": true,
+    "stable_speed_formula": true,
+    "inverse_energy_squared_delay": true,
+    "radial_redshift_length_cancellation": true,
+    "constant_emission_lag_cancels": true
+  },
+  "checks_passed": 8,
+  "limitations": [
+    "No detector sensitivity forecast, measured redshift or neutrino mass.",
+    "Static weak-lens, radial Schwarzschild, homogeneous FLRW are distinct limits, not one fitted lens.",
+    "Cosmological kernel neglects radiation; evaluated only at z<=1.",
+    "Finite numerical consistency is not proof of a new physical mechanism.",
+    "Double-delay algebra requires same source region and stable lens; low event counts may prevent measurement."
+  ],
+  "code_sha256": "94c84cadd8679c36f1972bfc89bfa4bedf014a056ff17985991ae72162338290",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux",
+    "workers": 1
+  },
+  "wall_seconds": 0.006857627999977467
+}
