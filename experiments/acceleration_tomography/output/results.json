@@ -1,0 +1,103 @@
+{
+  "study_id": "C-01",
+  "version": "1.0.0",
+  "date": "2026-10-16",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT"
+  ],
+  "data_kind": "SIMULATED ideal convergence expectations; no sampled or observed events",
+  "random_seed": null,
+  "randomness": "none",
+  "cosmology": {
+    "H0_km_s_Mpc": 67.4,
+    "Omega_m": 0.315,
+    "Omega_Lambda": 0.685,
+    "flat": true,
+    "radiation_omitted": true
+  },
+  "lens_redshifts": [
+    0.3,
+    0.8
+  ],
+  "source_redshifts": [
+    1.0,
+    2.0
+  ],
+  "lens_comoving_Mpc": [
+    1236.4442931517292,
+    2873.5130811386402
+  ],
+  "source_comoving_Mpc": [
+    3401.2629173468977,
+    5312.075392455651
+  ],
+  "W_dimensionless": [
+    [
+      0.6364749438081669,
+      0.15516290537748856
+    ],
+    [
+      0.7672389411287799,
+      0.4590601847971362
+    ]
+  ],
+  "determinant": 0.17313328209903456,
+  "plane_strengths_dimensionless": {
+    "A": [
+      0.02,
+      0.01
+    ],
+    "B": [
+      0.0214627086915546,
+      0.004
+    ]
+  },
+  "SIMULATED_convergences": {
+    "A": [
+      0.014281127929938225,
+      0.01993538067054696
+    ],
+    "B": [
+      0.014281127929938223,
+      0.018303266629452353
+    ]
+  },
+  "second_source_absolute_difference": 0.0016321140410946074,
+  "background_acceleration_over_H0_squared_today": 0.5275000000000001,
+  "checks": {
+    "distance_zero": true,
+    "monotonic_distances": true,
+    "quadrature_doubling": true,
+    "low_redshift_distance": true,
+    "source_in_front_null": true,
+    "source_at_lens_null": true,
+    "no_excess_mass_null": true,
+    "positive_strengths": true,
+    "first_source_degenerate": true,
+    "second_source_separates_selected_pair": true,
+    "determinant_identity": true,
+    "recover_both_amplitudes": true,
+    "duplicate_source_no_extra_rank": true,
+    "coincident_lens_no_extra_rank": true,
+    "null_metric_contraction": true,
+    "background_acceleration_positive": true
+  },
+  "checks_passed": 16,
+  "limitations": [
+    "Fixed two-plane geometry and known angular profiles; no unique arbitrary 3D reconstruction.",
+    "Absolute convergence is assumed available; shear alone has additional mass-sheet/source ambiguities.",
+    "No noise, covariance, photometric redshift uncertainty or survey selection.",
+    "Linear/Born weak lensing; does not include L-03 lens-lens coupling.",
+    "No annihilation interaction, time-varying constants, CCC boundary solution or neutrino detector forecast.",
+    "Lambda-null is direct Ricci focusing only; cosmological distances and growth still depend on Lambda."
+  ],
+  "code_sha256": "f28259aaf47e9742d0b5fe49e38a919d7a7f14b0755dc6240f59cc1e914356a2",
+  "csv_sha256": "c0e89df2c5db8855a4a7111c22b11dea68f552a1b173614339f38cee54589f73",
+  "environment": {
+    "python": "3.13.5",
+    "platform": "Linux",
+    "workers": 1
+  },
+  "numerical_wall_seconds": 0.07847032199998694
+}

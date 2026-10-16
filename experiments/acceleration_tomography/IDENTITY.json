@@ -1,0 +1,8 @@
+{
+  "canonical_study_id": "C-02",
+  "title": "Uneven acceleration and lensing tomography",
+  "raw_execution_label": "C-01",
+  "label_reason": "Provisional ID chosen before final remote branch catalogue read revealed independent C-01 initial-growth/bias study. Do not conflate them. Exact executed source and results preserved.",
+  "executed_code_sha256": "f28259aaf47e9742d0b5fe49e38a919d7a7f14b0755dc6240f59cc1e914356a2",
+  "existing_distinct_C01_commit": "f2dc1c17500f6abfe29903bf0d6c72d484120851"
+}
