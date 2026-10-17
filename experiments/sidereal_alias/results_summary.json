@@ -1,0 +1,113 @@
+{
+  "id": "D-01",
+  "date": "2026-10-17",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "inputs": {
+    "solar_day_seconds": 86400,
+    "sidereal_day_seconds": 86164.0905,
+    "solar_amplitude": 15,
+    "sidereal_injected_amplitude": 8,
+    "background_rate": 100,
+    "rate_unit": "events/(kg day)",
+    "mask": "night 21:00-05:00, every 11th day off",
+    "detector_mass_kg": 1,
+    "time_bin_minutes": 15,
+    "seed": null,
+    "random_draws": 0
+  },
+  "columns": [
+    "days",
+    "mask",
+    "exposure_kg_days",
+    "worst_phase_relative_fisher",
+    "best_phase_relative_fisher",
+    "false_sidereal_rate_from_solar_only_wrong_model"
+  ],
+  "rows": [
+    [
+      30,
+      "continuous",
+      30,
+      0.021862327203,
+      0.022118273201,
+      14.820695492244
+    ],
+    [
+      30,
+      "night+maintenance",
+      9,
+      0.008833930312,
+      0.050926200969,
+      12.818081788235
+    ],
+    [
+      90,
+      "continuous",
+      90,
+      0.183656333477,
+      0.185253471376,
+      13.542267216239
+    ],
+    [
+      90,
+      "night+maintenance",
+      27,
+      0.086460554092,
+      0.346854766417,
+      7.274479343614
+    ],
+    [
+      180,
+      "continuous",
+      180,
+      0.581906994072,
+      0.5841617636,
+      9.695443314401
+    ],
+    [
+      180,
+      "night+maintenance",
+      54.333333333333,
+      0.406946125712,
+      0.755437595679,
+      3.475129210145
+    ],
+    [
+      365,
+      "continuous",
+      365,
+      0.999999558694,
+      0.999999561111,
+      0.009961000439
+    ],
+    [
+      365,
+      "night+maintenance",
+      110.333333333333,
+      0.999985972498,
+      0.999994320313,
+      0.016270165902
+    ]
+  ],
+  "checks_passed": 10,
+  "asymptotic_checks": "Schur equals weighted-residual projection, coincident frequencies give zero profiled information",
+  "code_sha256": "0de9ba4678add9af7ead5d510a69d1a982a1568d85cd7d37b3c266fca7b1d437",
+  "code_git_blob": "fd694fa72790667d2aaa8271d28d29750d7fd71d",
+  "runtime_python": "3.13.5",
+  "runtime_numpy": "2.3.5",
+  "core_seconds": 0.46802989299999354,
+  "limitations": [
+    "Asimov expected rates not event counts",
+    "No detector response or observation mask",
+    "No likelihood-based significance",
+    "No original DAMIC-M fit"
+  ],
+  "source_urls": [
+    "https://arxiv.org/html/2602.15947v1",
+    "https://arxiv.org/html/2511.13962v1"
+  ]
+}
