@@ -1,0 +1,67 @@
+{
+  "study_id": "S-01",
+  "as_of": "2026-10-17",
+  "status": ["DERIVED", "SIMULATION_RESULT", "UNIDENTIFIABLE_H_ONLY", "DATA_INSUFFICIENT_OBSERVATIONS"],
+  "evidence": "SIMULATED ONLY; noiseless generating truth and an illustrative Gaussian error model",
+  "generating_truth": {
+    "s_dimensionless": 0.8, "theta_deg_from_sky_plane": 15.0,
+    "H_kpc": 1294.3406072273515, "Vlos_km_s": 465.8742811845373,
+    "relic_separation_kpc": 3000.0
+  },
+  "assumptions": {
+    "stage": "held fixed by idealized double-radio-relic reference, not inferred from observational data",
+    "h0_kpc": 1500.0, "response_kpc_per_unit_s": 200.0, "v_km_s": 1800.0,
+    "cross_section_conversion": "s = (sigma/m)/(1 cm^2 g^-1)",
+    "H_formula": "(h0-A*s)*cos(theta)", "Vlos_formula": "V*sin(theta)",
+    "relic_formula": "constant stage reference, exact by construction",
+    "errors_illustrative": {"sigma_H_kpc": 70.0, "sigma_Vlos_km_s": 200.0, "independent_Gaussian": true},
+    "parameter_grid": {"s_min": 0.0, "s_max": 1.5, "s_step": 0.01, "theta_min_deg": 0.0, "theta_max_deg": 50.0, "theta_step_deg": 0.1},
+    "limitations": [
+      "not calibrated to TNGC-SIDM simulation tracks",
+      "not a fit to observed halo/relic/galaxy velocities",
+      "relic projection is not exactly angle-independent in real data",
+      "relative 3D speed is unknown in real mergers and approaches zero at apocenter",
+      "halo mass, impact parameter, phase, source selection, centroids, covariances absent",
+      "linear response in s is a pedagogical local approximation, not a physical law",
+      "Delta chi2 contour not coverage-calibrated or a confidence limit"
+    ]
+  },
+  "analytic": {
+    "theta_cdm_mimic_deg": 30.356939029226297,
+    "H_cdm_mimic_kpc": 1294.3406072273515,
+    "Vlos_cdm_mimic_km_s": 909.6937095388516,
+    "H_only_exact_ridge_s_interval": [0.0, 1.0282969638632427],
+    "Jacobian_rows_H_kpc_and_V_km_s_columns_s_theta_rad": [[-193.18516525781365, -346.81752043737777], [0.0, 1738.6664873203229]],
+    "Jacobian_determinant_units_kpc_km_s_per_s_per_rad": -335884.57268119894,
+    "linearized_sigma_s_with_velocity": 0.4170628981426248
+  },
+  "grid": {
+    "best_fit": {"s": 0.8, "profile_chi2": 0.0, "best_angle_deg": 15.0},
+    "at_s_0": {"s": 0.0, "profile_chi2": 2.9313090317278965, "best_angle_deg": 23.3},
+    "delta_chisquare_s0": 2.9313090317278965,
+    "nominal_delta_chisquare_3p84_s_interval": [0.0, 1.5],
+    "count_s": 151, "count_theta": 501,
+    "profile_note": "Deterministic normalized-residual squared; not a calibrated p-value or coverage statement"
+  },
+  "checks": {
+    "fixed_stage_relic_invariant_by_model_definition": true,
+    "injection_recovered_on_grid": true,
+    "collisionless_orientation_exact_H_match": true,
+    "collisionless_alt_within_50deg": true,
+    "collisionless_LOS_speed_differs": true,
+    "unconstrained_H_ridge_contains_truth_and_cdm": true,
+    "determinant_nonzero_active_merger": true,
+    "determinant_zero_at_apocenter_v_zero": true,
+    "linear_error_finite": true,
+    "full_profile_peak_at_injection": true,
+    "nominal_profile_region_contains_injection": true,
+    "profile_finite_nonnegative": true,
+    "grid_has_151_profiles": true,
+    "H_only_does_not_identify_s": true,
+    "velocity_differentiates_exact_H_mimic": true
+  },
+  "checks_passed": 15, "random_seed": null,
+  "randomness": "none, deterministic truth and grid",
+  "runtime": {"python": "3.13.5", "workers": 1, "core_seconds": 0.021871878999988326},
+  "source_code_sha256": "74acf95719277d3066ccf2a7619b0709a0e8de5e1b21ebf3dc3fd5ec2eb84d71"
+}
