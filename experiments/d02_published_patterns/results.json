@@ -1,0 +1,77 @@
+{
+  "id": "D-02",
+  "as_of": "2026-10-17",
+  "status": [
+    "DERIVED",
+    "DATA_INSUFFICIENT"
+  ],
+  "source": "https://arxiv.org/html/2607.09352v1",
+  "kind": "PUBLISHED summary counts, fixed nominal background",
+  "labels": [
+    "11",
+    "21",
+    "111",
+    "31",
+    "22",
+    "211"
+  ],
+  "observed": [
+    144,
+    0,
+    0,
+    1,
+    0,
+    0
+  ],
+  "accidental": [
+    141.4,
+    0.111,
+    0.042,
+    0.019,
+    2.5e-05,
+    5.8e-05
+  ],
+  "radiogenic": [
+    0.039,
+    0.039,
+    0.016,
+    0.052,
+    0.011,
+    0.035
+  ],
+  "background": [
+    141.439,
+    0.15,
+    0.058,
+    0.071,
+    0.011025,
+    0.035058000000000006
+  ],
+  "all_observed": 145,
+  "all_background": 141.764083,
+  "rare_observed": 1,
+  "rare_background": 0.325083,
+  "p_31_at_least_one": 0.06853810787240788,
+  "p_any_rare_at_least_one": 0.2775326136396035,
+  "p_31_given_one_rare": 0.21840576099027015,
+  "p_exactly_one_rare": 0.2348618653601968,
+  "one_sided_90pct_extra_count_bound_fixed_background": 3.564637169867429,
+  "six_channel_deviance_no_p_value": 3.986410807934963,
+  "checks": {
+    "six_unique_channels": true,
+    "valid_counts": true,
+    "positive_means": true,
+    "one_rare_event": true,
+    "exact_bound_root": true,
+    "pattern_probabilities_sum_one": true
+  },
+  "seed": null,
+  "random_draws": 0,
+  "not_claimed": [
+    "collaboration likelihood reproduction",
+    "DM cross-section bound",
+    "detection significance",
+    "independent new experimental dataset"
+  ],
+  "code_sha256": "7de9752611bb186c87f9fb9ba80b41823643f360f36e7f3aa560487024b3f867"
+}
