@@ -1,0 +1,36 @@
+{
+  "id": "D-01A",
+  "date": "2026-10-18",
+  "status": ["DERIVED", "SIMULATION_RESULT", "DATA_INSUFFICIENT"],
+  "data": "SIMULATED Asimov expectations and synthetic masks; no measured events",
+  "periods_seconds": {"solar": 86400, "sidereal": 86164.0905},
+  "truth": {"solar_amplitude_fraction": 0.04, "sidereal_injection_amplitude_fraction": 0.02, "per_bin_expected_counts": 25, "sampling_minutes": 30, "segments": 7, "segment_days": 11, "invented_daily_outage_hours": 2, "invented_extra_outage_days": 2, "random_seed": null, "random_draws": 0},
+  "contiguous": {
+    "calendar_span_days": 77, "live_half_hour_bins": 3300, "live_days_equivalent": 68.75,
+    "simulated_expected_counts": 82445.0, "retained_fisher_eigenvalues": [0.11986543962648345, 0.16496640217723238],
+    "worst_retained_fraction": 0.11986543962648345,
+    "max_solar_sidereal_overlap": 0.9381548701432597,
+    "worst_direction_sigma_ratio": 2.694456390541328,
+    "solar_only_false_sidereal_amplitude_without_solar_nuisance": 0.03796503247833249,
+    "solar_only_false_sidereal_amplitude_with_solar_nuisance": 4.65133442701402e-16,
+    "injected_2pct_sidereal_recovered_joint_fit": 0.01999999999999906
+  },
+  "season_spread": {
+    "calendar_span_days": 323, "live_half_hour_bins": 3300, "live_days_equivalent": 68.75,
+    "simulated_expected_counts": 82445.0, "retained_fisher_eigenvalues": [0.9996405894830843, 0.9997040662716777],
+    "worst_retained_fraction": 0.9996405894830843,
+    "max_solar_sidereal_overlap": 0.018958125353411962,
+    "worst_direction_sigma_ratio": 1.0001742719525126,
+    "solar_only_false_sidereal_amplitude_without_solar_nuisance": 0.0007932617200100931,
+    "solar_only_false_sidereal_amplitude_with_solar_nuisance": 4.815201095182254e-16,
+    "injected_2pct_sidereal_recovered_joint_fit": 0.019999999999999796
+  },
+  "limitations": [
+    "Harmonic template, no material-specific response",
+    "Fisher approximation and noiseless Asimov injection, not real Poisson sample",
+    "Fixed sidereal phase ignores annual Galactic-wind phase drift",
+    "Solar sinusoid and seven segment offsets omit real detector-temperature effects",
+    "Synthetic uptime is NOT the DAMIC-M exposure mask"
+  ],
+  "code_sha256": "80ecbe76e1b1ebc0d6bd19eb57bbc639be4577d584ca61fecdc19ed2aac55547"
+}
