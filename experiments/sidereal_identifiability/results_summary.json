@@ -1,0 +1,105 @@
+{
+  "claim_id": "DIR-20261019-C1",
+  "as_of": "2026-10-19",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "dataset": "SIMULATED deterministic hourly design only",
+  "params": {
+    "solar_day_s": 86400,
+    "sidereal_day_s": 86164.09053899304,
+    "year_days": 365.2422,
+    "seed": null,
+    "mask": "18:00-06:00 5 of 7 days"
+  },
+  "cases": [
+    {
+      "mask": "full",
+      "elapsed_days": 7,
+      "observed_hours": 168,
+      "information_fraction_worst": 0.0011806360247783264,
+      "information_fraction_best": 0.0012162388332176719,
+      "noise_inflation_worst": 29.103283149864872,
+      "design_rank": 5
+    },
+    {
+      "mask": "full",
+      "elapsed_days": 30,
+      "observed_hours": 720,
+      "information_fraction_worst": 0.02186125931101023,
+      "information_fraction_best": 0.022119423406120428,
+      "noise_inflation_worst": 6.763358559084646,
+      "design_rank": 5
+    },
+    {
+      "mask": "full",
+      "elapsed_days": 90,
+      "observed_hours": 2160,
+      "information_fraction_worst": 0.18364988446120759,
+      "information_fraction_best": 0.1852619134156808,
+      "noise_inflation_worst": 2.3334831557215168,
+      "design_rank": 5
+    },
+    {
+      "mask": "full",
+      "elapsed_days": 365,
+      "observed_hours": 8760,
+      "information_fraction_worst": 0.9999995584671197,
+      "information_fraction_best": 0.9999995609043175,
+      "noise_inflation_worst": 1.000000220766513,
+      "design_rank": 5
+    },
+    {
+      "mask": "weekday_nights",
+      "elapsed_days": 7,
+      "observed_hours": 60,
+      "information_fraction_worst": 0.0006389235123223661,
+      "information_fraction_best": 0.003198562128183005,
+      "noise_inflation_worst": 39.56175642917675,
+      "design_rank": 5
+    },
+    {
+      "mask": "weekday_nights",
+      "elapsed_days": 30,
+      "observed_hours": 264,
+      "information_fraction_worst": 0.0234798629454419,
+      "information_fraction_best": 0.11319073578857408,
+      "noise_inflation_worst": 6.526077414395414,
+      "design_rank": 5
+    },
+    {
+      "mask": "weekday_nights",
+      "elapsed_days": 90,
+      "observed_hours": 780,
+      "information_fraction_worst": 0.19021683362381886,
+      "information_fraction_best": 0.5555705538560574,
+      "noise_inflation_worst": 2.292849377981929,
+      "design_rank": 5
+    },
+    {
+      "mask": "weekday_nights",
+      "elapsed_days": 365,
+      "observed_hours": 3132,
+      "information_fraction_worst": 0.9999998129403083,
+      "information_fraction_best": 0.9999999653873021,
+      "noise_inflation_worst": 1.000000093529859,
+      "design_rank": 5
+    }
+  ],
+  "holdout": {
+    "truth": "solar-only relative rate 1+0.05*cos(2*pi*t/86400+0.4)",
+    "train_days": "[0,7)",
+    "heldout_days": "[180,187)",
+    "train_observed_hours": 60,
+    "heldout_observed_hours": 60,
+    "wrong_sidereal_fit_train_rms": 0.000864802506841269,
+    "wrong_sidereal_fit_heldout_rms": 0.0709971179368679,
+    "solar_fit_heldout_rms": 3.125233444523409e-15
+  },
+  "checks_passed": 10,
+  "code_sha256": "8c1cfd1e8c03f00a3c87f1bdbfb1da1f8a1ba86255d0c49a150112668b4d3558",
+  "method": "First-harmonic equal-noise Gram projection; not a Poisson detector likelihood.",
+  "data_gaps": "No measured time mask, counts, response or calibrated nuisance covariance."
+}
