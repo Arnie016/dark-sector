@@ -1,0 +1,65 @@
+{
+  "study": "N-06",
+  "as_of": "2026-10-19",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "UNIDENTIFIABLE",
+    "DATA_INSUFFICIENT"
+  ],
+  "all_inputs_SIMULATED": true,
+  "seed": null,
+  "workers": 1,
+  "checks_passed": 17,
+  "model_A": {
+    "epsilon": 0.8,
+    "f": 0.75,
+    "s": 0.8
+  },
+  "model_B": {
+    "epsilon": 1.2,
+    "f": 0.5,
+    "s": 0.4666666666666667
+  },
+  "normalized_signals": {
+    "neutrino_vector_amplitude": 0.6,
+    "annihilation_pair_amplitude": 0.35
+  },
+  "potential_eV": 4.5e-19,
+  "energy_TeV": [
+    50,
+    100,
+    200
+  ],
+  "toy_two_flavor_P_A": [
+    0.4997994123717866,
+    0.08884852650903376,
+    0.0009190277829902222
+  ],
+  "toy_two_flavor_P_B": [
+    0.4997994123717867,
+    0.08884852650903344,
+    0.000919027782990189
+  ],
+  "jacobian": [
+    [
+      0.75,
+      0.8,
+      0
+    ],
+    [
+      0,
+      -1.2,
+      0.4375
+    ]
+  ],
+  "jacobian_rank": 2,
+  "null_direction": [
+    -1.0666666666666667,
+    1,
+    2.7428571428571433
+  ],
+  "code_sha256": "6a647039e5622e924f77d3ba4b1c905e7cd2316f89f3d0749aa7da39c852e1ed",
+  "original_full_result_sha256": "210544e1f71b0cdd65659e804db145ed3dcea66b5b41114c0f60d58a41ce2d9b",
+  "notice": "This is an explicitly normalized, SIMULATED observation map and not a detector likelihood or a paper baseline reproduction."
+}
