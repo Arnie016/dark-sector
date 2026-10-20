@@ -1,0 +1,33 @@
+{
+  "study_id": "N-06",
+  "data_kind": "SIMULATED",
+  "date": "2026-10-20",
+  "source_sha256": "6a44c12ba92831194797142ba76aea45dbc4945cfd9d4f975a42681206f10767",
+  "checks_passed": 14,
+  "seed": null,
+  "workers": 1,
+  "truth": {
+    "a": 1,
+    "q": 0.1
+  },
+  "one_path": {
+    "max_relabel_difference": 0,
+    "gram_eigen_min": 0
+  },
+  "two_paths": {
+    "max_relabel_difference": 0.003631187856817736,
+    "gram_eigenvalues": [
+      0.05701593805738854,
+      0.0005207529513275126
+    ]
+  },
+  "separate_electron_nuisances": {
+    "max_null_residual": 3.469446951953614e-12
+  },
+  "density": {
+    "DM_over_electron_number_ratio": 4.778919781971429e-25,
+    "required_coupling_over_sqrt2GF_for_q0p1": 2.092523092294874e+23
+  },
+  "source": "one actual corrected standard-library CPU process, no observations",
+  "full_original_results_sha256": "8dccb9b58924378229f0a3f16c84f4a196014c9c7183e5f44dc593a470871ee4"
+}
