@@ -1,0 +1,78 @@
+{
+  "study_id": "N-06",
+  "as_of": "2026-10-21",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "data_kind": "SIMULATED MODEL DENSITY; no observed events or calibrated halo measurement",
+  "source": "Dev, Gaido, Ibarra, Porto, arXiv:2609.26773v1 (2026-09-22), Section III; density profile parameters assumed by authors",
+  "theory": "C/Lambda^2 * (nu-current)(chi-vector-current), contact limit, maximally asymmetric benchmark; toy e-mu off-diagonal shares potential norm, not demonstrated viable UV completion",
+  "inputs": {
+    "MBH_Msun": 10000000,
+    "Schwarzschild_radius_pc": 9.571121104102759e-7,
+    "r_emission_pc": 0.00001,
+    "r_spike_pc": 700,
+    "r_NFW_pc": 13000,
+    "rho_s_GeV_per_cm3": 0.35,
+    "rho_emission_GeV_per_cm3": 2778246517760148500,
+    "rho_local_GeV_per_cm3": 0.4,
+    "halo_path_pc": 10000,
+    "mchi_GeV": 1,
+    "Lambda_GeV": 1000,
+    "C": 1,
+    "asymmetry_fraction": 1,
+    "neutrino_energy_TeV": 100,
+    "atmospheric_Delta_m2_eV2": 0.0025
+  },
+  "integral_rho_dr_GeV_per_cm3_pc": {
+    "spike_2048": 44526996351564.71,
+    "spike_4096": 44526996353430.9,
+    "spike_8192": 44526996353547.5,
+    "outer_8192": 7996.506407221172,
+    "uniform_halo_10kpc": 4000
+  },
+  "predictions": {
+    "epsilon_equivalent_to_2sqrt2GF": 0.030312058218593476,
+    "potential_at_emission_eV": 2.1346672592525855e-20,
+    "vacuum_delta_scale_eV": 6.25e-18,
+    "potential_to_vacuum_ratio_at_emission": 0.003415467614804137,
+    "integrated_norm_phase_spike": 0.0534991504385802,
+    "integrated_norm_phase_outer_to_10kpc": 9.607796040545463e-12,
+    "integrated_norm_phase_10kpc_uniform_halo": 4.805996794734877e-12,
+    "conservative_probability_shift_upper_spike": 0.1069983008771604,
+    "conservative_probability_shift_upper_halo": 9.611993589469753e-12,
+    "Lambda_GeV_for_spike_probability_bound_0p1": 1034.3998302260127,
+    "symmetric_dark_bath_bound": 0
+  },
+  "checks": {
+    "source_outside_horizon": true,
+    "nonnegative_density": true,
+    "spike_matches_nfw_at_radius": true,
+    "simpson_spike_convergence": true,
+    "simpson_outer_convergence": true,
+    "symmetric_DM_vector_potential_null": true,
+    "doubling_lam_quarters_phase": true,
+    "halving_mass_doubles_phase": true,
+    "rescaling_asym_scales_linearly": true,
+    "halo_constant_column_check": true,
+    "small_halo_upper_bound": true,
+    "local_potential_smaller_than_vacuum_scale": true
+  },
+  "checks_passed": 12,
+  "limitations": [
+    "Perturbation norm bound is a worst-case ceiling, not a predicted flavor fraction or detector sensitivity.",
+    "Weak/flat radial path dr: near-horizon GR propagation and redshift corrections omitted.",
+    "Density spike and maximally asymmetric charge are assumptions of a source benchmark, not independently measured.",
+    "No neutrino production mixture, PMNS 3-flavor evolution, detector efficiency, covariance or charged-lepton viability fit.",
+    "A single conventional or novel forward potential can be observationally degenerate with source/ordinary NSI nuisances."
+  ],
+  "runtime": {
+    "workers": 1,
+    "random_seed": null,
+    "method": "deterministic log-Simpson quadrature",
+    "python": "3.13.5"
+  },
+  "code_sha256": "e7773794bddf7d039d33bc50b65fe31775d9e9597233012fa39f2d380929673d"
+}
