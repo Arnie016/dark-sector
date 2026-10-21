@@ -1,0 +1,36 @@
+{
+  "date": "2026-10-21",
+  "claim_id": "N-06-C1",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "UNIDENTIFIABLE"
+  ],
+  "research": {
+    "supported": [
+      "vector-current asymmetry identity",
+      "parameter ratio null",
+      "two-flavor illustrative probabilities"
+    ],
+    "unresolved": [
+      "three-flavor radial propagation",
+      "AGN density spike prior",
+      "source/anti-source composition",
+      "detector likelihood",
+      "ordinary-matter comparison"
+    ],
+    "preserved_failures": [
+      "C-03 Cassini fail",
+      "N-04 abstract gate does not establish dark physics"
+    ]
+  },
+  "learning": {
+    "introduced": [
+      "number asymmetry vs gravitating density",
+      "rank-one parameter sensitivity",
+      "ordinary MSW competitor"
+    ],
+    "demonstrated_understanding": "NOT_ASSESSED"
+  },
+  "privacy": "Original work only; no private content"
+}
