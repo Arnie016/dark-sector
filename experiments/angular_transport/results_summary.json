@@ -1,0 +1,44 @@
+{
+  "study_id": "S-02",
+  "date": "2026-10-21",
+  "classification": [
+    "DERIVED",
+    "MODEL_CALCULATED"
+  ],
+  "observational_status": "DATA_INSUFFICIENT",
+  "source": "https://arxiv.org/html/2503.10748v2",
+  "source_version_date": "2025-09-29",
+  "reference_script_sha256": "b18ee464ed82f5d8b9ee456738d44eb40b8f3f164089892a36e744dde8bc7070",
+  "checks_passed": 40,
+  "numeric_validation_max_absolute_normalized_error": 6.469373322638694e-12,
+  "data_kind": "MODEL_CALCULATED, no observations",
+  "seed": null,
+  "samples": [
+    {
+      "model": "GroupSIDM",
+      "v_km_s": 30,
+      "sigma_total_over_m_cm2_g": 138.4470588235294,
+      "sigma_V_over_m_cm2_g": 138.3961858862132
+    },
+    {
+      "model": "GroupSIDM",
+      "v_km_s": 1000,
+      "sigma_total_over_m_cm2_g": 2.088170347003154,
+      "sigma_V_over_m_cm2_g": 0.4350953730684113
+    },
+    {
+      "model": "MilkyWaySIDM",
+      "v_km_s": 30,
+      "sigma_total_over_m_cm2_g": 58.276861300646104,
+      "sigma_V_over_m_cm2_g": 53.52585384184141
+    },
+    {
+      "model": "MilkyWaySIDM",
+      "v_km_s": 1000,
+      "sigma_total_over_m_cm2_g": 0.08680981867017347,
+      "sigma_V_over_m_cm2_g": 0.0016753342406516148
+    }
+  ],
+  "null": "If halo velocity-distribution and calibrated halo transport observables are absent, return DATA_INSUFFICIENT.",
+  "executed_local_script_sha256": "b18ee464ed82f5d8b9ee456738d44eb40b8f3f164089892a36e744dde8bc7070"
+}
