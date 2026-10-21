@@ -58,9 +58,10 @@
     "rescaling_asym_scales_linearly": true,
     "halo_constant_column_check": true,
     "small_halo_upper_bound": true,
-    "local_potential_smaller_than_vacuum_scale": true
+    "local_potential_smaller_than_vacuum_scale": true,
+    "opposite_dark_charge_same_norm": true
   },
-  "checks_passed": 12,
+  "checks_passed": 13,
   "limitations": [
     "Perturbation norm bound is a worst-case ceiling, not a predicted flavor fraction or detector sensitivity.",
     "Weak/flat radial path dr: near-horizon GR propagation and redshift corrections omitted.",
@@ -74,5 +75,5 @@
     "method": "deterministic log-Simpson quadrature",
     "python": "3.13.5"
   },
-  "code_sha256": "e7773794bddf7d039d33bc50b65fe31775d9e9597233012fa39f2d380929673d"
+  "code_sha256": "3f2f8146d269121b9c668ff762ea85d2de279f568222e2568e82c030cb2091b9"
 }

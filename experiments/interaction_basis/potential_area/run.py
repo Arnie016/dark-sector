@@ -63,7 +63,7 @@ def epsilon_dimless(lam_gev, coupling):
 def phase_area(column_gev_cm3_pc, lam_gev=LAMBDA_GEV, mchi_gev=MCHI_GEV, asym=ASYMMETRY, coupling=C_EFT):
     # V = C*Delta n/Lambda^2; Delta n=(asym)*rho/mchi in cm^-3.
     # Convert n_cm^-3 -> eV^3 via (hbar*c)^3, then path to eV^-1.
-    n_column_cm3_pc = asym*column_gev_cm3_pc/mchi_gev
+    n_column_cm3_pc = abs(asym)*column_gev_cm3_pc/mchi_gev
     return abs(coupling)*n_column_cm3_pc*(HBARC_EV_CM**3)/(lam_gev*1e9)**2*(PC/HBARC_EV_M)
 
 def main():
@@ -89,6 +89,7 @@ def main():
       'simpson_spike_convergence': abs(sp['8192']-sp['4096'])/spike_col<1e-7,
       'simpson_outer_convergence': abs(ext['8192']-ext['4096'])/outer_col<1e-8,
       'symmetric_DM_vector_potential_null': phase_area(spike_col,asym=0)==0,
+      'opposite_dark_charge_same_norm': phase_area(spike_col,asym=-1)==phase_spike,
       'doubling_lam_quarters_phase': abs(phase_area(spike_col,lam_gev=2000)/phase_spike-.25)<1e-14,
       'halving_mass_doubles_phase': abs(phase_area(spike_col,mchi_gev=.5)/phase_spike-2)<1e-14,
       'rescaling_asym_scales_linearly': abs(phase_area(spike_col,asym=.1)/phase_spike-.1)<1e-14,
