@@ -1,0 +1,31 @@
+{
+  "study": "S-03",
+  "as_of": "2026-10-22",
+  "kind": "MODEL-CALCULATED, NO OBSERVATIONAL INPUT",
+  "code_sha256": "cc069fd4b835c7527f0b45113ccf8e15fc957f8b6ef0886b9558b78a9361e1e3",
+  "checks_passed": 26,
+  "checks_total": 26,
+  "grid_max_fraction_error": 5.069272875546284e-13,
+  "seed": null,
+  "group_s100": {
+    "sigma0_over_m_cm2_g": 147.1,
+    "w_km_s": 120,
+    "R1_over_m_cm2_g": 26.055946592338493,
+    "R5_over_m_cm2_g": 9.71663801802366
+  },
+  "mw_s100": {
+    "sigma0_over_m_cm2_g": 147.1,
+    "w_km_s": 24.3,
+    "R1_over_m_cm2_g": 0.6390020741723607,
+    "R5_over_m_cm2_g": 0.08854791309206884
+  },
+  "constructed_matched_rate": {
+    "s_km_s": 100,
+    "sigma0_alternate_over_m_cm2_g": 5998.149143251681,
+    "shared_R1_over_m_cm2_g": 26.055946592338493,
+    "alternate_R5_over_m_cm2_g": 3.6106294292992325,
+    "heldout_s30_alternate_over_reference_R1": 5.018647910786808,
+    "heldout_s300_alternate_over_reference_R1": 0.38627130938242266
+  },
+  "warning": "This compact file summarizes actual locally executed output. python3 run.py generates the full results.json."
+}
