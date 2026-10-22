@@ -1,58 +1,72 @@
-# S-03 | Velocity averages are not interchangeable
+# S-03 | Velocity-weighted self-interacting dark matter
 
-**22 October 2026. S-03-C1: DERIVED. S-03-C2: SIMULATION_RESULT. S-03-C3: UNIDENTIFIABLE for a restricted single moment.** This is a worked computational check of known SIDM kinetic theory, **not** observed dark matter, an N-body baseline reproduction, or a new particle claim.
+**22 October 2026 | DERIVED + SIMULATION_RESULT + UNIDENTIFIABLE (single speed moment).** No observational halo or detector inputs were used. This is an original numerical audit of established kinetic theory, not a new particle interaction or an N-body reproduction.
 
 ## Question and explanatory AHA
 
-Does one representative halo speed determine its heat transport response when self-interaction strength falls sharply with relative speed? No. The outcome depends on **which velocity-weighted expectation** an observable probes. The rate of angular deflection and a conductivity-motivated response weigh the same interaction differently.
+When particles have a distribution of relative speeds, which "effective cross section" should describe them? It depends on what the experiment measures. The **AHA** is that a collision-rate proxy and a conductivity-motivated proxy emphasize different speeds, even for exactly the same microscopic scattering law. An effective value obtained for one observable is not automatically transferable to another.
 
-[Nadler et al., SIDM Concerto, arXiv:2503.10748v2, Section II Eq. (1), 29 September 2025](https://arxiv.org/html/2503.10748v2) use
-[
-rac{dsigma}{dmu}=rac{sigma_0}{2[1+(v/w)^2(1-mu)/2]^2},quadmu=cos	heta.
-]
-Here v is the relative speed in km/s, w the transition velocity and mu the cosine of the deflection angle. Our (3/2)-normalized angular viscosity cross section is
-[
-sigma_V(v)=rac32int_{-1}^{1}(1-mu^2)rac{dsigma}{dmu}dmu
-=sigma_0,6rac{(y+2)ln(1+y)-2y}{y^3},quad y=(v/w)^2.
-]
-The small-y limit is sigma_V/sigma0 = 1-y+0.9y²+..., not a numerically safe direct subtraction at small y.
+[S-02](https://github.com/Arnie016/dark-sector/tree/research/s02-angular-transport-2026-10-21/experiments/angular_transport) calculated the angular moments at a fixed velocity. Here we perform the missing speed average. This is not the actual heat flux, which also depends on temperature gradients and transport regime.
 
-With two independently sampled, isotropic Gaussian velocity vectors of one-particle 1D dispersion s, the relative-speed probability density is
-[
-f_s(v)=rac{v^2}{2sqrtpi,s^3}e^{-v^2/(4s^2)},quad
-langle vangle=4s/sqrtpi.
-]
-For p=1 versus p=5 define
-[
-R_p(s)=rac{int_0^infty dv,f_s(v)v^psigma_V(v)}
-             {int_0^infty dv,f_s(v)v^p}.
-]
-R1 is a viscosity-weighted encounter-rate **proxy**, not total collision count. R5 is a literature-motivated heat-conduction effective cross section, *not* the heat flux or a gravothermal collapse time. The p=5 effective weight is already in [Fischer et al., MNRAS 529 (2024), Section 3.2.1 Eq. (9)](https://academic.oup.com/mnras/article/529/3/2327/7624679), based on Yang & Yu (2022). Neither this weighting nor the SIDM angular model is a novelty claim.
+## One mathematical tool: a weighted expectation
 
-The normalized radial Maxwell moment is
-[
-langle v^pangle=(2s)^prac{2}{sqrtpi}Gamma((p+3)/2).
-]
-Consequently, for s/w small,
-[
-R_p/sigma_0=1-2(p+3)(s/w)^2+O((s/w)^4).
-]
-At first correction order, R5 decreases twice as fast as R1.
+[Nadler et al., SIDM Concerto, arXiv:2503.10748v2 (29 September 2025), Eq. 1](https://arxiv.org/html/2503.10748v2) specify the angular scattering law. Set relative speed \(v\), transition speed \(w\), scattering-angle cosine \(\mu=\cos\theta\), and \(y=(v/w)^2\):
 
-## MODEL-CALCULATED output (not observed)
+\[
+\frac{d\sigma}{d\mu}
+ =\frac{\sigma_0}{2[1+y(1-\mu)/2]^2},
+\qquad
+\frac{\sigma_V(v)}{\sigma_0}
+ =6\frac{(y+2)\ln(1+y)-2y}{y^3}.
+\]
 
-Published GroupSIDM parameters: sigma0/m=147.1 cm²/g, w=120 km/s. Published MilkyWaySIDM parameters: same sigma0/m, w=24.3 km/s. For s=100 km/s, GroupSIDM yields R1/m = **26.05595** cm²/g and R5/m = **9.71664** cm²/g. The MilkyWaySIDM model gives R1/m = **0.639002** and R5/m = **0.0885479** cm²/g. The R5/R1 ratios are **0.3729** and **0.1386** respectively.
+The second expression integrates the first with an explicitly **3/2-normalized** angular factor \(1-\mu^2\), to downweight weakly deflecting encounters. Its small-\(y\) limit is \(1-y+0.9y^2+\cdots\). Angular normalization conventions must be checked when comparing papers.
 
-**Exact single-rate degeneracy control, SIMULATED:** Hold the first GroupSIDM R1 at 26.05595 by resetting the second model's otherwise-free sigma0/m to 5998.15 cm²/g. This is not a physically permitted coupling fit. Its R5/m is 3.61063 versus 9.71664. A held-out s=30 km/s environment predicts R1/m=507.87 versus 101.20; at s=300 km/s, 0.942 versus 2.438. One scalar R1 observation fixes only sigma0*F(s/w), not sigma0 and w individually. A second calibrated speed regime can separate *these restricted models*.
+For **SIMULATED independent isotropic Gaussian** one-particle velocities with component standard deviation \(s\) km/s, the relative-speed density is
 
-## Execution and falsifiability
+\[
+f_s(v)=\frac{v^2}{2\sqrt{\pi}\,s^3}e^{-v^2/(4s^2)},
+\quad\langle v\rangle=\frac{4s}{\sqrt{\pi}}.
+\]
 
-One Python standard-library CPU process on a deterministic 0..10 transformed Maxwell integration interval using Simpson quadrature (6000 and 12000 subdivisions). **26 checks passed**, including small-speed limits, exact rate match, held-out separation, positivity and refinement. Largest coarse/fine difference in dimensionless response **5.07e-13**. No RNG, paid service, Mac or N-body data. SHA-256 of **actually executed** run.py: `cc069fd4b835c7527f0b45113ccf8e15fc957f8b6ef0886b9558b78a9361e1e3`. Run `python3 run.py` to regenerate full output `results.json`. This repository contribution includes the executable source and compact results summary; the complete numerical JSON/figure is in the ChatGPT companion package.
+Define \(R_p=\langle v^p\sigma_V(v)\rangle/\langle v^p\rangle\), where brackets mean integration with this distribution. \(R_1\) is a normalized **viscosity-weighted rate-like proxy**, not total collision counting. \(R_5\) is a **conductivity-motivated cross-section proxy**, supported by [Fischer et al., MNRAS 529 (2024), Eq. 9](https://academic.oup.com/mnras/article/529/3/2327/7624679) following Yang & Yu (2022). Neither is the physical heat flux or gravothermal collapse time.
 
-**Strongest null:** merger histories, baryonic feedback, speed-distribution uncertainty and simulated-halo selection explain differences. The Maxwell assumption does not apply automatically to merging or anisotropic halos. Actual heat flow also depends on gradients and long- versus short-mean-free-path conductivity: a smaller R5 does **not** universally imply smaller heat flow.
+For small \(s/w\), the Maxwell moments give
 
-**Decision gate:** acquire actual released matched Halo004 velocities, verify particle IDs/units, measure f(v,r) under the same spatial mask for independent CDM/SIDM halos. Stop with DATA_INSUFFICIENT if those particle-level inputs cannot be retrieved. [Mergers Matter, June 2026 v1](https://arxiv.org/html/2606.02566v1) shows histories alter collapse even with constant scattering. [TNGC-SIDM I, 13 October 2026 v1](https://arxiv.org/abs/2610.18957) uses isotropic velocity-independent scattering, so it is not a reproduction of this velocity-dependent check.
+\[
+\boxed{\frac{R_p}{\sigma_0}
+ =1-2(p+3)(s/w)^2+O((s/w)^4).}
+\]
 
-**Research checkpoint:** S-02 fixed-speed angular audit on independent branch read; main HEAD b6b85682, PRs #4–#8 inspected. Preserve S-01/C-04/D-04/N-06 and the C-03 unscreened-gravity FAILED result. Old ZIP names were searched in Library without exact match; October 19 particle-physics bridge context was read.
+Thus the first corrections are \(1-8(s/w)^2\) for \(R_1\), and \(1-16(s/w)^2\) for \(R_5\). This expansion is not reliable when \(s\) approaches or exceeds \(w\); the numerical calculation integrates the full formula.
 
-**Learning checkpoint:** velocity distribution versus representative speed, relative versus one-particle dispersion, kinetic weight and observable identifiability introduced. Understanding: NOT_ASSESSED. No public scientific authorship claim, outreach or schedule change.
+## MODEL-CALCULATED, not observed
+
+Use the published \(\sigma_0/m=147.1\) cm²/g for both models, with GroupSIDM \(w=120\) km/s and MilkyWaySIDM \(w=24.3\) km/s. Each \(s\) below is an invented **one-particle 1D dispersion**, not an empirical halo velocity distribution.
+
+| Model | \(s\) (km/s) | \(R_1/m\) (cm²/g) | \(R_5/m\) (cm²/g) |
+|---|---:|---:|---:|
+| GroupSIDM | 30 | 101.1964 | 74.6756 |
+| GroupSIDM | 100 | 26.05595 | 9.71664 |
+| GroupSIDM | 300 | 2.43759 | 0.447729 |
+| MilkyWaySIDM | 30 | 12.4551 | 3.57660 |
+| MilkyWaySIDM | 100 | 0.639002 | 0.0885479 |
+| MilkyWaySIDM | 300 | 0.0230913 | 0.00192201 |
+
+At \(s=100\) km/s, the mean relative speed is about **225.7 km/s**, not 100 km/s.
+
+### The identifiability control
+
+A *deliberately artificial* alternative with \(w=24.3\) km/s and adjustable \(\sigma_0/m=5998.149\) cm²/g exactly matches the GroupSIDM \(R_1/m=26.05595\) cm²/g at \(s=100\). Yet the alternative's \(R_5/m=3.61063\) differs from the reference \(9.71664\). At a held-out \(s=30\), their \(R_1/m\) values are **507.87** versus **101.20**; at \(s=300\) the values are **0.942** versus **2.438**.
+
+A single \(R_1(s;\sigma_0,w)=\sigma_0F(s/w)\) fixes only a parameter combination. Other speed regimes may distinguish these restricted laws if the actual velocity distributions and nuisance uncertainties are controlled. The altered normalization is **not** asserted to satisfy any particle-physics bound.
+
+## Actual execution and stopping rule
+
+One standard-library CPU run, deterministic Simpson integration of \(u=v/(2s)\) over \([0,10]\), coarse and fine grids of 6,000 and 12,000 intervals. **26 internal numerical/limiting checks passed**; maximum dimensionless grid difference \(5.07\times10^{-13}\). No RNG, paid compute, observations, N-body simulations, background covariance or particle-response fit. The executed \`run.py\` has SHA-256 \`cc069fd4b835c7527f0b45113ccf8e15fc957f8b6ef0886b9558b78a9361e1e3\`. Run \`python3 run.py\` to regenerate full \`results.json\`; see [summary](summary.json). Internal checks are not independent observational validation.
+
+**Strongest null:** merger and accretion histories, uncertain halo velocity anisotropy, baryonic feedback or lens/velocity inference freedom explain apparent halo differences. A viscosity-weighted cross section is not a complete conductivity prediction; increasing or decreasing it need not produce a proportional change in real halo heat transport.
+
+**Recommended next test:** recover public SIDM Concerto matched Halo004 particle velocities and masks, verify units and identities, measure the actual \(f(v,r)\), then hold out independent halos rather than nearby snapshots. Stop at **DATA_INSUFFICIENT** without those inputs. [Mergers Matter, June 2026](https://arxiv.org/html/2606.02566v1) demonstrates history sensitivity. [TNGC-SIDM I, October 13 2026](https://arxiv.org/abs/2610.18957) instead uses velocity-independent cluster benchmarks and is not reproduction of this work. A Zenodo release redirect was not accessible during this run; that does not establish permanent absence.
+
+**Research checkpoint:** main at \`b6b85682\`, open PRs #4–#8 inspected, S-02 source read. Existing C-03 FAILED unscreened-gravity result is preserved. **Learning checkpoint:** weighted speed expectation, relative versus individual dispersion and structural non-identifiability introduced; actual user understanding **NOT_ASSESSED**. No scheduler changes, outreach or scholarly submission.
