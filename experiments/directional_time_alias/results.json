@@ -1,0 +1,109 @@
+{
+  "checks": {
+    "60-days-improves-on-30-days": true,
+    "all_fractions_between_zero_and_one": true,
+    "equal-live-hours-across-two-60-day-masks": true,
+    "independent-solar-campaign-backgrounds-reduce-information": true,
+    "one-year-gives-more-information-than-short-30-day-window": true,
+    "same-frequency-null": true,
+    "separated-campaigns-improve-if-solar-background-is-shared": true,
+    "sidereal-period-shorter-than-solar": true
+  },
+  "checks_passed": 8,
+  "code_sha256": "1ac6e3297dbd8abf9c1a0f64289cbf8fb7480f6ddee208c0138f29c876a3a7a9",
+  "date": "2026-10-23",
+  "id": "D-01",
+  "limitations": [
+    "No detector response, events, environmental diagnostics or count-rate model",
+    "Solar/sidereal only constant-phase harmonics: actual dark-wind phase and amplitude drift seasonally",
+    "Equal independent Gaussian rate residuals rather than Poisson low-count likelihood",
+    "Phase coherence across seasons is assumed for the global-solar background hypothesis",
+    "Prior-art known frequency separation, not a new particle discovery"
+  ],
+  "method": "SVD orthonormal subspace projection; eigenvalues of retained Fisher information for sidereal cosine/sine after profiling backgrounds",
+  "numpy_version": "2.3.5",
+  "parameters": {
+    "beat_days": 365.2422,
+    "random_seed": null,
+    "sidereal_period_days": 0.9972695664235306,
+    "solar_hours_each_day": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15
+    ],
+    "solar_period_days": 1,
+    "weights": "uniform/equal"
+  },
+  "platform": "Linux-6.18.55-x86_64-with-glibc2.41",
+  "runtime_seconds": 0.0023005139999980884,
+  "same_frequency_null_relative_residual": 8.280594292281842e-16,
+  "scenarios": [
+    {
+      "condition_scope": "equal-variance Gaussian rate residuals; phase amplitudes free; no Poisson count model",
+      "days": 30,
+      "live_hours": 240,
+      "mask": "30-day_contiguous_global_solar",
+      "nuisance_parameters": 3,
+      "retained_information_best_phase": 0.2349406230106485,
+      "retained_information_worst_phase": 0.05150826565568791,
+      "samples": 240,
+      "sidereal_solar_period_difference_minutes": 3.9318243501159422,
+      "worst_phase_sd_inflation": 4.40617291523694
+    },
+    {
+      "condition_scope": "equal-variance Gaussian rate residuals; phase amplitudes free; no Poisson count model",
+      "days": 60,
+      "live_hours": 480,
+      "mask": "60-day_contiguous_global_solar",
+      "nuisance_parameters": 3,
+      "retained_information_best_phase": 0.5660747545642556,
+      "retained_information_worst_phase": 0.18345634925172521,
+      "samples": 480,
+      "sidereal_solar_period_difference_minutes": 3.9318243501159422,
+      "worst_phase_sd_inflation": 2.3347136721644373
+    },
+    {
+      "condition_scope": "equal-variance Gaussian rate residuals; phase amplitudes free; no Poisson count model",
+      "days": 60,
+      "live_hours": 480,
+      "mask": "30-plus-30_gap180_global_solar",
+      "nuisance_parameters": 4,
+      "retained_information_best_phase": 0.9999644939571006,
+      "retained_information_worst_phase": 0.9947459010584391,
+      "samples": 480,
+      "sidereal_solar_period_difference_minutes": 3.9318243501159422,
+      "worst_phase_sd_inflation": 1.0026374470892563
+    },
+    {
+      "condition_scope": "equal-variance Gaussian rate residuals; phase amplitudes free; no Poisson count model",
+      "days": 60,
+      "live_hours": 480,
+      "mask": "30-plus-30_gap180_each_campaign_solar",
+      "nuisance_parameters": 6,
+      "retained_information_best_phase": 0.23392451320204033,
+      "retained_information_worst_phase": 0.051516778664409804,
+      "samples": 480,
+      "sidereal_solar_period_difference_minutes": 3.9318243501159422,
+      "worst_phase_sd_inflation": 4.405808846101059
+    },
+    {
+      "condition_scope": "equal-variance Gaussian rate residuals; phase amplitudes free; no Poisson count model",
+      "days": 365,
+      "live_hours": 2920,
+      "mask": "365-day_contiguous_global_solar",
+      "nuisance_parameters": 3,
+      "retained_information_best_phase": 0.9999999810536856,
+      "retained_information_worst_phase": 0.9999997428134954,
+      "samples": 2920,
+      "sidereal_solar_period_difference_minutes": 3.9318243501159422,
+      "worst_phase_sd_inflation": 1.0000001285932771
+    }
+  ],
+  "status": "SIMULATION_RESULT",
+  "synthetic": true
+}
