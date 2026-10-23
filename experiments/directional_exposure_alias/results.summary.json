@@ -1,0 +1,55 @@
+{
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "study": "D-07",
+  "dated": "2026-10-23",
+  "generating_truth": "SIMULATED zero sidereal, 10*(1+0.18*cos(2πt+0.37)) counts/live hour solar-only",
+  "execution": {
+    "elapsed_seconds_numerical_core": 0.032062695999997004,
+    "checks_passed": 7,
+    "exit_code": 0,
+    "platform": "Linux",
+    "python": "3.13.5",
+    "numpy": "2.3.5",
+    "seed": null,
+    "script_sha256": "e8ea5eefa8e10394ecdfef9a14fbf7fa7d637a044ab56792a4d86decc15dc8c9"
+  },
+  "masked_cases": [
+    {
+      "span_days": 14,
+      "live_hours": 108,
+      "information_min": 0.004879781687220225,
+      "information_max": 0.024056644935051788,
+      "one_sigma_worst_counts_per_live_hour": 6.197545049862467,
+      "naive_fake_sidereal_amplitude_counts_per_live_hour": 1.7668982304287744
+    },
+    {
+      "span_days": 60,
+      "live_hours": 456,
+      "information_min": 0.09619025751112881,
+      "information_max": 0.3485883847265131,
+      "one_sigma_worst_counts_per_live_hour": 0.676791332069726,
+      "naive_fake_sidereal_amplitude_counts_per_live_hour": 1.4130913576490334
+    },
+    {
+      "span_days": 180,
+      "live_hours": 1380,
+      "information_min": 0.6129160292132027,
+      "information_max": 0.8900390267734745,
+      "one_sigma_worst_counts_per_live_hour": 0.1502596242493322,
+      "naive_fake_sidereal_amplitude_counts_per_live_hour": 0.7186853780134839
+    },
+    {
+      "span_days": 365,
+      "live_hours": 2784,
+      "information_min": 0.9999259524834561,
+      "information_max": 0.9999860807924986,
+      "one_sigma_worst_counts_per_live_hour": 0.08041482035597476,
+      "naive_fake_sidereal_amplitude_counts_per_live_hour": 0.009608899432935965
+    }
+  ],
+  "raw_output_location": "Full original results.json and stdout in user companion ZIP, not claimed identical to this curated summary."
+}
