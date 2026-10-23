@@ -1,0 +1,25 @@
+{
+  "id": "N-07",
+  "as_of": "2026-10-23",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "source_sha256": "a7528d69a57f9bccb681c4d8788fcea267b9a2f2d37ac1915f2c6b6635ed470c",
+  "benchmark": "SIMULATED NGC 1068-like density law, no observed events",
+  "R_S_pc": 9.571121104102759e-7,
+  "flat_column_GeV_cm3_pc": 44526996353547.5,
+  "proper_column_GeV_cm3_pc": 45563345297542.62,
+  "flat_phase_norm": 0.0534991504385802,
+  "proper_phase_norm": 0.05474432286434706,
+  "ratio": 1.0232746205418042,
+  "ratio_pointwise_upper": 1.0515899494048075,
+  "probability_bound_flat": 0.1069983008771604,
+  "probability_bound_proper": 0.10948864572869411,
+  "checks_passed": 11,
+  "seed": null,
+  "workers": 1,
+  "source": "arXiv:2609.26773v1",
+  "prior_art": "arXiv:2610.25053v1"
+}
