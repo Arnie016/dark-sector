@@ -1,0 +1,47 @@
+{
+  "id": "N-08",
+  "as_of": "2026-10-24",
+  "status": ["DERIVED", "SIMULATION_RESULT", "DATA_INSUFFICIENT"],
+  "benchmark_type": "SIMULATED MODEL / analytical EFT coefficient rescaling, NO observational data",
+  "source_record": {
+    "N07_branch_commit": "1fadf2f89043b5fd45e8d4caa6399597014131e7",
+    "N07_summary": "experiments/interaction_basis/schwarzschild_column/summary.json",
+    "N07_source_sha256": "a7528d69a57f9bccb681c4d8788fcea267b9a2f2d37ac1915f2c6b6635ed470c",
+    "operator_prior_art": "Babu, Dev, Thapa JHEP09(2026)046; arXiv:2512.25035v2 (Sep 8 2026)",
+    "spike_preprint": "Dev et al arXiv:2609.26773v1 (Sep 22 2026)"
+  },
+  "inputs": {
+    "v_GeV": 246.2, "Lambda_GeV": 1000.0, "C6": 1.0, "C8": 1.0,
+    "abs_asymmetry": 1, "A7_flat": 0.0534991504385802,
+    "A7_proper": 0.05474432286434706
+  },
+  "derived": {
+    "low_energy_matching_factor_v2_over_2Lambda2": 0.030307219999999996,
+    "low_energy_coefficient_ratio_C8toC6": 0.030307219999999996,
+    "N08_matched_flat_area": 0.0016214105221551466,
+    "N08_matched_proper_area": 0.0016591482368007962,
+    "fixed_detector_probability_difference_ceiling_min1A": 0.0016591482368007962,
+    "old_N07_looser_bound_min1_2A": 0.10948864572869411,
+    "tightened_N07_same_dimension6_ceiling_min1A": 0.05474432286434706,
+    "C8_to_recover_old_N07_area_at_same_Lambda": 32.99543805073511,
+    "N08_symmetric_dark_bath_area": 0.0
+  },
+  "checks": {
+    "higgs_projector_idempotent": true, "dimension8_factor_less_than_unity": true,
+    "matched_directly": true, "flat_curved_ratio_preserved": true,
+    "symmetric_dark_current_null": true, "dark_current_charge_reversal_norm": true,
+    "half_asymmetry_half_area": true, "doubling_UV_scale_sixteenth_area": true,
+    "doubling_C8_doubles_area": true, "unity_eff_coupling_required_C8": true,
+    "stronger_trace_distance_bound": true, "prior_loose_bound_still_valid": true
+  },
+  "checks_passed": 12,
+  "limitations": [
+    "Both Wilson coefficients C6=C8=1 are chosen hypothetical independent parameters, not a UV matching result.",
+    "Earlier N07 area is an assumed DM column result read from saved GitHub summary; N07 integration was not rerun here.",
+    "Dimension-8 Higgs projector is gauge invariant but does not establish absence of loop-induced charged-lepton effects.",
+    "Bounds are not probabilities or detector sensitivity, assume same input state and detector POVM.",
+    "No calibrated flavor, source density, asymmetry, mediator mass, astrophysical likelihood, or charged-lepton data fitted."
+  ],
+  "execution": {"python": "3.13.5", "workers": 1, "seed": null, "wall_sec": 0.000032057999987955554},
+  "sha256": "2b170663b8e7099d7747ce9cae6e0e94539a4a7ae5544e60337792c406452db9"
+}
