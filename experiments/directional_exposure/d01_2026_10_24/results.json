@@ -1,0 +1,92 @@
+{
+  "bin_width_h": 1.0,
+  "checks": {
+    "continuous_full_rank": true,
+    "continuous_resolves_with_longer_baseline": true,
+    "continuous_valid_bounds": true,
+    "frequency_beat_roughly_one_year": true,
+    "night_6in7_full_rank": true,
+    "night_6in7_resolves_with_longer_baseline": true,
+    "night_6in7_valid_bounds": true,
+    "same_frequency_information_zero": true
+  },
+  "checks_passed": 8,
+  "classification": "SIMULATED DESIGN; NOT OBSERVATIONAL DATA",
+  "compute_elapsed_seconds": 0.0234011320000036,
+  "covariance": "idealized equal-variance independent equal-exposure bins; no physical rate/likelihood",
+  "date": "2026-10-24",
+  "frequency_beat_period_days": 365.2422326126611,
+  "masks": {
+    "continuous": "all hourly midpoints observed",
+    "night_6in7": "solar hours [18,24) or [0,6); discard every seventh full day beginning with day 0"
+  },
+  "model": "constant + free-phase solar frequency + free-phase sidereal frequency",
+  "numpy_version": "2.3.5",
+  "results": {
+    "continuous": {
+      "120": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 1.8041147317831416,
+        "max_canonical_correlation": 0.832324629321107,
+        "n_observed_hourly_bins": 2880,
+        "observed_exposure_hours": 2880.0,
+        "solar_sidereal_min_principal_angle_deg": 33.66172055215085,
+        "worst_phase_retained_info_fraction": 0.3072357114254819
+      },
+      "30": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 6.76335915611367,
+        "max_canonical_correlation": 0.9890089709140928,
+        "n_observed_hourly_bins": 720,
+        "observed_exposure_hours": 720.0,
+        "solar_sidereal_min_principal_angle_deg": 8.502671322339676,
+        "worst_phase_retained_info_fraction": 0.021861255451447126
+      },
+      "365": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 1.0000002208259702,
+        "max_canonical_correlation": 0.0006645688782072219,
+        "n_observed_hourly_bins": 8760,
+        "observed_exposure_hours": 8760.0,
+        "solar_sidereal_min_principal_angle_deg": 89.96192300528018,
+        "worst_phase_retained_info_fraction": 0.9999995583482061
+      }
+    },
+    "night_6in7": {
+      "120": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 1.80483307620994,
+        "max_canonical_correlation": 0.832471504997878,
+        "n_observed_hourly_bins": 1224,
+        "observed_exposure_hours": 1224.0,
+        "solar_sidereal_min_principal_angle_deg": 33.64653526183897,
+        "worst_phase_retained_info_fraction": 0.3069911933665679
+      },
+      "30": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 6.9027142259102305,
+        "max_canonical_correlation": 0.9894506172676611,
+        "n_observed_hourly_bins": 300,
+        "observed_exposure_hours": 300.0,
+        "solar_sidereal_min_principal_angle_deg": 8.32978304638338,
+        "worst_phase_retained_info_fraction": 0.020987475988644366
+      },
+      "365": {
+        "both_two_column_bases_full_rank": true,
+        "conditional_sd_inflation": 1.0000057765470256,
+        "max_canonical_correlation": 0.003398969541884802,
+        "n_observed_hourly_bins": 3744,
+        "observed_exposure_hours": 3744.0,
+        "solar_sidereal_min_principal_angle_deg": 89.80525301557014,
+        "worst_phase_retained_info_fraction": 0.9999884470060534
+      }
+    }
+  },
+  "runtime_python": "3.13.5",
+  "seed": null,
+  "sidereal_period_h": 23.9344696,
+  "solar_period_h": 24.0,
+  "source_sha256": "2ff9e8c6a987c1b78861a5ac9e98125bcfe8e5bb2428280ab4cb9205f36bbecf",
+  "study": "D-01",
+  "true_particle_signal": null
+}
