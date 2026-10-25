@@ -1,0 +1,75 @@
+{
+  "assumptions": [
+    "two equal fixed positive heat capacities; static geometry",
+    "symmetric linear heat transfer",
+    "single positive outer-zone impulse",
+    "no gravity, negative heat capacity, baryons, or velocity-dependent cross sections"
+  ],
+  "claim_id": "C-05-H1",
+  "core_difference_early_minus_late_km2_s2": 19.170024978210186,
+  "data_label": "SIMULATED fixed-capacity two-reservoir model, NOT observed SIDM simulation data",
+  "early_to_late_core_energy_ratio": 1.9744101008840762,
+  "generating_truth": {
+    "alpha_Gyr^-1": 0.1,
+    "horizon_Gyr": 10.0,
+    "merger_epochs_Gyr": {
+      "early": 2.5,
+      "late": 7.5
+    },
+    "normalized_total_alpha_exposure": 1.0,
+    "outer_impulse_km2_s2": 100.0
+  },
+  "python_version": "3.13.5",
+  "random_seed": null,
+  "runs": {
+    "early": {
+      "core_RK4_2000_km2_s2": 38.843491992578485,
+      "core_analytic_km2_s2": 38.843491992578514,
+      "max_RK4_1000_analytic_abs_error_km2_s2": 8.668621376273222e-13,
+      "max_RK4_2000_analytic_abs_error_km2_s2": 6.394884621840902e-14,
+      "merger_time_Gyr": 2.5,
+      "outer_RK4_2000_km2_s2": 61.15650800742156,
+      "outer_analytic_km2_s2": 61.15650800742149,
+      "remaining_conduction_time_Gyr": 7.5,
+      "total_specific_energy_km2_s2": 100.0
+    },
+    "late": {
+      "core_RK4_2000_km2_s2": 19.673467014368356,
+      "core_analytic_km2_s2": 19.673467014368327,
+      "max_RK4_1000_analytic_abs_error_km2_s2": 2.842170943040401e-14,
+      "max_RK4_2000_analytic_abs_error_km2_s2": 1.1368683772161603e-13,
+      "merger_time_Gyr": 7.5,
+      "outer_RK4_2000_km2_s2": 80.32653298563156,
+      "outer_analytic_km2_s2": 80.32653298563167,
+      "remaining_conduction_time_Gyr": 2.5,
+      "total_specific_energy_km2_s2": 100.0
+    }
+  },
+  "scope": "ALGORITHMIC IDENTITY CHECK with SIMULATED assumptions, not calibrated or N-body physics",
+  "source_SHA256": "778dd33d292c0729f2e1965a6b27f12b524eccee86eac457ed7d63c922ae8fbf",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "DATA_INSUFFICIENT"
+  ],
+  "stop_condition": "any failed conservation, limiting, or analytic-versus-RK4 check",
+  "tests": {
+    "coarse_integrator_also_matches": true,
+    "earlier_merger_heats_core_more_at_fixed_alpha": true,
+    "equal_injected_energy": true,
+    "fast_exchange_equilibrates_if_time_remains": true,
+    "fixed_total_transport_exposure": true,
+    "no_heat_source_has_zero_response": true,
+    "numeric_matches_analytic_early": true,
+    "numeric_matches_analytic_late": true,
+    "pulse_at_end_no_exchange": true,
+    "timing_response_within_physical_bounds": true,
+    "zero_exchange_no_core_heating": true
+  },
+  "tests_passed": 11,
+  "units": {
+    "alpha": "Gyr^-1",
+    "specific_kinetic_energy": "(km/s)^2",
+    "time": "Gyr"
+  }
+}
