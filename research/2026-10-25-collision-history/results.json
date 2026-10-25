@@ -1,0 +1,87 @@
+{
+  "checks": {
+    "cm2_per_g_units_exposure_g_per_cm2": true,
+    "different_early_density": true,
+    "fisher_rank_one_identity": true,
+    "history_boost_50_percent_at_fixed_cross_section": true,
+    "matched_integrated_scattering": true,
+    "midpoint_quadrature_matches_analytic": true,
+    "probability_falls_in_0_1": true,
+    "same_endpoint_density": true,
+    "sloped_half_histories_ratio_1p4": true,
+    "symmetric_half_histories_equal": true,
+    "zero_cross_section_null": true
+  },
+  "checks_passed": 11,
+  "critical_limits": [
+    "No cosmological expansion or radius dependence",
+    "Frozen trajectory and constant velocity",
+    "Expected collision count alone does not predict heat flux or gravothermal collapse",
+    "No N-body code or paper data rerun",
+    "No measured scattering event count",
+    "Cross section velocity dependence ignored",
+    "Fisher is conditional on one illustrative scalar measurement, not calibrated likelihood"
+  ],
+  "dataset_label": "SIMULATED_FIXED_TRAJECTORY_NOT_OBSERVATIONS",
+  "description": "Two imposed linear histories with equal final density but adjusted scattering cross sections giving identical integrated collision optical depths",
+  "generating_inputs": {
+    "cross_section_flat_cm2_per_g": 1.0,
+    "cross_section_high_cm2_per_g": 0.6666666666666666,
+    "duration_Gyr": 10.0,
+    "history_linear_a_flat": 0.0,
+    "history_linear_a_high": 1.0,
+    "rho_final_Msun_per_pc3": 0.01,
+    "seed": null,
+    "v_km_per_s": 30.0
+  },
+  "model": "inhomogeneous Poisson event count with prescribed rho(t), constant relative speed and constant sigma/m, no dynamical response",
+  "results": {
+    "P_at_least_one_flat": 0.4731060177561492,
+    "P_at_least_one_high_adjusted_sigma": 0.47310601775614913,
+    "P_at_least_one_high_same_sigma": 0.6175410242226186,
+    "collision_exposure_flat_g_per_cm2": 0.6407559228914254,
+    "collision_exposure_high_g_per_cm2": 0.961133884337138,
+    "early_late_exposure_ratio_flat": 1.0,
+    "early_late_exposure_ratio_high": 1.4,
+    "expected_collisions_flat": 0.6407559228914254,
+    "expected_collisions_high_adjusted_sigma": 0.6407559228914252,
+    "expected_collisions_high_same_sigma": 0.961133884337138,
+    "fisher_determinant_numeric": 0.0,
+    "fisher_proportional_2x2": [
+      [
+        0.4105681527204422,
+        0.2052840763602211
+      ],
+      [
+        0.2052840763602211,
+        0.10264203818011056
+      ]
+    ],
+    "midpoint_g_per_cm2": {
+      "256": 0.9611338843371379,
+      "32": 0.9611338843371379,
+      "4096": 0.9611338843371379
+    },
+    "rho_final_g_per_cm3": 6.768109983980883e-25,
+    "rho_initial_flat_g_per_cm3": 6.768109983980883e-25,
+    "rho_initial_high_g_per_cm3": 1.3536219967961765e-24,
+    "sensitivity_J_at_flat_logk_a": [
+      0.6407559228914254,
+      0.3203779614457127
+    ]
+  },
+  "runtime": {
+    "environment": "ChatGPT Linux container; not user's Mac",
+    "python": "3.13.5",
+    "seconds_core": 0.0013666270000101122,
+    "source_sha256": "9df0d40f07d9b26a8ba9dd1b65289fc1daf4df4d742702ec51c1eb2d302474a3",
+    "worker_count": 1
+  },
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "UNIDENTIFIABLE",
+    "DATA_INSUFFICIENT"
+  ],
+  "study_id": "C05-2026-10-25-v1.0.0"
+}
