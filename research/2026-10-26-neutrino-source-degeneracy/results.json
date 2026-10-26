@@ -1,0 +1,166 @@
+{
+  "checks": {
+    "analytic_derivative_finite_difference": true,
+    "distinct_rows_full_rank": true,
+    "distinct_rows_positive_fisher_determinant": true,
+    "distinct_rows_predictions_separate": true,
+    "free_source_mixture_exact_match": true,
+    "free_source_mixture_physical": true,
+    "no_vacuum_mixing_no_conversion": true,
+    "normalization_source_mixture_bounds": true,
+    "potential_sign_reversal_even_probability": true,
+    "proportional_rows_exact_alternate_p": true,
+    "proportional_rows_rank_one": true,
+    "proportional_rows_zero_fisher_det": true,
+    "source_zero_flavor_sensitivity_at_half": true,
+    "unitarity_probability_range": true,
+    "vacuum_potential_zero_first_derivative": true,
+    "zero_baseline_flavor_change": true
+  },
+  "checks_passed": 16,
+  "data_class": "SIMULATED ONLY; no astrophysical or detector events",
+  "date": "2026-10-26",
+  "environment": {
+    "platform": "Linux",
+    "python": "3.13.5"
+  },
+  "limitations": [
+    "Non-reproduced illustrative toy; no neutrino three-flavor propagation or phase averaging.",
+    "Full column rank is a necessary design criterion for the constant common-generator toy, not sufficient real-world identifiability.",
+    "Unknown per-source mixture can absorb output differences in this example.",
+    "No gauge-complete model, source population, calibrated density maps or likelihood.",
+    "Fisher entries assume independent Gaussian error sigma=0.05 on simulated probabilities; not a sensitivity forecast."
+  ],
+  "model": "constant two-flavor H=(DELTA*sigma_x+v*sigma_z)/2; v=theta_chi*x+theta_e*y",
+  "nonproportional": {
+    "determinant_columns": -1.5,
+    "determinant_fisher": 190080.26203911367,
+    "fisher": [
+      [
+        1509.6422379681326,
+        582.4074690170485
+      ],
+      [
+        582.4074690170485,
+        350.59877677927733
+      ]
+    ],
+    "free_source_w_alt": [
+      0.6999999999999998,
+      0.45205207271556486
+    ],
+    "jacobian": [
+      [
+        -0.8266335534867012,
+        -0.8266335534867012
+      ],
+      [
+        -1.7580621613499,
+        -0.439515540337475
+      ]
+    ],
+    "observed_probability_simulated": [
+      0.5848466106426111,
+      0.4796589044128865
+    ],
+    "p_e_to_mu_alt": [
+      0.7121165266065279,
+      0.7121165266065279
+    ],
+    "p_e_to_mu_truth": [
+      0.7121165266065279,
+      0.44914726103221614
+    ],
+    "rows": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        2.0,
+        0.5
+      ]
+    ],
+    "v_truth": [
+      0.6000000000000001,
+      0.9
+    ]
+  },
+  "parameters": {
+    "L": 3.0,
+    "delta": 1.0,
+    "simulated_error_sigma": 0.05,
+    "source_w_truth": [
+      0.7,
+      0.7
+    ],
+    "theta_alt": [
+      0.2,
+      0.4
+    ],
+    "theta_truth": [
+      0.4,
+      0.2
+    ]
+  },
+  "proportional": {
+    "determinant_columns": 0.0,
+    "determinant_fisher": 0.0,
+    "fisher": [
+      [
+        1010.889351388162,
+        1010.889351388162
+      ],
+      [
+        1010.889351388162,
+        1010.889351388162
+      ]
+    ],
+    "free_source_w_alt": [
+      0.6999999999999998,
+      0.7000000000000001
+    ],
+    "jacobian": [
+      [
+        -0.8266335534867012,
+        -0.8266335534867012
+      ],
+      [
+        -1.3579029224213175,
+        -1.3579029224213175
+      ]
+    ],
+    "observed_probability_simulated": [
+      0.5848466106426111,
+      0.384117718362621
+    ],
+    "p_e_to_mu_alt": [
+      0.7121165266065279,
+      0.2102942959065524
+    ],
+    "p_e_to_mu_truth": [
+      0.7121165266065279,
+      0.2102942959065524
+    ],
+    "rows": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        2.0,
+        2.0
+      ]
+    ],
+    "v_truth": [
+      0.6000000000000001,
+      1.2000000000000002
+    ]
+  },
+  "seed": null,
+  "source_mix_consequence": "Each free per-source source fraction w_i can exactly absorb this difference; this is a local/model-specific demonstration, not a universal real-detector theorem.",
+  "source_sha256": "14eaab95fd8b02c3c83541be9ad6f16628eacaa1ccb02d25981165705457080e",
+  "status": "SIMULATION_RESULT + UNIDENTIFIABLE",
+  "study": "N-10",
+  "units": "all dimensionless: density templates x,y, coefficients theta, DELTA and L"
+}
