@@ -1,0 +1,134 @@
+{
+  "alternative_free_w_per_energy": [
+    0.5848466106426111,
+    0.4391614134494175,
+    0.47965890441288656,
+    0.39427362878823
+  ],
+  "alternative_same_w_per_source": [
+    0.5848466106426111,
+    0.4391614134494175,
+    0.47965890441288656,
+    0.5145854206200757
+  ],
+  "alternative_w_from_first_bin": [
+    0.6999999999999998,
+    0.45205207271556486
+  ],
+  "alternative_w_per_energy": [
+    0.6999999999999998,
+    0.6999999999999998,
+    0.45205207271556486,
+    0.8475635355987988
+  ],
+  "checks": {
+    "all_alternative_source_fractions_are_physical": true,
+    "all_truth_probabilities_physical": true,
+    "alternative_constant_source_fails_second_bin": true,
+    "analytic_derivative_agrees_with_finite_difference": true,
+    "determinant_factors_into_column_and_spectral_gates": true,
+    "fixed_spectrum_4x4_local_rank": true,
+    "free_energy_dependent_source_exactly_mimics_two_bins": true,
+    "global_sign_flip_exactly_invariant": true,
+    "holdout_rejects_first_bin_tuned_alt_for_source_2": true,
+    "maximally_mixed_source_blind_to_potential": true,
+    "proportional_columns_have_zero_rank": true,
+    "spectral_dependence_is_not_constant": true,
+    "two_sources_fit_first_bin_after_nuisance_adjustment": true,
+    "zero_path_length_limit": true,
+    "zero_potential_first_derivative": true
+  },
+  "checks_passed": 15,
+  "column_determinant": -1.5,
+  "data_class": "SIMULATED TOY MODEL ONLY: no astrophysical or detector data",
+  "date": "2026-10-26",
+  "environment": {
+    "python": "3.13.5",
+    "system": "Linux"
+  },
+  "holdout_alt_fixed_w": [
+    0.36929959778402605,
+    0.5313340669074899
+  ],
+  "holdout_truth": [
+    0.369299597784026,
+    0.34742536665502605
+  ],
+  "jacobian": [
+    [
+      -0.3306534213946804,
+      -0.3306534213946804,
+      0.4242330532130558,
+      0.0
+    ],
+    [
+      -0.1384418939297198,
+      -0.1384418939297198,
+      -0.3041929327529127,
+      0.0
+    ],
+    [
+      -0.7032248645399598,
+      -0.17580621613498995,
+      0.0,
+      -0.10170547793556772
+    ],
+    [
+      -0.30709218053404297,
+      -0.07677304513351074,
+      0.0,
+      -0.5286318560588499
+    ]
+  ],
+  "jacobian_determinant": 0.04068651416010427,
+  "limitations": [
+    "Fixed two-state coherent toy, not phase-averaged 3-flavor source-to-detector likelihood.",
+    "Production fractions held constant with energy only in the conditional identification test.",
+    "Equal-prior full-rank Jacobian does not imply finite detector sensitivity or absence of global discrete degeneracy.",
+    "Sign reversal of both matter couplings is exactly invisible in this constant-H model.",
+    "No source-resolved flavors, IceCube detector response, covariance, physical density columns, electroweak model or paid compute."
+  ],
+  "model": "constant two-state H=(Delta(E) sigma_x + v sigma_z)/2, Delta(E)=1/E, L=3, v=theta_chi*x+theta_e*y",
+  "observations_simulated": [
+    0.5848466106426111,
+    0.4391614134494175,
+    0.4796589044128865,
+    0.39427362878823
+  ],
+  "parameters": {
+    "L": 3.0,
+    "columns": [
+      [
+        1.0,
+        1.0
+      ],
+      [
+        2.0,
+        0.5
+      ]
+    ],
+    "energies": [
+      1.0,
+      2.0
+    ],
+    "holdout_energy": 3.0,
+    "theta_alt": [
+      0.2,
+      0.4
+    ],
+    "theta_truth": [
+      0.4,
+      0.2
+    ],
+    "w_truth": [
+      0.7,
+      0.7
+    ]
+  },
+  "seed": null,
+  "source_sha256": "08cf78770bf2d52edd9c6e887babf810fc3e0b806308140e98e2aaac584f70ba",
+  "source_spectral_det_product": 0.02712434277340284,
+  "status": "DERIVED + SIMULATION_RESULT + UNIDENTIFIABLE + DATA_INSUFFICIENT",
+  "study": "N-11",
+  "units": "all energy/length/density/coupling coordinates dimensionless and normalized, no TeV/GeV prediction"
+}
