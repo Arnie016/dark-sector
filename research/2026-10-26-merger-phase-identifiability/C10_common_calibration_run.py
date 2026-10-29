@@ -75,6 +75,3 @@ out={
  'python':sys.version.split()[0],
  'limitations':['No posterior samples, cluster-specific physical response derivatives, mass priors, shared simulation calibration distribution or selection function fitted.','The 2% assumed shared nuisance is NOT the published within-simulator interpolation test result.','The weighted mean of log-ratio residuals is a schematic common-offset diagnostic, not a physical combined SIDM cross-section.','The 11 published clusters are independent observed systems, but their emulator and geometry calibration may introduce correlated epistemic uncertainty.']}
 print(json.dumps(out,indent=2,sort_keys=True))
-
-if __name__ == '__main__':
-    main()
