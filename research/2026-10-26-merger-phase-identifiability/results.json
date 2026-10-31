@@ -1,0 +1,134 @@
+{
+  "apocenter_exact_mimic": {
+    "alternative_alpha_deg": 36.07076865079635,
+    "alternative_k_cm2_g": 0.5,
+    "alternative_observables": [
+      2945.4110352000002,
+      909.3266739736606,
+      -0.0
+    ],
+    "truth_observables": [
+      2945.4110352000002,
+      909.3266739736606,
+      -0.0
+    ]
+  },
+  "assumptions": {
+    "drag_kpc_per_cm2g": 150.0,
+    "halo_curve_kpc_Gyr2": 1400.0,
+    "halo_max_kpc": 1200.0,
+    "independent_gaussian_errors": true,
+    "measurement_sigma_halo_kpc": 80.0,
+    "measurement_sigma_los_km_s": 50.0,
+    "measurement_sigma_shock_kpc": 100.0,
+    "shock_velocity_km_s": 3600.0
+  },
+  "checks": {
+    "all_mock_outputs_finite": true,
+    "alternative_angle_physical": true,
+    "apocenter_exact_mimic": true,
+    "apocenter_profiled_information_zero": true,
+    "apocenter_rank_deficiency": true,
+    "apocenter_zero_LOS": true,
+    "determinant_identity": true,
+    "jacobian_finite_difference": true,
+    "preapocenter_information_positive": true,
+    "units_conversion": true,
+    "zero_drag_no_k_sensitivity": true
+  },
+  "checks_passed": 11,
+  "claim": "C06-C1",
+  "label": "SIMULATED MODEL, NOT OBSERVATIONAL DATA",
+  "limitations": [
+    "Parameterization is an invented local linearization, not a calibrated cluster model.",
+    "The 3600 km/s scale is merely illustrative; shocks are not exactly insensitive to SIDM.",
+    "No covariance, selection function, simulation likelihood or observed events were fitted.",
+    "BCG LOS velocity is set proportional to a toy orbital derivative, not simulated stars.",
+    "A vanishing Jacobian determinant is a local identifiability warning, not a global impossibility theorem."
+  ],
+  "max_fd_abs_error": 9.180496363114798e-08,
+  "python_version": "3.13.5",
+  "seed": null,
+  "series": [
+    {
+      "analytic_determinant": 170100000.00000006,
+      "jacobian_determinant": 170100000.00000003,
+      "profiled_information_per_k_squared": 1.4716345968682212,
+      "profiled_sigma_k_cm2_g": 0.8243279119539265,
+      "simulated_observables": {
+        "BCG_LOS_km_s": 205.3363665621402,
+        "halo_kpc": 854.767073535241,
+        "shock_kpc": 1840.881897
+      },
+      "time_Gyr": 0.5
+    },
+    {
+      "analytic_determinant": 113400000.00000006,
+      "jacobian_determinant": 113400000.00000006,
+      "profiled_information_per_k_squared": 0.8819838181840725,
+      "profiled_sigma_k_cm2_g": 1.0648040428808818,
+      "simulated_observables": {
+        "BCG_LOS_km_s": 136.89091104142682,
+        "halo_kpc": 885.0779626676964,
+        "shock_kpc": 2209.0582764
+      },
+      "time_Gyr": 0.6
+    },
+    {
+      "analytic_determinant": 56700000.00000005,
+      "jacobian_determinant": 56700000.00000005,
+      "profiled_information_per_k_squared": 0.2769261130543925,
+      "profiled_sigma_k_cm2_g": 1.900281958030964,
+      "simulated_observables": {
+        "BCG_LOS_km_s": 68.44545552071344,
+        "halo_kpc": 903.2644961471696,
+        "shock_kpc": 2577.2346558
+      },
+      "time_Gyr": 0.7
+    },
+    {
+      "analytic_determinant": 5670000.000000006,
+      "jacobian_determinant": 5670000.0000000065,
+      "profiled_information_per_k_squared": 0.0030210894252422626,
+      "profiled_sigma_k_cm2_g": 18.193581879487425,
+      "simulated_observables": {
+        "BCG_LOS_km_s": 6.844545552071345,
+        "halo_kpc": 909.2660521953958,
+        "shock_kpc": 2908.59339726
+      },
+      "time_Gyr": 0.79
+    },
+    {
+      "analytic_determinant": -0.0,
+      "jacobian_determinant": 0.0,
+      "profiled_information_per_k_squared": 0.0,
+      "profiled_sigma_k_cm2_g": null,
+      "simulated_observables": {
+        "BCG_LOS_km_s": -0.0,
+        "halo_kpc": 909.3266739736606,
+        "shock_kpc": 2945.4110352000002
+      },
+      "time_Gyr": 0.8
+    }
+  ],
+  "source_sha256": "451d50bf3fbcfb22d5ef0e9ca02a55e7a97ea00af3e7a39b91a6c0f5c106df41",
+  "status": [
+    "DERIVED",
+    "SIMULATION_RESULT",
+    "UNIDENTIFIABLE",
+    "DATA_INSUFFICIENT"
+  ],
+  "truth": {
+    "alpha_deg": 30.0,
+    "apocenter_Gyr": 0.8,
+    "k_cm2_g": 1.0
+  },
+  "units": {
+    "LOS": "km/s",
+    "alpha": "radian",
+    "halo": "kpc",
+    "k": "cm^2/g",
+    "shock": "kpc",
+    "t": "Gyr"
+  }
+}
