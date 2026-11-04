@@ -1,0 +1,20 @@
+{
+  "input_sha256": "5a15bccb5e1764e67feece022711f740a7e616b8c6b866c08b114741c846fb70",
+  "events_in_api_snapshot": 161,
+  "source_mass_available": 104,
+  "source_mass_unavailable": 57,
+  "far_lt_one": {
+    "n": 105,
+    "source_mass_available": 104
+  },
+  "far_gte_one": {
+    "n": 56,
+    "source_mass_available": 0
+  },
+  "median_snr_mass_available": 11.3,
+  "median_snr_mass_unavailable": 8.6,
+  "no_mass_far_lt_one": [
+    "GW240406_062847-v1"
+  ],
+  "caveat": "Descriptive missingness in a public API snapshot, not an independent rate, physical inference, causal effect or a defect claim."
+}
