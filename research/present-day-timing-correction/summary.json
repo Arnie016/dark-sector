@@ -1,4 +1,8 @@
 {
+  "time_consistency_rows": 2083,
+  "median_timing_residual_gyr": 0.005090737179191507,
+  "p90_timing_residual_gyr": 0.08179716981457759,
+  "max_timing_residual_gyr": 0.3082381017181799,
   "cosmological_age_z0_gyr": 13.802718326801589,
   "old_selection_event_rows": 103,
   "new_selection_event_rows": 107,
