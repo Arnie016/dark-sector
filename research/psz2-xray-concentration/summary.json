@@ -18,7 +18,7 @@
   },
   "pixel_aperture_ratio_z0234": 0.14193742534165335,
   "paper_concentration": 0.141,
-  "paper_reported_error": 0.00639,
+  "paper_reported_error": 0.0105,
   "relative_percent_difference": -0.9185278528492491,
   "warning": "Exploratory pixel-sum ratio, not a reproduced likelihood or measurement; no independent source mask, exposure map, blank sky, Poisson or systematics model.",
   "wcs_warnings": [
