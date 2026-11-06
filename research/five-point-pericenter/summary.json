@@ -1,0 +1,18 @@
+{
+  "catalog_rows": 2083,
+  "accepted": 1932,
+  "rejections": {
+    "window_outside_range": 63,
+    "missing_unique_history": 48,
+    "invalid_or_unbracketed_fit": 3,
+    "invalid_position": 37
+  },
+  "unique_recorded_halo_labels": 337,
+  "median_abs_tcoll_difference_gyr": 0.029849492887780826,
+  "p90_abs_tcoll_difference_gyr": 0.06498177522845827,
+  "median_abs_dperi_difference_ckpc_h": 72.28961452755816,
+  "p90_abs_dperi_difference_ckpc_h": 166.42039336612353,
+  "median_comoving_vs_proper_vertex_time_shift_gyr": 0.008292705714992188,
+  "p90_comoving_vs_proper_vertex_time_shift_gyr": 0.02311649716127722,
+  "warning": "Centered snapshot window and fit assumptions are provisional; this is not an exact reproduction of Lee et al. or a catalog error measurement."
+}
