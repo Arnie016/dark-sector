@@ -1,0 +1,19 @@
+{
+  "input_csv_sha256": "13a3648da6fc58988b791b74f2124048e41effd83e26ffb78c4a0778e8402a83",
+  "total": 1977,
+  "matches_nearby_proper": 1428,
+  "matches_minimum_of_three": 1428,
+  "matches_nearby_but_not_minimum": 0,
+  "best_match_offsets": {
+    "0": 1415,
+    "1": 9,
+    "-1": 4
+  },
+  "minimum_offsets": {
+    "0": 1415,
+    "1": 9,
+    "-1": 4
+  },
+  "tolerance_numeric": 0.01,
+  "warning": "Association within the same catalog, not independent evidence of units or exact construction."
+}
