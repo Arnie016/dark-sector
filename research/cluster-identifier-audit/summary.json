@@ -1,0 +1,15 @@
+{
+  "merger_rows": 2083,
+  "unique_merger_ids": 346,
+  "cluster_rows": 352,
+  "merger_rows_numerically_matching_orig_id": 1311,
+  "merger_rows_numerically_matching_virtual_id": 11,
+  "unique_merger_ids_matching_orig_id": 165,
+  "unique_merger_ids_matching_virtual_id": 1,
+  "snap99_positive_collision_mass_rows": 31,
+  "snap99_numerically_matching_orig_id_rows": 12,
+  "snap99_log10_mass_abs_difference_median_dex": 0.07247681733640121,
+  "snap99_log10_mass_abs_difference_p90_dex": 0.2781639288321218,
+  "snap99_matching_within_0_001_dex": 0,
+  "warning": "Numeric equality is not identity. Mass mismatch does not by itself establish an incorrect join; collision and z=0 estimators or epochs may differ."
+}
