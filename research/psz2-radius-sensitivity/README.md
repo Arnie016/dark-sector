@@ -29,3 +29,5 @@ Next steps toward a defensible comparison: establish the exact distance estimato
 ## Reproduce
 
 Run `python analyze.py` using matplotlib. It writes the table, summary and plot and requires no network or credentials. Inputs are the source values above; the weak-lensing radius computation uses G = 4.30091 × 10^-9 Mpc (km/s)^2 / solar mass. An independent numerical check verified the derived radius and formula outputs. No additional observational data were downloaded, and no email was sent.
+
+**Redshift provenance update:** The catalog separation used above was published using z = 0.240, whereas the weak-lensing radius was computed at z = 0.234. A [subsequent coordinate and FITS cross-check](../psz2-lotss-cutout/README.md) recomputes the same angular separation at both redshifts. At the same assumed cosmology, substituting its 2640 kpc value for 2694 kpc changes this exercise's lensing-radius formula output by about −0.030 Gyr. This remains an illustrative calculation, not a re-estimated merger age.
