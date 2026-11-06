@@ -1,0 +1,62 @@
+{
+  "redshifts_sha256": "1782eede062252844a7d528fed28b3421ed8fc49edde8e4c1377b8c5d2c57ccc",
+  "snapshots": [
+    68,
+    69,
+    70,
+    71,
+    72
+  ],
+  "previous_to_collision_spacing_gyr": 0.1605194667900598,
+  "phase_samples": 101,
+  "cases": {
+    "50kpc_1500kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 88.98007457549528,
+      "median_abs_time_error_myr": 9.36234399286029
+    },
+    "50kpc_3000kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 214.81970569389557,
+      "median_abs_time_error_myr": 9.526117509050636
+    },
+    "100kpc_1500kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 62.500219277715615,
+      "median_abs_time_error_myr": 8.578903798966309
+    },
+    "100kpc_3000kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 177.96014915099056,
+      "median_abs_time_error_myr": 9.36234399286029
+    },
+    "300kpc_1500kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 20.01910812554536,
+      "median_abs_time_error_myr": 5.319872705563
+    },
+    "300kpc_3000kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 90.79978342066647,
+      "median_abs_time_error_myr": 7.792838085519449
+    },
+    "1000kpc_1500kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 1.6242156120333675,
+      "median_abs_time_error_myr": 1.1451892922504925
+    },
+    "1000kpc_3000kms": {
+      "accepted": 101,
+      "rejected": 0,
+      "median_distance_bias_kpc": 16.401331180638977,
+      "median_abs_time_error_myr": 3.185824496668488
+    }
+  }
+}
