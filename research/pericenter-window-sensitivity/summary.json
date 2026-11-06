@@ -1,0 +1,20 @@
+{
+  "catalog_rows": 2083,
+  "paired_accepted": 1818,
+  "rejections": {
+    "outside_snapshot_range": 63,
+    "missing_unique_snapshot": 49,
+    "at_least_one_invalid_fit": 115,
+    "invalid_position": 38
+  },
+  "median_p90_abs_window_time_shift_gyr": [
+    0.022723301407182817,
+    0.05211088891665127
+  ],
+  "median_p90_abs_window_sep_shift_ckpc_h": [
+    15.838081493886307,
+    47.29102094171873
+  ],
+  "snapshot_redshifts_sha256": "1782eede062252844a7d528fed28b3421ed8fc49edde8e4c1377b8c5d2c57ccc",
+  "warning": "Selection and alternative windows are exploratory; neither reproduces verified paper pipeline."
+}
