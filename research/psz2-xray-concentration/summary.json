@@ -1,0 +1,28 @@
+{
+  "source_sha256": "3adb40e43af69a4d86ed2138178909a70a00380418fbdc0f096e6761577f20ee",
+  "peak_pixel_xy": [
+    927,
+    747
+  ],
+  "peak_ra_dec_deg": [
+    144.8551792862692,
+    40.75477941702747
+  ],
+  "kpc_per_pixel_z024": 3.7328526482894837,
+  "pixel_aperture_ratio_z024": {
+    "peak": 0.13970487572748255,
+    "east": 0.13598222479515315,
+    "west": 0.1408387804810025,
+    "north": 0.14410879574255514,
+    "south": 0.1340377735259799
+  },
+  "pixel_aperture_ratio_z0234": 0.14193742534165335,
+  "paper_concentration": 0.141,
+  "paper_reported_error": 0.00639,
+  "relative_percent_difference": -0.9185278528492491,
+  "warning": "Exploratory pixel-sum ratio, not a reproduced likelihood or measurement; no independent source mask, exposure map, blank sky, Poisson or systematics model.",
+  "wcs_warnings": [
+    "'datfix' made the change 'Set DATEREF to '1998-01-01' from MJDREF.\nInvalid parameter values: MJD-OBS and DATE-OBS are inconsistent.\nSet MJD-END to 58749.883009 from DATE-END'.",
+    "'unitfix' made the change 'Changed units:\n  'degree' -> 'deg',\n  'degree' -> 'deg'."
+  ]
+}
