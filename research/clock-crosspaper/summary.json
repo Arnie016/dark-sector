@@ -1,6 +1,12 @@
 {
   "input_sha256": "444611e6cf4dc52fdc865605a8e1373b0ebae375db212620cb1d1693c63e4349",
   "systems": 4,
+  "reported_intervals_above_stated_prior": [
+    {
+      "cluster": "PSZ2 G181.06+48.47",
+      "reported_upper_endpoint_gyr": 1.01
+    }
+  ],
   "lee_minus_jee_gyr": [
     -0.036,
     0.144,
