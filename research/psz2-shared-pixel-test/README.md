@@ -19,3 +19,5 @@ The values are signed T50 minus T50SUB pair separations. For the southern relic 
 ## Reproduce
 
 Run `python research/psz2-shared-pixel-test/analyze.py /path/to/psz2-maps /path/to/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. The script validates the map and catalog hashes, matching beam kernels, finite coverage and the independent baseline against the prior analysis. It writes `variants.csv`, `summary.json` and `shared-selection.png`. An independent Astropy calculation verified all eight pair differences from the 32 saved coordinate rows. Inputs are already archived privately in Azure. See [Botteon et al.](https://arxiv.org/abs/2202.11720), [Shimwell et al.](https://arxiv.org/abs/2202.11733) and the [LoTSS cluster release](https://lofar-surveys.org/planck_dr2.html).
+
+A [bright-fraction sweep](../psz2-bright-fraction-sensitivity/README.md) finds a non-monotonic response to the T50-selected fraction and a residual difference even on the full jointly eligible set. These choices remain post-hoc.
