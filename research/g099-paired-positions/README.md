@@ -9,3 +9,5 @@ Signed T50 minus T50SUB pair-separation differences are **+116.05 to +116.72 kpc
 ## Reproduce
 
 Run `python research/g099-paired-positions/analyze.py /path/g099-selected /path/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. It verifies the two member hashes and catalog hash, target kernel covariance, aperture containment and common finite coverage. `compare.py` produces the three-field plot from the saved configuration tables. A separate Astropy calculation verified all nine separation differences from the 36 coordinate rows. The selected FITS, manifest, preselection and analysis are archived privately in Azure. The FITS grids return FK5 J2000 positions. Further work requires source-defined relic regions, noise covariance and a published simulation-clock baseline; no claim of physical bias follows.
+
+A separate [computational replay](../g099-independent-reproduction/README.md) reproduces all nine configurations using a different convolution and interpolation implementation; it does not provide independent observational or scientific validation.
