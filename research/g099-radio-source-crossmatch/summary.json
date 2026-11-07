@@ -1,0 +1,79 @@
+{
+  "peak_summary_sha256": "a0ca0f3686f9cab33b05dc67e2792b29659df4a4f76bbb3e6e693e7045ba79dc",
+  "input_fits_sha256": "9a27db5ff41df8e825315b0d70afd99c2fbe4f23a04d354c6d6a11a5f5f538f7",
+  "catalog": "J/A+A/659/A1/catalog",
+  "catalog_position_frame_assumption": "J2000 coordinates treated as ICRS; absolute astrometric frame and uncertainty not verified",
+  "results": {
+    "N": {
+      "query_center_icrs_deg": [
+        216.97898077831542,
+        56.990692835229254
+      ],
+      "query_radius_arcsec": 70,
+      "rows": 4,
+      "candidates": [
+        {
+          "source_id": "ILTJ142754.33+565926.2",
+          "separation_arcsec": 5.128917032723274,
+          "catalog_major_fwhm_arcsec": 60.29,
+          "catalog_minor_fwhm_arcsec": 20.75,
+          "catalog_peak_mjy_per_beam": 33.252,
+          "catalog_morphology_code": "M"
+        },
+        {
+          "source_id": "ILTJ142800.69+565917.4",
+          "separation_arcsec": 47.76357474409894,
+          "catalog_major_fwhm_arcsec": 9.17,
+          "catalog_minor_fwhm_arcsec": 4.61,
+          "catalog_peak_mjy_per_beam": 0.52,
+          "catalog_morphology_code": "S"
+        },
+        {
+          "source_id": "ILTJ142748.24+565900.8",
+          "separation_arcsec": 60.542857685767935,
+          "catalog_major_fwhm_arcsec": 25.2,
+          "catalog_minor_fwhm_arcsec": 18.5,
+          "catalog_peak_mjy_per_beam": 0.241,
+          "catalog_morphology_code": "S"
+        },
+        {
+          "source_id": "ILTJ142755.60+570034.9",
+          "separation_arcsec": 68.66153808868813,
+          "catalog_major_fwhm_arcsec": 7.68,
+          "catalog_minor_fwhm_arcsec": 5.38,
+          "catalog_peak_mjy_per_beam": 0.818,
+          "catalog_morphology_code": "S"
+        }
+      ],
+      "response_sha256": "3245bde4ca59aaf51ad50f0e19aef9f3f37e7753a0b1079e6727745162357600"
+    },
+    "S": {
+      "query_center_icrs_deg": [
+        217.29183849558754,
+        56.70473438801133
+      ],
+      "query_radius_arcsec": 70,
+      "rows": 2,
+      "candidates": [
+        {
+          "source_id": "ILTJ142910.26+564216.3",
+          "separation_arcsec": 1.8957174148192812,
+          "catalog_major_fwhm_arcsec": 6.91,
+          "catalog_minor_fwhm_arcsec": 6.47,
+          "catalog_peak_mjy_per_beam": 36.212,
+          "catalog_morphology_code": "S"
+        },
+        {
+          "source_id": "ILTJ142905.46+564310.3",
+          "separation_arcsec": 65.30613856357009,
+          "catalog_major_fwhm_arcsec": 110.15,
+          "catalog_minor_fwhm_arcsec": 55.22,
+          "catalog_peak_mjy_per_beam": 0.17,
+          "catalog_morphology_code": "S"
+        }
+      ],
+      "response_sha256": "cfc578f93e5676e6bca56a717447ca37347d3a028c340027e38a3031873436d9"
+    }
+  },
+  "warning": "Post-hoc positional association with related LoTSS survey data, not independent detection, a source identity proof, a cluster membership determination or a calibrated association probability."
+}

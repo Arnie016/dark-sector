@@ -16,3 +16,5 @@ The selected northern and southern difference maxima lie approximately 271.09 an
 ## Reproduce
 
 Run `python research/g099-feature-influence/analyze.py /path/g099-selected /path/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. The code checks input hashes, target beam and coverage, reproduces the saved 600 kpc/0.2 baseline, and writes the 16 center rows and diagnostic plot. A separate Astropy calculation verified all four pair differences from the saved FK5 positions. The input FITS members and analysis are archived privately in Azure; the full source archive was only partially streamed. Source masks, per-image noise covariance and independent data remain necessary for a calibrated inference. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720) and the [LoTSS release](https://lofar-surveys.org/planck_dr2.html).
+
+A [LoTSS catalog cross-match](../g099-radio-source-crossmatch/README.md) finds nearby radio entries for both selected peaks; the same-survey positional matches do not establish physical identities.
