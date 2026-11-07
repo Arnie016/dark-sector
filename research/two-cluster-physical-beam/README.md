@@ -19,3 +19,5 @@ A subsequent [post-hoc exclusion experiment](../psz2-boundary-ablation/README.md
 A separate [computational replay](../psz2-independent-reproduction/README.md) reproduces the PSZ2 position calculations using NumPy FFTs and explicit interpolation. The FITS WCS positions are FK5 J2000; some earlier comparisons read stored numeric positions as ICRS, introducing an approximately 0.021-arcsecond positional-frame systematic.
 
 The [frame-aware correction](../catalog-frame-correction/README.md), assuming ICRS catalog coordinates, gives 20.537 arcseconds for the PSZ2 peak-to-radio separation.
+
+A [noise provenance check](../lofar-noise-provenance/README.md) distinguishes the survey's published reference-image RMS from the noise of these smoothed maps; the exploratory brightness cuts are not verified 2σ thresholds.
