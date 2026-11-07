@@ -16,3 +16,5 @@ For context, we placed circles at three other positions on the same nominal radi
 ## Reproduce
 
 Run `python research/psz2-boundary-ablation/analyze.py /path/to/psz2-maps /path/to/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. The maps and catalog are pinned by hashes and archived privately in Azure. The program checks beam-kernel covariance, coverage and the previous baseline; it writes all 52 center rows, `summary.json` and `ablation.png`. An independent Astropy calculation verified all 13 pair differences from the saved coordinates. Images share observations; noise covariance, original region selection, source subtraction and cluster membership remain unverified. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720), [Shimwell et al.](https://arxiv.org/abs/2202.11733) and the [LoTSS release](https://lofar-surveys.org/planck_dr2.html).
+
+A [36-location rotated-mask sweep](../psz2-rotated-mask-sweep/README.md) extends the control check. Only one alternate mask has similar eligible-pixel counts in both maps, and it overlaps the selected mask, so an independent matched control remains unavailable.
