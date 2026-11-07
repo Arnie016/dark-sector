@@ -41,3 +41,5 @@ The supported conclusion is **conditional, post-hoc sensitivity of this particul
 ## 6. Reproducibility and provenance
 
 The referenced analysis notes include code, map hashes, coordinates, assumptions and plots; original images remain in the private Azure archive. `python research/two-cluster-working-draft/assemble.py` reconciles the central numbers and SHA-256 hashes of five saved derived files in `evidence.json`. That is a traceability check, not independent scientific replication. An analyst must independently rerun the map processing and assess publication readiness. No manuscript has been submitted and no email has been sent.
+
+A [third targeted field](../g099-paired-positions/README.md) applies the existing physical-beam aperture grid to Abell 1925. Selection occurred after the initial two-field exploration and is not an independent or population validation.
