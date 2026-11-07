@@ -6,9 +6,8 @@
   "published_coordinate_separation_arcmin": 6.3610053306578305,
   "finner_reported_scale_kpc_per_arcsec": 5.123,
   "coordinate_length_using_finner_scale_kpc": 1955.245818537604,
-  "finner_table_length_kpc": 2323,
-  "finner_length_equivalent_angle_arcmin_at_stated_scale": 7.557420782093825,
-  "equivalent_angle_difference_arcmin": 1.1964154514359944,
+  "finner_reported_axis_projected_length_kpc": 2323,
+  "finner_length_equivalent_axis_angle_arcmin_at_stated_scale": 7.557420782093825,
   "catalog_length_kpc": 1941,
-  "caveat": "Equivalent angle is inferred from reported length and rounded published scale, not an independent measurement of Finner coordinates. Different definitions, maps, redshifts and processing remain."
+  "caveat": "Finner reports an axis-projected separation; Botteon coordinates give a full sky separation. Their inferred angles are different geometric quantities and are not directly comparable."
 }
