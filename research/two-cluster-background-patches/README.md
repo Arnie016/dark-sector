@@ -16,3 +16,5 @@ Units are mJy/target beam. The nominal patch sides are roughly 252–261 kpc, on
 ## Reproduce
 
 Run `python research/two-cluster-background-patches/analyze.py /path/to/macs-maps /path/to/psz2-maps /path/to/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. Input hashes, FITS units, beam-kernel covariance and common finite coverage are checked; `patches.csv` includes accepted and rejected locations, and `summary.json` records the per-product ranges. An independent read of the CSV checked patch counts and all four medians. The patch selection is not the survey authors' region or a prevalidated noise mask. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720), [Jones et al.](https://arxiv.org/abs/2301.07814), and the [LoTSS release](https://lofar-surveys.org/planck_dr2.html).
+
+A [catalog-screened patch analysis](../catalog-screened-background/README.md) masks known LoTSS positions but still cannot establish source-free noise or calibrated significance.
