@@ -37,3 +37,5 @@ A follow-up capable of testing the broader question must freeze source-verified 
 ## Evidence and reproducibility
 
 The referenced notes contain executable analyses and pinned source hashes; original maps remain in the private Azure archive. `python research/macs1752-working-draft/check_evidence.py` checks selected derived-summary consistency and writes `evidence.json` with hashes. This is a traceability check, not independent scientific replication. References in this draft are links to the original publications and catalog. No journal submission or email has been made.
+
+A later [second-field paired-position diagnostic](../psz2-paired-positions/README.md) repeats the angular mask and threshold grid on PSZ2 G181 at a 25-arcsecond target beam. Its small pair-separation changes provide context, not a controlled two-cluster comparison or population result.
