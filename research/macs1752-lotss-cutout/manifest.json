@@ -1,0 +1,8 @@
+{
+  "cutout_source": "https://lofar-surveys.org/dr2-low-cutout.fits?pos=268.02755+44.6678&size=20",
+  "cutout_sha256": "2bae5fcf4a842dc5a5f7a9bc96ad28d8f2ae9a92a62a9a2c6f23e1c35d7312ea",
+  "cutout_bytes": 570240,
+  "catalog_source": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J%2FA%2BA%2F660%2FA78%2Frrsamp&-out.all&-out.max=100",
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "retrieved_utc": "2026-11-07"
+}
