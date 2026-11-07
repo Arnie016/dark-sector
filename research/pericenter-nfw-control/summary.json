@@ -1,0 +1,51 @@
+{
+  "mass_within_reference_radius_msun": 100000000000000.0,
+  "reference_radius_kpc": 1000.0,
+  "reference_radius_over_scale_radius": 4.0,
+  "model": "static spherical untruncated NFW potential; reference radius not calibrated to critical-density R200",
+  "redshifts_sha256": "1782eede062252844a7d528fed28b3421ed8fc49edde8e4c1377b8c5d2c57ccc",
+  "cases": {
+    "100kpc_3000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 173.3261324943732,
+      "median_abs_time_error_myr": 9.609854770696202,
+      "max_energy_drift_normalized": 1.0276573949933176e-11,
+      "max_relative_angular_momentum_drift": 5.966019815881716e-12
+    },
+    "100kpc_5000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 339.8444952931416,
+      "median_abs_time_error_myr": 9.625259381220275,
+      "max_energy_drift_normalized": 2.516766855876043e-12,
+      "max_relative_angular_momentum_drift": 2.037898421415023e-12
+    },
+    "300kpc_3000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 87.70394773748899,
+      "median_abs_time_error_myr": 8.079515989626529,
+      "max_energy_drift_normalized": 4.680283347967798e-12,
+      "max_relative_angular_momentum_drift": 2.4364678291123773e-12
+    },
+    "300kpc_5000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 219.97369968934288,
+      "median_abs_time_error_myr": 8.905233197280538,
+      "max_energy_drift_normalized": 1.208978608080715e-12,
+      "max_relative_angular_momentum_drift": 9.507081280041486e-13
+    },
+    "1000kpc_3000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 15.567050552048613,
+      "median_abs_time_error_myr": 3.1773521917095593,
+      "max_energy_drift_normalized": 5.346409599017273e-13,
+      "max_relative_angular_momentum_drift": 2.0893116363513905e-12
+    },
+    "1000kpc_5000kms": {
+      "accepted": 101,
+      "median_distance_bias_kpc": 65.67469456503432,
+      "median_abs_time_error_myr": 5.328798456755379,
+      "max_energy_drift_normalized": 3.225732708159925e-12,
+      "max_relative_angular_momentum_drift": 2.4807654045104417e-12
+    }
+  }
+}

@@ -1,0 +1,5 @@
+{
+  "radius_difference_clock_shift_gyr": 0.28862199089134677,
+  "weak_lensing_derived_radius_mpc": 0.9305148586101112,
+  "warning": "Illustrative substitution of projected LOFAR distance for simulation fit; no corrected time, posterior, significance, or SIDM inference."
+}

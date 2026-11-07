@@ -1,0 +1,13 @@
+# Independent computational replay of PSZ2 paired positions
+
+This reimplements the PSZ2 part of the [matched-physical-beam analysis](../two-cluster-physical-beam/README.md) using **NumPy zero-padded FFT convolution** and an explicit four-neighbor bilinear interpolator, rather than the prior SciPy convolution and interpolation functions. An impulse test and a small directly summed convolution check the new convolution. Both implementations use the same input FITS files, catalog, Astropy WCS and cosmology, Gaussian-beam model, coverage threshold, apertures and ranking rules.
+
+For all nine radius/threshold configurations, the independent replay obtains the same eligible and selected pixel counts as the saved analysis. Across 36 stored image/relic rows, the maximum center difference is approximately **1.1 × 10⁻¹⁰ arcseconds** and the maximum pair-separation difference rounds to zero at stored precision. Tolerances are 10⁻⁵ arcseconds for centers and 10⁻⁴ kpc for pair differences. This is a computational cross-check of one field, not independent data, an independent researcher, validation of survey imaging or transfer functions, a statistical uncertainty, or a reproduction of a published merger clock.
+
+## Coordinate-frame correction
+
+The two SUB FITS reference grids used in the project produce **FK5 J2000** celestial coordinates. The saved `ra_deg` and `dec_deg` center values from those grids should be interpreted in that frame. During this replay, reading those numeric values as ICRS instead gave an apparent center discrepancy of about **0.021 arcseconds**; preserving the WCS frame resolves it. Some earlier post-hoc location comparisons treated saved WCS numbers as ICRS, so their quoted source/peak offsets have a frame-related systematic of roughly this scale. This is much smaller than the radio beams and the reported arcsecond-scale positional offsets, but exact cross-catalog comparisons should explicitly transform FK5 J2000 to ICRS and re-evaluate uncertainties. No change to the paired separations was observed in this replay, where both positions share the same WCS frame.
+
+## Reproduce
+
+Run `python research/psz2-independent-reproduction/reproduce.py /path/to/psz2-maps /path/to/rrsamp.tsv` with NumPy and Astropy. The script verifies the map, catalog and previously saved configuration identities; performs the independent calculations; checks all nine configurations against the 36 saved rows; and writes `comparison.csv` and `summary.json`. Source files are archived privately in Azure. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720), [Shimwell et al.](https://arxiv.org/abs/2202.11733), and the [LoTSS cluster release](https://lofar-surveys.org/planck_dr2.html).

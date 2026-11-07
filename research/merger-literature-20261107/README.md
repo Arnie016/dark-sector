@@ -1,0 +1,19 @@
+# Cluster-merger velocity candidate: literature and measurement cross-check
+
+Research note, 7 November 2026. This is a design and novelty checkpoint, not a paper or a new dark-matter measurement.
+
+## Measurement alignment
+
+The [TNG-Cluster merger catalog](https://www.tng-project.org/data/cluster/) defines `Mhistory_vel` as the main and secondary `SubhaloVel` histories and `V_coll` as the maximum relative velocity at first pericenter. [TNG field specifications](https://www.tng-project.org/data/docs/specifications/) define subhalo position through the minimum of the gravitational potential and velocity as the mass-weighted velocity of member particles. Therefore a finite difference of positions and the catalog velocity do not measure exactly the same quantity. The earlier C14 single-event result (median interior discrepancy 223 km/s; 90th percentile 895 km/s) is a discrepancy between estimators, not an uncertainty or a validated physical residual.
+
+The [TNG-Cluster gas-motion atlas](https://doi.org/10.1051/0004-6361/202348612) reports that line-of-sight and radial gas velocities do not have a clear relationship in its analysis. This independently motivates treating projected gas velocities, halo center motions, and subhalo member velocities as distinct observables. It does not quantify the C14 discrepancy. [XRISM's comparison](https://ntrs.nasa.gov/api/citations/20250004574/downloads/paper.pdf) uses an X-ray-emissivity-weighted gas line-of-sight estimator; comparison to observations needs that weighting and instrumental forward modeling, not just a mass-weighted halo velocity.
+
+[Lee et al.'s TNG-Cluster radio-relic study](https://doi.org/10.1051/0004-6361/202348194) already analyzes massive mergers, shocks, and a high-velocity case. Thus neither a high simulated velocity nor a shock/halo offset is by itself a novel result. The [TNGC-SIDM I preprint](https://arxiv.org/abs/2610.18957) explicitly compares matched collisionless and self-interacting simulations and emphasizes sample selection. TNG-Cluster's ordinary catalog alone is not a matched SIDM experiment; any contrast requires matched initial conditions and controlled baryonic assumptions.
+
+## Candidate and falsifiable next test
+
+Question: how much of the difference between a potential-center finite-difference velocity and the catalog member-weighted velocity persists after matching frame, cadence, and branch identity across a predeclared set of mergers? A same-particle trajectory or identically weighted centroid provides the critical matched-estimator control. First, simulate known smooth trajectories sampled at actual snapshot times and verify finite-difference convergence; then evaluate multiple independent merger branches and proximity to pericenter with documented missingness. A small matched-tracer residual would weaken an interpretation based on numerical cadence; a large residual remaining under matched definitions would motivate a separate provenance audit, not an automatic claim of new physics. Quantify selection, temporal spacing, periodic wrapping, merger-tree identity, and outliers before interpreting ensemble summaries. Separate halo motion from gas and observable projections.
+
+## Data required before manuscript promotion
+
+Versioned corrected merger catalog, exact snapshot scale factors and cosmology, validated main/secondary branch IDs, same-tracer positions and velocities, and the minimum relevant gas or mock X-ray products. For a lensing comparison, obtain projected mass plus geometric lens/source assumptions and an observational response; raw 3D coordinates are insufficient. Establish novelty against the papers above, independently reproduce a published baseline, and propagate systematic and selection uncertainties. No journal submission or outreach is authorized without explicit approval.

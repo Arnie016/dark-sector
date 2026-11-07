@@ -1,0 +1,16 @@
+{
+  "prior_variants_sha256": "449227fd08ff1e080eed86987916261d6d69cefda7be16ea70b3557568934a40",
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "inputs_sha256": {
+    "T50": "d08c263b83712bdc40b13357ef297ce6e389437d666aee870fdf68f8489ce5b4",
+    "T50SUB": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+  },
+  "configurations": 9,
+  "rows": 36,
+  "max_abs_position_difference_arcsec": 1.0606036417820454e-10,
+  "max_abs_pair_difference_kpc": 0.0,
+  "eligible_and_selected_count_differences": 0,
+  "independent_components": "NumPy zero-padded FFT convolution and explicit bilinear interpolation; direct convolution and impulse checks",
+  "shared_components": "Astropy WCS, FITS data, cosmology and scientific assumptions; same post-hoc masks, ranking rules and beam approximation",
+  "limitations": "Computational reproduction of one field, not independent observations, a verification of source reduction or transfer functions, uncertainty, or a merger-clock validation."
+}

@@ -1,0 +1,37 @@
+{
+  "prior_variants_sha256": "68a3d41b3c975575e9eddf786303fb224030418bbc4d16ab0b65abf9f857cb52",
+  "region_radius_arcsec": 120,
+  "peak_positive_difference_mjy_per_beam": 26.547684057732113,
+  "peak_position_deg": [
+    267.9960407707972,
+    44.64843416985056
+  ],
+  "peak_offset_from_south_catalog_arcsec": 84.46940619234236,
+  "inner_0_60": {
+    "pixels": 5022,
+    "median_mjy_per_beam": -0.0257965293712914,
+    "max_mjy_per_beam": 1.5992231747077312,
+    "positive_pixel_sum_mjy_per_beam": 99.56427365818854
+  },
+  "annulus_60_120": {
+    "pixels": 15086,
+    "median_mjy_per_beam": -0.0005988840712234378,
+    "max_mjy_per_beam": 26.547684057732113,
+    "positive_pixel_sum_mjy_per_beam": 3966.112220011084
+  },
+  "displayed_prior_config": "90 arcsec, 0.2 mJy/beam, S",
+  "prior_centers_deg": {
+    "T50": [
+      267.97784376044325,
+      44.63433742607115
+    ],
+    "T50SUB": [
+      267.973901382481,
+      44.63118198317499
+    ]
+  },
+  "prior_center_difference_arcsec": 15.200191032886528,
+  "posthoc_ablation_radius_arcsec": 20,
+  "ablated_center_difference_arcsec": 0.11712027740874967,
+  "caveat": "Pixel sum is not flux; differences are between related image products, not proven point sources or uncertainty."
+}

@@ -1,0 +1,66 @@
+{
+  "aperture_kpc": 600,
+  "threshold_mjy_per_beam": 0.2,
+  "target_beam_kpc": 135,
+  "kpc_per_arcsec": 3.7223342261615215,
+  "peak_ra_deg": 144.8571200701199,
+  "peak_dec_deg": 40.72670460105244,
+  "reflected_control_ra_deg": 144.79911743510388,
+  "reflected_control_dec_deg": 40.649082817555026,
+  "prior_summary_sha256": "d02f35a3d9eed920b80f4cf2bf40436ef891c3c201e38fed68d1a4bf88eb937a",
+  "cases": {
+    "none_0": {
+      "pair_delta_kpc": -270.58443347829956,
+      "south_center_delta_arcsec": 74.53372477638804
+    },
+    "peak_20": {
+      "pair_delta_kpc": -92.36456957703125,
+      "south_center_delta_arcsec": 26.36888823452445
+    },
+    "peak_40": {
+      "pair_delta_kpc": 6.502575282579137,
+      "south_center_delta_arcsec": 0.7863582122940995
+    },
+    "peak_60": {
+      "pair_delta_kpc": 5.495978687596752,
+      "south_center_delta_arcsec": 0.3746341326609797
+    },
+    "reflected_20": {
+      "pair_delta_kpc": -270.58443347829956,
+      "south_center_delta_arcsec": 74.53372477638804
+    },
+    "reflected_40": {
+      "pair_delta_kpc": -270.58443347829956,
+      "south_center_delta_arcsec": 74.53372477638804
+    },
+    "reflected_60": {
+      "pair_delta_kpc": -270.58443347829956,
+      "south_center_delta_arcsec": 74.53372477638804
+    },
+    "rotated_90_20": {
+      "pair_delta_kpc": -270.58443347829956,
+      "south_center_delta_arcsec": 74.53372477638804
+    },
+    "rotated_90_40": {
+      "pair_delta_kpc": -271.2601532321722,
+      "south_center_delta_arcsec": 74.72093472957224
+    },
+    "rotated_90_60": {
+      "pair_delta_kpc": -274.4678488268539,
+      "south_center_delta_arcsec": 75.59662128387797
+    },
+    "rotated_minus90_20": {
+      "pair_delta_kpc": -273.95771552996115,
+      "south_center_delta_arcsec": 75.44249610934214
+    },
+    "rotated_minus90_40": {
+      "pair_delta_kpc": -282.59937523624865,
+      "south_center_delta_arcsec": 77.78811046145854
+    },
+    "rotated_minus90_60": {
+      "pair_delta_kpc": -292.4125076927363,
+      "south_center_delta_arcsec": 80.43890975872444
+    }
+  },
+  "warning": "Post-hoc exclusion applied to both maps; three control locations are arbitrary and may contain no eligible pixels. No randomization, independence, uncertainty or causal source identity."
+}

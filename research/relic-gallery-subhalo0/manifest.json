@@ -1,0 +1,37 @@
+{
+  "source_gallery": "https://www.tng-project.org/cluster/gallery/lee23/",
+  "gallery_subhalo_link": "https://www.tng-project.org/api/TNG-Cluster/snapshots/099/subhalos/00000000/",
+  "simulation": "TNG-Cluster",
+  "snapshot": 99,
+  "subhalo_id": 0,
+  "images": [
+    {
+      "axis": "x",
+      "filename": "x.png",
+      "url": "https://www.tng-project.org/exp/galleries/lee23//TNG-Cluster.099.00000000.x.png",
+      "bytes": 295067,
+      "sha256": "1c3f5afe760a33d33bffba96b25e78cc12ac0e9ba486c3a77d38e7b1a559031f",
+      "width_px": 800,
+      "height_px": 873
+    },
+    {
+      "axis": "y",
+      "filename": "y.png",
+      "url": "https://www.tng-project.org/exp/galleries/lee23//TNG-Cluster.099.00000000.y.png",
+      "bytes": 238798,
+      "sha256": "b17fb151cf3e546e3cf6ad0986f8abdd445dbb025bf2f98e6a0c3b49ab143cf8",
+      "width_px": 800,
+      "height_px": 873
+    },
+    {
+      "axis": "z",
+      "filename": "z.png",
+      "url": "https://www.tng-project.org/exp/galleries/lee23//TNG-Cluster.099.00000000.z.png",
+      "bytes": 253143,
+      "sha256": "4cdc3140f234a0123bb099fb804cccfdec4c665e0cd14caa4f7ed9ee250e9727",
+      "width_px": 800,
+      "height_px": 873
+    }
+  ],
+  "interpretation": "Rendered public images, not calibrated numerical maps or independent proof of event-to-halo merger tree."
+}

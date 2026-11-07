@@ -1,0 +1,45 @@
+{
+  "maps": {
+    "T50kpcSUB.fits": {
+      "shape": [
+        1614,
+        1614
+      ],
+      "beam_fwhm_arcsec": [
+        14.72520605101877,
+        10.642842435543336
+      ],
+      "positions_pixels_xy": {
+        "N": [
+          697.0128187444109,
+          908.1298856041334
+        ],
+        "S": [
+          881.5026657206241,
+          732.9063189393173
+        ]
+      }
+    },
+    "T100kpcSUB.fits": {
+      "shape": [
+        615,
+        615
+      ],
+      "beam_fwhm_arcsec": [
+        30.47033877198919,
+        27.78444406202832
+      ],
+      "positions_pixels_xy": {
+        "N": [
+          252.50640937220535,
+          358.06494280206675
+        ],
+        "S": [
+          344.7513328603121,
+          270.4531594696586
+        ]
+      }
+    }
+  },
+  "warning": "Images have different beams; plotted catalog positions are not measurements of shocks or image centroids."
+}

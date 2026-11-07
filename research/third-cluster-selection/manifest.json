@@ -1,0 +1,61 @@
+{
+  "url": "https://lofar-surveys.org/public/clusterdata/PSZ2G099.48%2B55.60/PSZ2G099.48%2B55.60_FITS.tar.gz",
+  "compressed_bytes_consumed": 73789440,
+  "compressed_byte_cap": 75000000,
+  "http_content_length": "82105034",
+  "last_modified": "Tue, 28 Mar 2023 11:32:37 GMT",
+  "etag": "\"1680003157.350426-82105034-2051087486\"",
+  "members_scanned": [
+    {
+      "name": "PSZ2G099.48+55.60compact-model.fits",
+      "size": 20548800,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60T50kpc.fits",
+      "size": 1728000,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60CHANDRA.fits",
+      "size": 12277440,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60XMM.fits",
+      "size": 3366720,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60R-1.25.fits",
+      "size": 20545920,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60.fits",
+      "size": 20545920,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60T25kpc.fits",
+      "size": 6891840,
+      "regular": true
+    },
+    {
+      "name": "PSZ2G099.48+55.60T50kpcSUB.fits",
+      "size": 1722240,
+      "regular": true
+    }
+  ],
+  "selected": {
+    "PSZ2G099.48+55.60T50kpc.fits": {
+      "bytes": 1728000,
+      "sha256": "d0b6497804569ba90299d7160aefd68ab42f27981f4a87478a0ca29e17033db4"
+    },
+    "PSZ2G099.48+55.60T50kpcSUB.fits": {
+      "bytes": 1722240,
+      "sha256": "9a27db5ff41df8e825315b0d70afd99c2fbe4f23a04d354c6d6a11a5f5f538f7"
+    }
+  },
+  "limitation": "Partial sequential read only; original complete tarball was not downloaded or hashed."
+}

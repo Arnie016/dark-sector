@@ -1,0 +1,67 @@
+{
+  "input_sha256": "19a3d33c088d8d77a2ee4307640df79faa646b6daf47f1b99df693f4cb843ad1",
+  "threshold_gyr": 0.01,
+  "bins": [
+    {
+      "snap_min": 30,
+      "snap_max": 49,
+      "events": 135,
+      "distance_match": {
+        "n": 112,
+        "within_0_01_gyr": 99,
+        "fraction": 0.8839285714285714
+      },
+      "distance_nonmatch": {
+        "n": 23,
+        "within_0_01_gyr": 1,
+        "fraction": 0.043478260869565216
+      }
+    },
+    {
+      "snap_min": 50,
+      "snap_max": 69,
+      "events": 684,
+      "distance_match": {
+        "n": 521,
+        "within_0_01_gyr": 445,
+        "fraction": 0.8541266794625719
+      },
+      "distance_nonmatch": {
+        "n": 163,
+        "within_0_01_gyr": 4,
+        "fraction": 0.024539877300613498
+      }
+    },
+    {
+      "snap_min": 70,
+      "snap_max": 84,
+      "events": 568,
+      "distance_match": {
+        "n": 401,
+        "within_0_01_gyr": 332,
+        "fraction": 0.827930174563591
+      },
+      "distance_nonmatch": {
+        "n": 167,
+        "within_0_01_gyr": 8,
+        "fraction": 0.04790419161676647
+      }
+    },
+    {
+      "snap_min": 85,
+      "snap_max": 98,
+      "events": 590,
+      "distance_match": {
+        "n": 394,
+        "within_0_01_gyr": 323,
+        "fraction": 0.8197969543147208
+      },
+      "distance_nonmatch": {
+        "n": 196,
+        "within_0_01_gyr": 13,
+        "fraction": 0.0663265306122449
+      }
+    }
+  ],
+  "warning": "Exploratory within-catalog stratification; no independent clusters or uncertainty-corrected causal inference."
+}

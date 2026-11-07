@@ -1,0 +1,59 @@
+{
+  "index_sha256": "0f46f79f9be29ebf7b5650d4059dd441164500ef5c8a2aa502ccb86050c2aeb4",
+  "index_rows": 46,
+  "clusters": {
+    "PSZ2 G071.21+28.86": {
+      "listed_images": [
+        {
+          "filename": "PSZ2G071.21+28.86_lofar.fits",
+          "type": "LOFAR radio image",
+          "size_kib": 10187
+        },
+        {
+          "filename": "PSZ2G071.21_28.86XMM.fits",
+          "type": "XMM X-ray image",
+          "size_kib": 3291
+        }
+      ],
+      "radio_index_shape": [
+        1614,
+        1614
+      ],
+      "archived_sub_shape": [
+        1614,
+        1614
+      ],
+      "shape_matches": true,
+      "radio_index_frequency_hz": 143651000.0,
+      "archived_sub_frequency_hz": null,
+      "archive_map_sha256": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+    },
+    "PSZ2 G181.06+48.47": {
+      "listed_images": [
+        {
+          "filename": "PSZ2G181.06+48.47_lofar.fits",
+          "type": "LOFAR radio image",
+          "size_kib": 1690
+        },
+        {
+          "filename": "PSZ2G181.06_48.47CHANDRA.fits",
+          "type": "CHANDRA X-ray image",
+          "size_kib": 17170
+        }
+      ],
+      "radio_index_shape": [
+        656,
+        656
+      ],
+      "archived_sub_shape": [
+        656,
+        656
+      ],
+      "shape_matches": true,
+      "radio_index_frequency_hz": 143748000.0,
+      "archived_sub_frequency_hz": null,
+      "archive_map_sha256": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+    }
+  },
+  "limitations": "Index metadata similarity is not a file hash comparison, proof of identical image, or a region mask. Index is a snapshot of a 46-entry service response."
+}

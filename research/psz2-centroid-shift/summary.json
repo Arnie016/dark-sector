@@ -1,0 +1,19 @@
+{
+  "chandra_sha256": "3adb40e43af69a4d86ed2138178909a70a00380418fbdc0f096e6761577f20ee",
+  "redshift": 0.24,
+  "peak_pixel_xy": [
+    927,
+    747
+  ],
+  "number_apertures": 26,
+  "maximum_aperture_kpc": 493.1614271114035,
+  "shift_from_image": 0.06933273393951442,
+  "published_shift": 0.0695,
+  "published_shift_error": 0.00304,
+  "difference": -0.000167266060485588,
+  "caution": "Provisional pixel-weighted summary; point source mask, underlying counts, background/exposure products, exact author center, and uncertainty procedure are not independently reproduced.",
+  "wcs_warnings": [
+    "'datfix' made the change 'Set DATEREF to '1998-01-01' from MJDREF.\nInvalid parameter values: MJD-OBS and DATE-OBS are inconsistent.\nSet MJD-END to 58749.883009 from DATE-END'.",
+    "'unitfix' made the change 'Changed units:\n  'degree' -> 'deg',\n  'degree' -> 'deg'."
+  ]
+}

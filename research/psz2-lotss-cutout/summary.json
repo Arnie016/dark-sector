@@ -1,0 +1,30 @@
+{
+  "cutout_shape_pixels": [
+    398,
+    398
+  ],
+  "beam_fwhm_arcsec": [
+    20.0,
+    20.0
+  ],
+  "frequency_hz": 143650000.0,
+  "catalog_positions_pixels_xy": {
+    "N": [
+      173.33075699647782,
+      273.2158703515372
+    ],
+    "S": [
+      223.77958552299532,
+      123.94593539598827
+    ]
+  },
+  "coordinate_separation_arcmin": 11.820612610652974,
+  "assumed_cosmology": "flat LCDM H0=70 km/s/Mpc Om0=0.3",
+  "separation_kpc_by_redshift": {
+    "0.24": 2690.5247004926186,
+    "0.234": 2640.0162536898038
+  },
+  "catalog_separation_kpc": 2694,
+  "catalog_separation_error_kpc": 39,
+  "warning": "Coordinate-based conversion uses rounded catalog coordinates and illustrative cosmology; no image-based centroid, flux, shock, or lensing inference."
+}

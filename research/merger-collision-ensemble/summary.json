@@ -1,0 +1,15 @@
+{
+  "catalog_sha256": "d9d103b13a40cb8088914e025310fd2d8f99eb20f679e57e54b6eb5dcf78253d",
+  "total_rows": 2083,
+  "selected_rows": 1977,
+  "distinct_halo_ids": 337,
+  "rejections": {
+    "missing_unique_adjacent_snapshots": 68,
+    "invalid_position_or_velocity": 38
+  },
+  "median_discrepancy_km_s": 407.39090188958664,
+  "p90_discrepancy_km_s": 974.6464841203081,
+  "median_abs_vcoll_difference_km_s": 0.00020486217999859946,
+  "fraction_vcoll_within_0_1_km_s": 0.5159332321699545,
+  "warning": "Estimator discrepancy, not velocity error or evidence of new physics. Rows can share halos."
+}
