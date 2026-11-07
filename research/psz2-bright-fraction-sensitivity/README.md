@@ -16,3 +16,5 @@ These are signed T50 minus T50SUB pair-separation differences for an illustrativ
 ## Reproduce
 
 Run `python research/psz2-bright-fraction-sensitivity/analyze.py /path/to/psz2-maps /path/to/rrsamp.tsv` with NumPy, SciPy, Astropy and Matplotlib. The script verifies the map/catalog hashes, beam kernel, finite support and four 10% baseline values, and checks that the 100% results agree between references. It writes `variants.csv`, `summary.json` and the figure. A separate Astropy calculation verified all 24 pair differences from the 96 recorded coordinate rows. Inputs are in private Azure. These fractions and the peak exclusion are exploratory, not a preregistered trial or uncertainty interval. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720), [Shimwell et al.](https://arxiv.org/abs/2202.11733), and the [LoTSS release](https://lofar-surveys.org/planck_dr2.html).
+
+A [pixel-weight decomposition](../psz2-selection-mechanism/README.md) explains why the T50-selected 1% and 5% choices behave differently: the former confines both map centers to the boundary region, while the latter mixes that region with other pixels weighted very differently in the two images.
