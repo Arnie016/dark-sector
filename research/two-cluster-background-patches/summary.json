@@ -1,0 +1,64 @@
+{
+  "cosmology": "FlatLambdaCDM H0=70 km/s/Mpc, Om0=0.3, Tcmb0=0",
+  "target_beam_kpc": 135,
+  "grid_fractions": [
+    0.2,
+    0.4,
+    0.6,
+    0.8
+  ],
+  "relic_exclusion_kpc": 600,
+  "patch_half_width_kpc": 125,
+  "clusters": {
+    "MACS J1752": {
+      "target_beam_arcsec": 26.55499548583943,
+      "patch_side_pixels": 33,
+      "nominal_patch_side_kpc": 251.6475667850698,
+      "accepted_patches": 15,
+      "median_mad_sigma_mjy_per_beam": {
+        "T50": 0.23709585723987409,
+        "T50SUB": 0.24077011628050546
+      },
+      "patch_mad_range_mjy_per_beam": {
+        "T50": [
+          0.14197765575428414,
+          0.6759856363933897
+        ],
+        "T50SUB": [
+          0.14782576203670927,
+          0.3372467277668233
+        ]
+      },
+      "input_sha256": {
+        "T50": "ad491b8e9df67889f1e9ee8f3e9f323052698705ca553c8875e3b7d0262bd124",
+        "T50SUB": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+      }
+    },
+    "PSZ2 G181": {
+      "target_beam_arcsec": 36.26756540323147,
+      "patch_side_pixels": 35,
+      "nominal_patch_side_kpc": 260.5633958313067,
+      "accepted_patches": 12,
+      "median_mad_sigma_mjy_per_beam": {
+        "T50": 0.2563711481764729,
+        "T50SUB": 0.20942233072476085
+      },
+      "patch_mad_range_mjy_per_beam": {
+        "T50": [
+          0.10624522755247327,
+          1.2559501205449792
+        ],
+        "T50SUB": [
+          0.11504034498438628,
+          0.27561564147095424
+        ]
+      },
+      "input_sha256": {
+        "T50": "d08c263b83712bdc40b13357ef297ce6e389437d666aee870fdf68f8489ce5b4",
+        "T50SUB": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+      }
+    }
+  },
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "warning": "Geometry-selected patches are not demonstrated source-free; MAD-scaled variation is descriptive, not a calibrated RMS, noise significance, uncertainty or source/region model. Correlated pixels and backgrounds persist."
+}

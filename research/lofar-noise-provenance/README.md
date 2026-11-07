@@ -11,3 +11,5 @@ The next defensible measurement requires source-free regions and an RMS/covarian
 ## Reproduce
 
 Run `python research/lofar-noise-provenance/analyze.py /path/planck-dr2-snapshot.html /path/macs-T50kpcSUB.fits /path/psz2-T50kpcSUB.fits` with Beautiful Soup, NumPy and Astropy. The official table snapshot is archived privately in Azure. The script checks image hashes and exact table labels, extracts the two reference RMS values and records archived FITS beam sizes. The later-paper entries are transcriptions requiring source review, not independently estimated values. `summary.json` includes the table snapshot hash and provenance. Cite [Botteon et al.](https://arxiv.org/abs/2202.11720), [Rajpurohit et al.](https://arxiv.org/abs/2501.08390) and the [survey release](https://lofar-surveys.org/planck_dr2.html).
+
+An initial [geometry-selected patch diagnostic](../two-cluster-background-patches/README.md) measures spatial variation on the actual smoothed products, but the patches are small and not verified source-free; the results are not calibrated RMS values.
