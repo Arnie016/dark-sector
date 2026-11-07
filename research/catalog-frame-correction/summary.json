@@ -1,0 +1,50 @@
+{
+  "catalog_frame_assumption": "Catalog numerical coordinates treated as ICRS, as in prior work; catalog labels J2000 and absolute astrometry need source-level verification.",
+  "results": {
+    "MACS radio": {
+      "catalog_ra_deg": 267.99699456543635,
+      "catalog_dec_deg": 44.64713476780804,
+      "peak_fk5_ra_deg": 267.9960407707972,
+      "peak_fk5_dec_deg": 44.64843416985056,
+      "peak_icrs_ra_deg": 267.99603709604503,
+      "peak_icrs_dec_deg": 44.64842873384618,
+      "old_naive_arcsec": 5.277285666491392,
+      "frame_corrected_arcsec": 5.264324410370476,
+      "correction_arcsec": -0.012961256120916254
+    },
+    "MACS optical": {
+      "catalog_ra_deg": 267.9954559,
+      "catalog_dec_deg": 44.649425136309226,
+      "peak_fk5_ra_deg": 267.9960407707972,
+      "peak_fk5_dec_deg": 44.64843416985056,
+      "peak_icrs_ra_deg": 267.99603709604503,
+      "peak_icrs_dec_deg": 44.64842873384618,
+      "old_naive_arcsec": 3.869200206599696,
+      "frame_corrected_arcsec": 3.883634213576631,
+      "correction_arcsec": 0.014434006976934644
+    },
+    "MACS Keck object": {
+      "catalog_ra_deg": 267.995469,
+      "catalog_dec_deg": 44.64944397,
+      "peak_fk5_ra_deg": 267.9960407707972,
+      "peak_fk5_dec_deg": 44.64843416985056,
+      "peak_icrs_ra_deg": 267.99603709604503,
+      "peak_icrs_dec_deg": 44.64842873384618,
+      "old_naive_arcsec": 3.9191424748935724,
+      "frame_corrected_arcsec": 3.933810801794859,
+      "correction_arcsec": 0.014668326901286832
+    },
+    "PSZ2 radio": {
+      "catalog_ra_deg": 144.86256,
+      "catalog_dec_deg": 40.73065,
+      "peak_fk5_ra_deg": 144.8571200701199,
+      "peak_fk5_dec_deg": 40.72670460105244,
+      "peak_icrs_ra_deg": 144.8571163479292,
+      "peak_icrs_dec_deg": 40.726709849949714,
+      "old_naive_arcsec": 20.54226141812029,
+      "frame_corrected_arcsec": 20.536542336347765,
+      "correction_arcsec": -0.005719081772525669
+    }
+  },
+  "limitations": "Frame-aware positional comparison only, no astrometric error budget or physical source association. Prior map-based paired separations use common WCS and are unaffected by this cross-catalog correction."
+}

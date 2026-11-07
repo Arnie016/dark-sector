@@ -17,3 +17,5 @@ Run `python research/two-cluster-physical-beam/analyze.py /path/to/macs-maps /pa
 A subsequent [post-hoc exclusion experiment](../psz2-boundary-ablation/README.md) shows that the selected southern boundary region strongly influences one 600 kpc estimator configuration; it does not identify a physical source or quantify a published clock bias.
 
 A separate [computational replay](../psz2-independent-reproduction/README.md) reproduces the PSZ2 position calculations using NumPy FFTs and explicit interpolation. The FITS WCS positions are FK5 J2000; some earlier comparisons read stored numeric positions as ICRS, introducing an approximately 0.021-arcsecond positional-frame systematic.
+
+The [frame-aware correction](../catalog-frame-correction/README.md), assuming ICRS catalog coordinates, gives 20.537 arcseconds for the PSZ2 peak-to-radio separation.
