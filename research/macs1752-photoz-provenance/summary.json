@@ -1,0 +1,14 @@
+{
+  "source_id": "ILTJ175159.28+443849.6",
+  "z_best": 0.3469112,
+  "z_source": "Phot",
+  "zphot": 0.3469112,
+  "zphot_err": 0.030810085729320768,
+  "photo_quality_flag": 1,
+  "position_method": "Ridge line code",
+  "optical_radio_separation_arcsec": 9.138659685002986,
+  "sdss_spec_available": false,
+  "desi_spec_available": false,
+  "hetdex_spec_available": false,
+  "warning": "Catalog-reported optical association and photometric redshift, not verified membership or spectroscopic confirmation; peak-to-radio positional match is not an identity proof."
+}
