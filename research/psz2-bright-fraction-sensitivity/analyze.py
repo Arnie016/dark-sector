@@ -40,6 +40,7 @@ for masked in (False,True):
   for reference in ('T50','T50SUB'):
    centers={im:{} for im in images};nsel={}
    for relic,(x,y) in pixels.items():
+    if min(x,y,X.shape[1]-1-x,X.shape[0]-1-y) < (600/scale)/pixscale[0]: raise ValueError('Aperture extends outside image')
     circle=(np.hypot(X-x,Y-y)<=(600/scale)/pixscale[0])&common&~exclusion
     joint=circle&(images['T50']>.2)&(images['T50SUB']>.2);ids=np.flatnonzero(joint)
     if len(ids)<100:raise ValueError('Insufficient joint pixels')

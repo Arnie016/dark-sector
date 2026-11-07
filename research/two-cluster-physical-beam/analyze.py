@@ -46,6 +46,7 @@ for cluster,folder in zip(clusters,dirs):
    for image,arr in paired.items():
     centers[image]={}
     for key,(cx,cy) in pix.items():
+     if min(cx,cy,X.shape[1]-1-cx,X.shape[0]-1-cy) < angular/scales[0]: raise ValueError('Aperture extends outside image')
      circle=np.hypot(X-cx,Y-cy)<=angular/scales[0];coverage=float((circle&common).sum()/circle.sum())
      if coverage<.99:raise ValueError(f"{cluster['name']} {key} insufficient common coverage {coverage:.3f}")
      mask=circle&common&(arr>cut);y,x=np.where(mask);v=arr[mask]

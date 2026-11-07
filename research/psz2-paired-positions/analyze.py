@@ -47,6 +47,7 @@ for radius in (60,90,120):
   for image,arr in paired.items():
    centers[image]={}
    for key,(cx,cy) in pix.items():
+    if min(cx,cy,X.shape[1]-1-cx,X.shape[0]-1-cy) < radius/scales[0]: raise ValueError('Aperture extends outside image')
     circle=np.hypot(X-cx,Y-cy)<=radius/scales[0]
     fraction=float((circle&common).sum()/circle.sum())
     if fraction<.99:raise ValueError(f'Insufficient common coverage: {key} radius {radius} fraction {fraction:.3f}')

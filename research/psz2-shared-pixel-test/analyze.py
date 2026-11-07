@@ -40,6 +40,7 @@ for masked in (False,True):
  exclusion=np.hypot(X-px,Y-py)<=40/pixscale[0] if masked else np.zeros_like(common,dtype=bool)
  centers={mode:{im:{} for im in images} for mode in modes}
  for key,(x,y) in pixels.items():
+  if min(x,y,X.shape[1]-1-x,X.shape[0]-1-y) < (600/scale)/pixscale[0]: raise ValueError('Aperture extends outside image')
   circle=(np.hypot(X-x,Y-y)<=(600/scale)/pixscale[0])&common&~exclusion
   if circle.sum()<100:raise ValueError('Insufficient sky support')
   eligible={im:circle&(arr>.2) for im,arr in images.items()};joint=eligible['T50']&eligible['T50SUB']

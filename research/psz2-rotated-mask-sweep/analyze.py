@@ -46,6 +46,7 @@ for angle,point in [(None,None)]+list(controls.items()):
  for image,arr in images.items():
   centers[image]={}
   for key,(x,y) in pixels.items():
+   if min(x,y,X.shape[1]-1-x,X.shape[0]-1-y) < (600/scale)/pixscale[0]: raise ValueError('Aperture extends outside image')
    circle=np.hypot(X-x,Y-y)<=(600/scale)/pixscale[0]
    if (circle&common).sum()/circle.sum()<.99:raise ValueError('Insufficient common coverage')
    mask=circle&common&~exclusion&(arr>.2);iy,ix=np.where(mask);values=arr[mask]

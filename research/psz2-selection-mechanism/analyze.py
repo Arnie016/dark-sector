@@ -40,6 +40,7 @@ for reference in ('T50','T50SUB'):
  for fraction in fractions:
   centers={im:{} for im in images}
   for relic,(cx,cy) in pixels.items():
+   if min(cx,cy,X.shape[1]-1-cx,X.shape[0]-1-cy) < (600/scale)/pixscale[0]: raise ValueError('Aperture extends outside image')
    circle=(np.hypot(X-cx,Y-cy)<=(600/scale)/pixscale[0])&common;joint=circle&(images['T50']>.2)&(images['T50SUB']>.2);ids=np.flatnonzero(joint)
    if len(ids)<100:raise ValueError('Insufficient joint pixels')
    n=math.ceil(fraction*len(ids));chosen=ids[np.argsort(images[reference].ravel()[ids],kind='stable')[-n:]];iy,ix=np.unravel_index(chosen,images[reference].shape);inside=feature.ravel()[chosen]
