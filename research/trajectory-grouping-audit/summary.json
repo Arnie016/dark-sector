@@ -1,0 +1,16 @@
+{
+  "catalog_rows": 2083,
+  "missing_or_duplicate_99_rows": 524,
+  "invalid_phase_space_rows": 29,
+  "valid_rows": 1530,
+  "unique_exact_phase_space_vectors": 366,
+  "unique_recorded_labels": 321,
+  "vectors_associated_with_multiple_labels": 0,
+  "labels_associated_with_multiple_vectors": 39,
+  "largest_vector_group_event_count": 20,
+  "within_label_comparisons_to_sorted_first": 45,
+  "within_label_pairs_below_both_1_ckpc_h_and_0_002_km_s": 0,
+  "median_within_label_max_component_pos_difference_ckpc_h": 524.078125,
+  "median_within_label_max_component_vel_difference_km_s": 1207.4100646972656,
+  "warning": "Exact vector fingerprints at one epoch, not independently verified subhalo, group, or tree identities."
+}

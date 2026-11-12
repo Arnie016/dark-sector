@@ -1,0 +1,12 @@
+{
+ "catalog_version": "LoTSS DR2 value-added v1.2",
+ "source": "https://lofar-surveys.org/public/DR2/catalogues/combined-release-v1.2-LM_opt_mass.fits",
+ "source_total_bytes": 3934056960,
+ "header_stored_range": [0, 69119],
+ "header_sha256": "39f8a3f1cad273f1c7d79875ac95c41a24a5185eeb207e1c2c422504d4cec761",
+ "row_range": [3636356176, 3636357119],
+ "row_sha256": "cb9145dfe3bba33ebc0e3a8c566ee3c110feb087c6a284ea8d29d8f7e7d39095",
+ "provisional_record_number": 3852000,
+ "identity": "ILTJ175159.28+443849.6",
+ "retrieved_utc": "2026-11-07"
+}

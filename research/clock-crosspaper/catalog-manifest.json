@@ -1,0 +1,8 @@
+{
+  "source": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J%2FA%2BA%2F660%2FA78%2Frrsamp&-out.all&-out.max=100",
+  "catalog": "J/A+A/660/A78/rrsamp",
+  "bytes": 8222,
+  "sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "retrieved_utc": "2026-11-06",
+  "license_information": "https://cds.unistra.fr/vizier-org/licences_vizier.html"
+}

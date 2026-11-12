@@ -1,0 +1,30 @@
+{
+  "input_summary_sha256": {
+    "research/macs1752-subtraction-sensitivity/summary.json": "74ac1ad8147c7bc3509054297c87580bf0aa02e184f65524fcf8767cb0c99a2c",
+    "research/macs1752-difference-localization/summary.json": "97bfcbf6a3d72ad1a04fdc7c66f48805c296137987a0595e0cc64e55c214a71a",
+    "research/macs1752-matched-centers/summary.json": "e6566de7774b19bf0d220ccb440470dc5a7935fd92455deff8bebad5c65dc1a9",
+    "research/macs1752-model-holdout/summary.json": "5f6ce2643e95950b8b688b024a173a054a18eee22980c533fe6780c555c34db1",
+    "research/macs1752-keck-crossmatch/summary.json": "e4d8bd09461aed4ac6b65bca80f8280de4a9d6ba002a477dde768b571f7a7ab2",
+    "research/macs1752-radio-optical-overlay/summary.json": "01b562c07b80ab0bdca13f4426a1d02f68eec64892503b72c0b201b3cf0b2294"
+  },
+  "same_beam_south_center_difference_range_arcsec": [
+    0.011315788228250653,
+    15.897679051994475
+  ],
+  "same_beam_pair_difference_range_arcsec": [
+    -15.802343525321191,
+    0.19957032035705424
+  ],
+  "ablation_before_arcsec": 15.200191032886528,
+  "ablation_after_arcsec": 0.11712027740874967,
+  "matched_beam_pair_difference_range_arcsec": [
+    -0.32945853353066923,
+    0.25127711659632723
+  ],
+  "keck_optical_offset_arcsec": 0.07564823157220846,
+  "keck_galaxy_peak_offset_arcsec": 3.9191424748935724,
+  "keck_z": 0.3708639,
+  "holdout_all_pixel_rms_restored": 0.29945479770173333,
+  "holdout_all_pixel_rms_component": 0.02840422731453592,
+  "limitations": "Derived summary consistency only; not independent verification, publication readiness, or a measurement of merger-age bias."
+}

@@ -1,0 +1,58 @@
+{
+  "target_beam_kpc": 135,
+  "aperture_kpc": 600,
+  "threshold_mjy_per_beam": 0.2,
+  "results_kpc": {
+    "none": {
+      "independent": -270.58443347829956,
+      "shared_eligible_independent_rank": -232.65619641683793,
+      "shared_t50_rank": -213.4646702034065,
+      "shared_sub_rank": -0.030878158399370203
+    },
+    "peak40": {
+      "independent": 6.502575282579137,
+      "shared_eligible_independent_rank": -0.3449363163915706,
+      "shared_t50_rank": -0.014502903291658136,
+      "shared_sub_rank": -0.025341403391091095
+    }
+  },
+  "selection_diagnostics": {
+    "none_N": {
+      "eligible_T50": 9512,
+      "eligible_T50SUB": 6946,
+      "joint_eligible": 6854,
+      "independent_selected_overlap": 695,
+      "independent_selected_union": 952,
+      "joint_rank_selected_overlap": 670,
+      "joint_rank_selected_count": 686
+    },
+    "none_S": {
+      "eligible_T50": 8000,
+      "eligible_T50SUB": 7046,
+      "joint_eligible": 6934,
+      "independent_selected_overlap": 537,
+      "independent_selected_union": 968,
+      "joint_rank_selected_overlap": 520,
+      "joint_rank_selected_count": 694
+    },
+    "peak40_N": {
+      "eligible_T50": 9512,
+      "eligible_T50SUB": 6946,
+      "joint_eligible": 6854,
+      "independent_selected_overlap": 695,
+      "independent_selected_union": 952,
+      "joint_rank_selected_overlap": 670,
+      "joint_rank_selected_count": 686
+    },
+    "peak40_S": {
+      "eligible_T50": 7395,
+      "eligible_T50SUB": 6807,
+      "joint_eligible": 6695,
+      "independent_selected_overlap": 681,
+      "independent_selected_union": 740,
+      "joint_rank_selected_overlap": 664,
+      "joint_rank_selected_count": 670
+    }
+  },
+  "warning": "Shared support is exploratory and reference-dependent; separately weighted maps still share observations, and the feature and mask were selected post-hoc. No author-pipeline, uncertainty, or clock inference."
+}

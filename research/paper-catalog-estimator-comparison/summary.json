@@ -1,0 +1,9 @@
+{
+  "input_event_csv_sha256": "a20e39c685edc0e2ab4d46f836a03d4e747ab7c4c5b01506320b10663147f3ca",
+  "events": 1977,
+  "median_abs_difference_km_s": 1673.6623734267046,
+  "p90_abs_difference_km_s": 2614.186680539636,
+  "median_catalog_vcoll_km_s": 2101.167724609375,
+  "median_abs_proper_separation_rate_km_s": 336.9980739044871,
+  "warning": "Three-point rate at Snap_coll is NOT reproduction of paper five-point fit or a matched estimator; descriptive only."
+}

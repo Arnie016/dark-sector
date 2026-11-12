@@ -1,0 +1,11 @@
+{
+  "gold_sha256": "7ac1c7b6cb51eb8cd01188d7c655a5549cffd7ca4a154af1f6838834c38ec4e6",
+  "crosswalk_sha256": "225b89aa006c88b84b82022a0bce707ab8f9c0e6b5c55770a13420405b57aeb5",
+  "matched": 8,
+  "different_rounded_redshift_count": 4,
+  "cosmology": "flat LCDM H0=70 km/s/Mpc Om0=0.3",
+  "zwcl1856_heading_z": 0.334,
+  "zwcl1856_table_z": 0.304,
+  "illustrative_fixed_angle_heading_vs_table_percent": 6.566748891096319,
+  "caveat": "Coordinates and original angular measurements not checked; scalar fixed-angle rescaling is not a remeasurement, lensing re-fit, correction to published results or uncertainty."
+}

@@ -1,0 +1,84 @@
+{
+  "archive_sha256": "7aee2051a76ba6cb89afd0816cfd8a861df57682f2bee0010c7d5f8bcbfd03dc",
+  "archive_bytes": 38604083,
+  "members": [
+    {
+      "name": "PSZ2G181.06+48.47T25kpc.fits",
+      "size": 5316480,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47T100kpc.fits",
+      "size": 1056960,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47CHANDRA.fits",
+      "size": 17579520,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47R-1.25.fits",
+      "size": 5316480,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47.fits",
+      "size": 5316480,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47compact-model.fits",
+      "size": 5319360,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47T50kpc.fits",
+      "size": 1667520,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47T25kpcSUB.fits",
+      "size": 5316480,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47T50kpcSUB.fits",
+      "size": 1728000,
+      "type": "file"
+    },
+    {
+      "name": "PSZ2G181.06+48.47T100kpcSUB.fits",
+      "size": 1056960,
+      "type": "file"
+    }
+  ],
+  "archive_region_or_mask_candidates": [],
+  "decisions": {
+    "PSZ2G181.06+48.47": {
+      "source_file": "psz2-decision.txt",
+      "sha256": "d53ee869d907ab68a1fcce77f238fbf674cfafceaf0cd251df35b04bc755f1ef",
+      "records": [
+        {
+          "classification": "RR",
+          "significant_artifacts_answer": "n"
+        }
+      ]
+    },
+    "PSZ2G071.21+28.86": {
+      "source_file": "macs-decision.txt",
+      "sha256": "ee2ec5478527bab46dc323b26d2c9beb544094f1a98ff6328b311df981595654",
+      "records": [
+        {
+          "classification": "RH",
+          "significant_artifacts_answer": "n"
+        },
+        {
+          "classification": "RR",
+          "significant_artifacts_answer": "n"
+        }
+      ]
+    }
+  },
+  "limitations": "Inventory covers only this ten-file archive and the two linked decision records; absence of named masks here does not prove masks are unavailable elsewhere or encode the paper's full selection."
+}

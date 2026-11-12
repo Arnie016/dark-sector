@@ -1,0 +1,35 @@
+{
+  "redshift": 0.234,
+  "cosmology": "flat LCDM H0=70 km/s/Mpc, Om0=0.3",
+  "separation_arcmin": {
+    "relic": 11.820612610652974,
+    "mass": 2.234690828991889
+  },
+  "separation_kpc": {
+    "relic": 2640.0162536898038,
+    "mass": 499.0959694587463
+  },
+  "ratio_mass_to_relic": 0.18905033965650314,
+  "radio_shape": [
+    656,
+    656
+  ],
+  "chandra_shape": [
+    1480,
+    1483
+  ],
+  "chandra_bunit": null,
+  "wcs_roundtrip_max_arcsec": {
+    "radio": 2.0660590794869938e-10,
+    "chandra": 6.869998111961196e-11
+  },
+  "wcs_warnings": {
+    "radio": [
+      "'datfix' made the change 'Set MJD-OBS to 57177.489676 from DATE-OBS'."
+    ],
+    "chandra": [
+      "'datfix' made the change 'Set DATEREF to '1998-01-01' from MJDREF.\nInvalid parameter values: MJD-OBS and DATE-OBS are inconsistent.\nSet MJD-END to 58749.883009 from DATE-END'.",
+      "'unitfix' made the change 'Changed units:\n  'degree' -> 'deg',\n  'degree' -> 'deg'."
+    ]
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "cosmology": "FlatLambdaCDM: H0=70 km/s/Mpc, Om0=0.3, Tcmb0=2.725 K; illustrative",
+  "redshift": 0.234,
+  "angular_diameter_distance_Mpc": 767.7703269771342,
+  "gamma_sigma_deg": 0.4,
+  "gamma_68_containment_deg": 0.6038368741806655,
+  "gamma_68_projected_Mpc_at_cluster_redshift": 8.091486637766831,
+  "lensing_R200c_Mpc": 1.43,
+  "lensing_R200c_angle_deg": 0.10671546141447565,
+  "radio_relic_separation_Mpc_approx": 2.7,
+  "radio_relic_separation_deg_approx": 0.20149073134201698,
+  "qualification": "Gaussian containment radius, lensing radius and relic separation are different quantities; gamma-ray distance and association unverified."
+}

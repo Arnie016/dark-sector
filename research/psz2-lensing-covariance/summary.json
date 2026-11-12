@@ -1,0 +1,10 @@
+{
+  "central_north_south_ratio": 0.3247232472324723,
+  "proxy_sigma_north": 0.32499999999999996,
+  "proxy_sigma_south": 0.495,
+  "published_correlation": -0.574,
+  "approx_ratio_sigma_correlated": 0.16145041924362613,
+  "approx_ratio_sigma_zero_correlation": 0.1337920606523263,
+  "relative_increase_percent": 20.67264563864757,
+  "qualification": "Use mean of each asymmetric quoted error as a proxy for standard deviation; use first-order uncertainty propagation. This does not reconstruct the posterior."
+}

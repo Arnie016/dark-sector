@@ -1,0 +1,18 @@
+{
+  "valid_rows": 2083,
+  "t0_gyr": 13.802718326801589,
+  "median_signed_direct_minus_derived_gyr": 0.005010785567801435,
+  "p90_absolute_difference_gyr": 0.08179716981457759,
+  "max_absolute_difference_gyr": 0.3082381017181799,
+  "direct_selection_rows": 107,
+  "full_snapshot_selection_rows": 103,
+  "intersection_rows": 103,
+  "direct_only_rows": [
+    343,
+    421,
+    1243,
+    1821
+  ],
+  "full_only_rows": [],
+  "warning": "Both estimates share cosmology; this is sensitivity to field interpretation, not independent validation or a confidence interval."
+}

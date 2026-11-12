@@ -1,0 +1,16 @@
+{
+  "catalog": "J/ApJS/240/39/table7",
+  "query_radius_arcsec": 60,
+  "rows": 33,
+  "source_file_sha256": "68a293f0dfd84c872f69a9a75a7b33618a70dd229281bd4dcfa5929c08e7f395",
+  "keck_object": "[GDW2019] J267.99546900+44.64944397",
+  "optical_separation_arcsec": 0.07564823157220846,
+  "radio_separation_arcsec": 9.185557713829922,
+  "next_optical_separation_arcsec": 7.577150847415233,
+  "z_spec": 0.3708639,
+  "z_spec_uncertainty": 2.17e-05,
+  "z_phot_lotss": 0.3469112,
+  "z_phot_uncertainty": 0.030810085729320768,
+  "cluster_reference_z": 0.366,
+  "interpretation": "Positional optical match; association with extended radio emission and cluster membership remain unproven."
+}

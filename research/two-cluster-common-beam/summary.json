@@ -1,0 +1,74 @@
+{
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "cosmology": "FlatLambdaCDM H0=70 km/s/Mpc, Om0=0.3, Tcmb0=0",
+  "target_beam_arcsec": 25,
+  "apertures_kpc": [
+    300,
+    450,
+    600
+  ],
+  "thresholds_mjy_per_25arcsec_beam": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "clusters": {
+    "MACS J1752": {
+      "z": 0.366,
+      "kpc_per_arcsec": 5.083789227981204,
+      "beam_fwhm_kpc": 127.0947306995301,
+      "center_difference_arcsec": {
+        "N": [
+          0.028804774087557102,
+          0.34077034089641656
+        ],
+        "S": [
+          0.009299050105138238,
+          12.680014250236948
+        ]
+      },
+      "pair_difference_arcsec": [
+        -12.619490347877047,
+        0.0877147413279431
+      ],
+      "pair_difference_kpc": [
+        -64.15482909315011,
+        0.4459232570981549
+      ],
+      "min_coverage": 1.0,
+      "input_sha256": {
+        "T50": "ad491b8e9df67889f1e9ee8f3e9f323052698705ca553c8875e3b7d0262bd124",
+        "T50SUB": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+      }
+    },
+    "PSZ2 G181": {
+      "z": 0.234,
+      "kpc_per_arcsec": 3.7223342261615215,
+      "beam_fwhm_kpc": 93.05835565403804,
+      "center_difference_arcsec": {
+        "N": [
+          0.27291733585660044,
+          39.067053947293005
+        ],
+        "S": [
+          0.08206000773979058,
+          74.0466305760463
+        ]
+      },
+      "pair_difference_arcsec": [
+        -71.36971424482681,
+        0.18560670214878883
+      ],
+      "pair_difference_kpc": [
+        -265.66193004488633,
+        0.6908901800134039
+      ],
+      "min_coverage": 1.0,
+      "input_sha256": {
+        "T50": "d08c263b83712bdc40b13357ef297ce6e389437d666aee870fdf68f8489ce5b4",
+        "T50SUB": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+      }
+    }
+  },
+  "caveat": "Post-hoc two-field case study; common angular beam, differing physical beams, arbitrary thresholds and regions; no calibrated uncertainty or merger-age inference."
+}

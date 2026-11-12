@@ -1,0 +1,9 @@
+{
+ "official_landing_page": "https://lofar-surveys.org/clusters/PSZ2G071.21%2B28.86.html",
+ "official_archive": "https://lofar-surveys.org/public/clusterdata/PSZ2G071.21%2B28.86/PSZ2G071.21%2B28.86_FITS.tar.gz",
+ "archive_sha256": "96b0297b8be66c3dadb35783d99a59eaad1c68063ec6da3c3832edab199727bc",
+ "archive_bytes": 71739765,
+ "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+ "selected": {"T50kpcSUB.fits":"d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de", "T100kpcSUB.fits":"ecb30d7acec3eead058916780398811656f606347bb3c1dd79e9d7760cf86de1"},
+ "retrieved_utc": "2026-11-07"
+}

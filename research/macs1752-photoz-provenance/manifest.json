@@ -1,0 +1,11 @@
+{
+  "source": "https://lofar-surveys.org/public/DR2/catalogues/combined-release-v1.1-LM_opt_mass.fits",
+  "source_catalog_total_bytes": 3934039680,
+  "header_range": [0, 51839],
+  "header_sha256": "066e62685d60d0627d2deac5e457a82c7cbaffe909be85089085b651f7565a11",
+  "row_range": [3636338896, 3636339839],
+  "row_sha256": "b666e332f02697b94659a861a26532f6c15d3ea4a5aff69b580c911effa34a5a",
+  "vizier_record_pointer": 3852000,
+  "pointer_note": "A VizieR record number is only a provisional row offset, not an identifier. Verify the Source_Name in the original FITS row.",
+  "retrieved_utc": "2026-11-07"
+}
