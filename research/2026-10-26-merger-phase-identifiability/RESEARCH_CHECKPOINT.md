@@ -1,0 +1,8 @@
+# C-06 Research checkpoint | 2026-10-26
+
+- **C06-C1 DERIVED:** SIMULATED three-observable toy with unknown (k,t,alpha): det J=s b v(t) cos²(alpha). At orbital apocenter v=0, local full-rank identification fails; no literature novelty claim.
+- **C06-C2 SIMULATION_RESULT + UNIDENTIFIABLE:** same outputs (R=2945.411 kpc, H=909.327 kpc, U=0 km/s) at (k=1 cm²/g, alpha=30°) and (k=0.5 cm²/g, alpha=36.07076865°). Invented values, not observations. With made-up independent errors, profiled curvature approaches zero at turnaround.
+- **C06-C3 DATA_INSUFFICIENT:** no calibrated TNGC-SIDM output grid, radio completeness, covariance, weak-lensing posterior, kinematics or selection likelihood. TNGC-SIDM v1 makes underlying data available on reasonable request, not publicly supplied numerical arrays.
+- **Continuity:** main b6b85682f0843ae0d097b5f192d90b51b130788d checked 26 Oct; PRs #4–#10 open, including C05 25 Oct halo-history and N10/N11 26 Oct source/spectral nulls. Earlier named Sept archives searched in Files but not recovered. Do not reclassify C03 globally unscreened gravity FAILURE as success.
+- **Execution:** one ChatGPT Linux Python 3.13.5 CPU process, 20 s hard timeout, exit 0, elapsed 1.10 s. run.py SHA256 451d50bf3fbcfb22d5ef0e9ca02a55e7a97ea00af3e7a39b91a6c0f5c106df41; results.json SHA256 6a9f73a9f82f2b2bdbddb1b63242a2eb7a84c59816b0bf74ef1da7711acaef44. 11 coded assertions but one tautological/misnamed: at most 10 meaningful checks. Seed null; units/assumptions in receipt.
+- **Next gate:** machine-readable matched-merger outputs, independent angle constraints, heldout by independent initial halo, not nearby snapshots. Two simulated cluster hosts do not justify population statistics.

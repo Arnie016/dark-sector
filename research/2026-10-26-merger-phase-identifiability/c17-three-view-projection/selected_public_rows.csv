@@ -1,0 +1,8 @@
+# Source: https://www.tng-project.org/files/TNG-Cluster_Catalog.txt
+# Catalog version reported 6 March 2025; viewed 2026-11-06, lines 43-45.
+# Deterministically selected first three rows origID=0,1,2; these are SIMULATED TNG-Cluster halos.
+# q[axis] = log10(projected positive offset / pkpc); x,y,z are viewing-axis labels.
+origID,haloID,xray_x,xray_y,xray_z,sz_x,sz_y,sz_z
+0,0,0.23,0.67,0.55,0.60,0.45,0.72
+1,252455,1.91,2.81,1.84,1.35,1.75,1.93
+2,476245,1.41,2.29,2.23,1.04,1.26,1.63
