@@ -20,6 +20,7 @@ function fetchLocal(path, type) {
 }
 
 export const getCatalog = () => fetchLocal("catalog.json", "json");
+export const getHostCatalog = () => fetchLocal("hosts.json", "json");
 
 export async function getEvent(row) {
   const catalog = await getCatalog();
@@ -35,8 +36,8 @@ export async function getEvent(row) {
 
 const littleEndian = new Uint8Array(new Uint32Array([1]).buffer)[0] === 1;
 
-export function decodeCutout(bytes, side) {
-  const count = side ** 2;
+export function decodeCutout(bytes, width, height = width) {
+  const count = width * height;
   if (bytes.byteLength !== count * 8) throw new Error("Unexpected radio cutout size.");
   const view = new DataView(bytes);
   const values = littleEndian ? new Float32Array(bytes) :
@@ -52,4 +53,12 @@ export async function getRadio(id) {
     return { ...cut, ...decodeCutout(buffer, cut.side) };
   }));
   return { ...metadata, cutouts };
+}
+
+export async function getRadioPanorama(field, mode) {
+  const geometry = field.panorama;
+  if (!geometry?.layers[mode]) return null;
+  const layer = geometry.layers[mode];
+  const data = await fetchLocal(`radio/${layer.file}`, "arrayBuffer");
+  return { ...geometry, ...layer, mode, ...decodeCutout(data, geometry.width, geometry.height) };
 }

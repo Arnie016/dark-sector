@@ -1,0 +1,41 @@
+{
+  "version": 1,
+  "id": "corrected-velocities",
+  "date": "2026-11-03",
+  "scope": "Data and tooling",
+  "status": "measurement",
+  "title": "Check the velocity before reading the orbit",
+  "summary": "A reference merger gives consistent relative speeds from its reconstructed trajectory and the catalog’s collision-speed field.",
+  "sections": [
+    {
+      "heading": "A single sample with clear units",
+      "body": [
+        "Read the main and secondary position and peculiar velocity triples from row 5. Compute the nearest periodic separation, then convert positions from ckpc/h to proper kpc with a/h. Subtract the two velocity vectors in km/s and take the norm.",
+        "At snapshot 70, the stored sample after first passage gives 95.4061 proper kpc and 3,689.6624 km/s. The absolute difference from the recorded V_coll for this row is about 0.00015 km/s. This is a consistency check on a specific event and release."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Input and numerical verifier",
+      "result": "The atlas exporter pins the HDF5 digest and checks the corrected Mhistory_vel dimensions 2,083 × 70 × 6. The reference replay checks row 5.",
+      "command": "node eventfield/scripts/verify.mjs",
+      "url": "https://github.com/Arnie016/dark-sector/tree/65ae61f/eventfield"
+    }
+  ],
+  "sources": [
+    {
+      "label": "IllustrisTNG · TNG-Cluster data documentation",
+      "url": "https://www.tng-project.org/data/cluster/"
+    },
+    {
+      "label": "IllustrisTNG · Changes and additions",
+      "url": "https://www.tng-project.org/data/forum/topic/2/changes-and-additions/"
+    }
+  ],
+  "next": "Use the documented snapshot IDs and independently traced hosts before treating an ensemble of merger rows as independent events.",
+  "action": {
+    "label": "Replay row 5 at snapshot 70",
+    "href": "#orbit?event=5&snap=70"
+  }
+}

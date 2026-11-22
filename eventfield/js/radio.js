@@ -1,14 +1,17 @@
 import { byId, choose, downloadCsv, number, setText, signed, value } from "./dom.js";
-import { getRadio } from "./data.js";
-import { drawRadio, drawRadioCurve, RADIO_MAX } from "./charts.js";
+import { getRadio, getRadioPanorama } from "./data.js";
+import { drawRadio, drawRadioCurve, drawRadioPanorama } from "./charts.js";
 import { measureRadio } from "./engine.js";
 
 let field = null;
-let channel = 0;
+let channel = 1;
 let request = 0;
+let mapRequest = 0;
 let measurement = null;
 let readings = [];
 let renderHandle = 0;
+let panorama = null;
+let faint = false;
 
 const settings = () => ({
   radius: value("aperture"),
@@ -18,14 +21,49 @@ const settings = () => ({
 
 function paint() {
   if (!field || !measurement || byId("view-radio").hidden) return;
-  field.cutouts.forEach((cut, i) => {
-    const result = measurement.points[i][channel];
-    const canvas = byId(i === 0 ? "radio-n" : "radio-s");
-    const label = i ? "Southern relic" : "Northern relic";
-    canvas.setAttribute("aria-label", `${label}, ${channel ? "T50SUB" : "T50"}. ${result.selected?.length ?? 0} bright pixels used to estimate its position.`);
-    drawRadio(canvas, cut, result, measurement.radiusPixels, channel);
-  });
-  drawRadioCurve(byId("radio-curve"), readings);
+  const canvas = byId("radio-sky");
+  const activeMeasurement = byId("radio-measure").open ? measurement : null;
+  if (panorama) {
+    const marker = panorama.mode === "matched" ? activeMeasurement : null;
+    drawRadioPanorama(canvas, panorama, field, marker, channel, faint);
+    const mode = channel ? "T50SUB" : "T50";
+    const pair = marker ? ` Measured separation ${number(measurement.separations[channel], 1)} kiloparsecs.` : "";
+    canvas.setAttribute("aria-label", `${field.cluster} wide LoTSS field, ${mode}. Northern catalog relic on the left and southern relic on the right.${pair}`);
+  } else {
+    canvas.setAttribute("aria-label", `${field.cluster}, southern relic cutout`);
+    drawRadio(canvas, field.cutouts[1], activeMeasurement?.points[1][channel], measurement.radiusPixels, channel);
+  }
+  if (activeMeasurement) drawRadioCurve(byId("radio-curve"), readings);
+}
+
+function describeImage() {
+  if (!panorama) {
+    setText("radio-color-label", "Southern cutout · prepare the current data cache for a wide field");
+    return;
+  }
+  const matched = byId("radio-measure").open;
+  const beam = panorama.beamsArcsec[channel].join(" × ");
+  setText("radio-color-label", matched
+    ? "135 kpc matched beam · measurement overlay"
+    : `Native release beam ${beam}″ · regridded along the relic pair`);
+}
+
+async function loadMap() {
+  if (!field) return;
+  const ticket = ++mapRequest;
+  const mode = byId("radio-measure").open ? "matched" : "native";
+  try {
+    const loaded = await getRadioPanorama(field, mode);
+    if (ticket !== mapRequest) return;
+    panorama = loaded;
+    byId("radio-sky").style.aspectRatio = loaded ? `${loaded.width} / ${loaded.height}` : "2 / 1";
+  } catch (error) {
+    if (ticket !== mapRequest) return;
+    console.warn("Wide radio map", error.message);
+    panorama = null;
+  }
+  describeImage();
+  paint();
 }
 
 function update() {
@@ -64,21 +102,21 @@ export async function loadRadio(id = "g181") {
     return;
   }
   setText("radio-status", "Loading the paired radio maps…");
-  choose("radio-field", "field", id);
+  byId("radio-field").value = id;
   try {
     const next = await getRadio(id);
     if (ticket !== request) return;
     field = next;
+    panorama = null;
     setText("radio-id", `${field.psZ2} · z = ${field.z.toFixed(3)}`);
     setText("radio-cluster", id === "g099" ? "Abell 1925" : field.cluster);
-    setText("radio-color-label", `Flux 0–${RADIO_MAX} mJy/beam · asinh`);
     byId("radio-layout").hidden = false;
-    byId("radio-series").hidden = false;
     update();
+    loadMap();
   } catch (error) {
     if (ticket !== request) return;
     console.warn("Radio read", error.message);
-    if (field) choose("radio-field", "field", field.id);
+    if (field) byId("radio-field").value = field.id;
     setText("radio-status", "The requested cutouts could not be read. Prepare the local atlas data and select the field again.");
   }
 }
@@ -104,9 +142,8 @@ function exportMeasurement() {
 }
 
 export function wireRadio() {
-  byId("radio-field").addEventListener("click", event => {
-    const id = event.target.closest("button")?.dataset.field;
-    if (!id) return;
+  byId("radio-field").addEventListener("change", event => {
+    const id = event.target.value;
     const hash = `#radio?field=${id}`;
     if (location.hash === hash) loadRadio(id);
     else location.hash = hash;
@@ -116,7 +153,38 @@ export function wireRadio() {
     if (image === undefined) return;
     channel = Number(image);
     choose("radio-image-mode", "image", channel);
+    describeImage();
     paint();
+  });
+  byId("radio-measure").addEventListener("toggle", loadMap);
+  byId("radio-faint").addEventListener("click", event => {
+    faint = !faint;
+    event.currentTarget.setAttribute("aria-pressed", String(faint));
+    event.currentTarget.textContent = faint ? "Hide faint signal" : "Show faint signal";
+    paint();
+  });
+  const fullscreen = byId("radio-fullscreen");
+  fullscreen.addEventListener("click", async () => {
+    try {
+      if (document.fullscreenElement) await document.exitFullscreen();
+      else await fullscreen.parentElement.requestFullscreen();
+    } catch {
+      fullscreen.parentElement.classList.toggle("expanded");
+      updateFullscreen();
+    }
+  });
+  function updateFullscreen() {
+    const expanded = document.fullscreenElement !== null || fullscreen.parentElement.classList.contains("expanded");
+    fullscreen.ariaLabel = expanded ? "Exit full screen" : "Enter full screen";
+    fullscreen.title = fullscreen.ariaLabel;
+    fullscreen.textContent = expanded ? "×" : "⤢";
+    paint();
+  }
+  document.addEventListener("fullscreenchange", updateFullscreen);
+  document.addEventListener("keydown", event => {
+    if (event.key !== "Escape" || !fullscreen.parentElement.classList.contains("expanded")) return;
+    fullscreen.parentElement.classList.remove("expanded");
+    updateFullscreen();
   });
   for (const key of ["aperture", "threshold", "bright-fraction"]) byId(key).addEventListener("input", queueUpdate);
   byId("aperture-presets").addEventListener("click", event => {
@@ -126,8 +194,7 @@ export function wireRadio() {
     queueUpdate();
   });
   byId("radio-export").addEventListener("click", exportMeasurement);
-  byId("radio-question").addEventListener("click", () => { location.hash = "#desk?topic=radio"; });
   const observer = new ResizeObserver(paint);
-  observer.observe(byId("radio-n"));
+  observer.observe(byId("radio-sky"));
   observer.observe(byId("radio-curve"));
 }

@@ -17,35 +17,34 @@
       <a class="brand" href="#atlas" aria-label="Eventfield atlas"><img src="mark.svg" alt="" width="30" height="30"><span>eventfield<span class="brand-dot">.</span></span></a>
       <nav aria-label="Main navigation" class="main-nav">
         <a href="#atlas" data-nav="atlas" aria-current="page">Atlas</a>
-        <a href="#orbit" data-nav="orbit">Orbit lab</a>
-        <a href="#radio" data-nav="radio">Radio lab</a>
-        <a href="#desk" data-nav="desk">Research desk</a>
+        <a href="#radio" data-nav="radio">Radio</a>
+        <a href="#orbit" data-nav="orbit">Orbits</a>
+        <a href="#data" data-nav="data">Data</a>
+        <a href="#journal" data-nav="journal">Journal</a>
       </nav>
-      <span class="mast-source"><i></i> TNG-Cluster × LoTSS</span>
+      <span class="mast-source">Frontier physics</span>
     </div>
   </header>
   <main id="main">
     <section id="view-atlas" class="frame view" data-view="atlas" aria-label="Cluster merger atlas">
       <div class="hero">
         <div class="hero-copy">
-          <div class="kicker"><span class="tick"></span> Galaxy cluster merger atlas</div>
+          <div class="kicker"><span class="tick"></span> Frontier physics · Galaxy clusters</div>
           <h1>When clusters<br><em>collide.</em></h1>
           <p>Follow a collision in TNG-Cluster, then measure the radio relics left by mergers in the real sky.</p>
           <div class="hero-actions">
-            <a class="button primary" href="#orbit">Replay a merger <span aria-hidden="true">↗</span></a>
-            <a class="text-action" href="#catalog">Explore the data <span aria-hidden="true">↓</span></a>
+            <a class="button primary" href="#radio">Explore the radio sky <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href="#journal">Read the journal <span aria-hidden="true">↗</span></a>
           </div>
-          <div class="hero-credit"><span class="mark-stroke"></span> Frontier Physics <span> / </span> Dark Sector Research</div>
         </div>
         <figure class="hero-figure">
           <div class="hero-image" id="hero-image">
             <img id="hero-render" alt="TNG-Cluster halo 0 gas column density. A bright central cluster is surrounded by diffuse purple filaments." width="800" height="886" fetchpriority="high">
-            <div class="reticle" aria-hidden="true"><b></b></div>
             <div class="image-top">
               <span class="image-label"><i></i> Simulated projection</span>
               <span class="image-index" id="hero-view-label">z-axis · z = 0</span>
             </div>
-            <div class="image-bottom"><div><span id="hero-band-label">Gas column density</span><strong>Halo 0</strong></div><span class="image-id">TNG / 099</span></div>
+            <div class="image-bottom"><div><span id="hero-band-label">Gas column density</span><strong>Halo 0</strong></div></div>
             <p id="hero-empty" class="asset-empty" hidden>Prepare the local gallery images to view this projection.</p>
           </div>
           <figcaption class="hero-caption">
@@ -93,15 +92,24 @@
             <h3>Move the aperture</h3>
             <p>Measure relic positions on the same sky field with two different treatments of compact sources.</p>
           </a>
-          <a class="story-card story-desk" href="#desk">
+          <a class="story-card story-desk" href="#journal">
             <div class="story-art story-refs" aria-hidden="true"><span>Lee et al. · TNG-Cluster</span><span>Botteon et al. · LoTSS</span><span>Ahn et al. · weak lensing</span></div>
             <span class="card-label"><span class="kind literature">Literature</span><span aria-hidden="true">↗</span></span>
-            <h3>Ask for the evidence</h3>
-            <p>Look up how a result was measured, what it means, and which input would test it next.</p>
+            <h3>Test a merger clock</h3>
+            <p>Follow the papers, equations and verifiers behind the research timeline.</p>
           </a>
         </div>
       </section>
 
+    </section>
+
+    <section id="view-data" class="frame view lab-view" data-view="data" aria-labelledby="data-heading" hidden>
+      <div class="lab-intro"><p class="kicker"><span class="tick"></span> Data library</p><h1 id="data-heading">Beyond the merger file.</h1><p>Browse the files we can inspect today and the source products needed for the next experiment.</p></div>
+      <div id="data-inventory" class="inventory-grid"></div>
+      <section class="panel inventory-hosts" aria-labelledby="hosts-heading">
+        <div class="panel-heading"><div><h3 id="hosts-heading">Inside the 352-cluster catalog</h3><p id="host-caption">Loading the local file inventory…</p></div><a class="plain-link" href="https://www.tng-project.org/data/cluster/" target="_blank" rel="noopener">TNG-Cluster release ↗</a></div>
+        <details><summary>See the real HDF5 fields and fingerprint</summary><p id="host-hash"></p><ul id="host-fields" class="field-list"></ul></details>
+      </section>
       <section class="catalog-section" id="catalog" aria-labelledby="catalog-heading">
         <div class="section-head">
           <div><p class="kicker"><span class="tick"></span> Dataset guide</p><h2 id="catalog-heading">What’s in the file?</h2></div>
@@ -126,13 +134,13 @@
             <details id="catalog-provenance"><summary>Full field list and file fingerprint</summary><p id="catalog-file"></p><ul id="catalog-fields" class="field-list"></ul></details>
           </div>
           <div class="panel data-sources">
-            <h3>Three ways to look</h3>
+            <h3>How the data layers fit together</h3>
             <dl>
               <div><dt><span class="status-dot violet"></span> Simulated halos</dt><dd>Track relative positions and velocities. TNG gas, X-ray and radio renders show the present-day gallery target.</dd></div>
               <div><dt><span class="status-dot mint"></span> Observed radio sky</dt><dd>LoTSS-DR2 images for MACS J1752, PSZ2 G181 and Abell 1925. Each field has a pair with different source subtraction.</dd></div>
               <div><dt><span class="status-dot amber"></span> Inputs for the next model</dt><dd>Co-registered gas temperature, density and Mach maps for shocks. Projected total mass, background galaxy shapes and redshifts for weak lensing.</dd></div>
             </dl>
-            <a href="#desk?topic=world" class="plain-link">Open the model evidence brief ↗</a>
+            <a href="#journal?post=clock-pipeline" class="plain-link">Read the proposed experiment ↗</a>
           </div>
         </div>
       </section>
@@ -220,37 +228,51 @@
       </div>
     </section>
 
-    <section id="view-radio" class="frame view lab-view" data-view="radio" aria-labelledby="radio-heading" hidden>
-      <div class="lab-intro"><p class="kicker"><span class="tick"></span> Radio lab</p><h1 id="radio-heading">Where does a relic begin?</h1><p>Change the aperture and measure how a radio relic’s center shifts between two versions of the same sky map.</p></div>
-      <div class="lab-toolbar">
-        <div class="seg" id="radio-field" role="group" aria-label="Observed field">
-          <button data-field="g181" aria-pressed="true" type="button">PSZ2 G181</button>
-          <button data-field="macs" aria-pressed="false" type="button">MACS J1752</button>
-          <button data-field="g099" aria-pressed="false" type="button">Abell 1925</button>
+    <section id="view-radio" class="frame view lab-view radio-view" data-view="radio" aria-labelledby="radio-heading" hidden>
+      <div class="radio-header">
+        <div><p class="kicker">LoTSS-DR2 · Observed radio sky</p><h1 id="radio-heading">Two relics, one field.</h1></div>
+        <div class="radio-field-picker">
+          <label for="radio-field">Cluster</label>
+          <select id="radio-field">
+            <option value="g181" selected>PSZ2 G181</option>
+            <option value="macs">MACS J1752</option>
+            <option value="g099">Abell 1925</option>
+          </select>
         </div>
-        <span class="kind observation">LoTSS-DR2 observations</span>
       </div>
-      <p id="radio-status" class="state-message" role="status">Loading radio cutouts…</p>
-      <div id="radio-layout" class="radio-layout" hidden>
-        <div class="panel radio-panel">
-          <div class="panel-heading plot-heading">
-            <div><p class="kicker" id="radio-id">PSZ2 G181.06+48.47</p><h2 id="radio-cluster">PSZ2 G181</h2></div>
-            <div class="seg compact" id="radio-image-mode" role="group" aria-label="Image processing">
-              <button type="button" data-image="0" aria-pressed="true">T50</button>
-              <button type="button" data-image="1" aria-pressed="false">T50SUB</button>
+      <p id="radio-status" class="state-message" role="status">Loading radio field…</p>
+      <div id="radio-layout" hidden>
+        <figure class="radio-panorama">
+          <div class="panorama-image">
+            <canvas id="radio-sky" role="img" aria-label="Wide LoTSS radio field"></canvas>
+            <button class="sky-fullscreen" id="radio-fullscreen" type="button" aria-label="Enter full screen" title="Enter full screen">⤢</button>
+          </div>
+          <figcaption>
+            <div><strong id="radio-cluster">PSZ2 G181</strong> <span id="radio-id"></span><small id="radio-color-label"></small></div>
+            <div class="sky-options">
+              <div class="seg compact" id="radio-image-mode" role="group" aria-label="Image processing">
+                <button type="button" data-image="1" aria-pressed="true">Sources subtracted</button>
+                <button type="button" data-image="0" aria-pressed="false">Original</button>
+              </div>
+              <button class="button secondary small" type="button" id="radio-faint" aria-pressed="false">Show faint signal</button>
             </div>
-          </div>
-          <div class="radio-scenes">
-            <figure class="radio-figure"><canvas id="radio-n" role="img" aria-label="Flux and measurement aperture, northern relic"></canvas><figcaption>Northern relic <span>↑ N</span></figcaption></figure>
-            <figure class="radio-figure"><canvas id="radio-s" role="img" aria-label="Flux and measurement aperture, southern relic"></canvas><figcaption>Southern relic <span>↑ N</span></figcaption></figure>
-          </div>
-          <div class="map-legend"><span><i class="ring"></i> Aperture</span><span><i class="mint"></i> Catalog center</span><span><i class="amber"></i> Measured center</span><span class="gradient"></span><span id="radio-color-label">Flux, asinh</span></div>
+          </figcaption>
+        </figure>
+        <div class="radio-action-row">
+          <p>Radio relics are diffuse arcs of emission. The gap between them can help date a collision.</p>
+          <a class="plain-link" href="#journal?post=relic-clock">Read the relic clock ↗</a>
         </div>
-        <aside class="panel radio-controls" aria-label="Radio measurement and controls">
-          <div class="aside-top"><span class="kicker">Separation change</span><button id="radio-question" class="help-button" type="button" title="Look up the radio measurement" aria-label="Look up the radio measurement">i</button></div>
+      <details class="panel measure-panel" id="radio-measure">
+        <summary>Measure the relic separation</summary>
+        <div class="measure-grid">
+        <div class="radio-controls" aria-label="Measured separations">
+          <div class="aside-top"><span class="kicker">Difference between maps</span></div>
           <div class="delta-readout"><strong id="radio-delta">—</strong> <span>kpc</span></div>
           <p class="muted delta-caption">T50 separation minus T50SUB separation</p>
           <dl class="metric-grid radio-metrics"><div><dt>T50 pair</dt><dd id="radio-before">—</dd></div><div><dt>T50SUB pair</dt><dd id="radio-after">—</dd></div></dl>
+          <p class="data-note">The open circles mark catalog seeds and the crosses mark flux-weighted centers. A line connects the measured pair.</p>
+        </div>
+        <div class="radio-controls" aria-label="Measurement settings">
           <div class="sliders">
             <div class="output-row"><label for="aperture">Aperture radius</label><output for="aperture" id="aperture-out">600 kpc</output></div>
             <input id="aperture" type="range" min="300" max="600" step="25" value="600">
@@ -263,13 +285,38 @@
             <input id="bright-fraction" type="range" min="5" max="25" step="1" value="10">
           </div>
           <button id="radio-export" class="button secondary small" type="button">Export measurement <span aria-hidden="true">↓</span></button>
-        </aside>
+        </div>
+        </div>
+        <div class="radio-series">
+          <div class="panel-heading"><div><h3>What changes with aperture?</h3><p>Pair separation difference for the current threshold and bright-pixel fraction</p></div></div>
+          <canvas id="radio-curve" role="img" aria-label="Signed pair separation difference for three aperture sizes"></canvas>
+          <p id="radio-curve-note" class="data-note"></p>
+          <details><summary>How the measurement works</summary><p>Both maps are smoothed to a nominal 135 kpc beam and sampled on the T50SUB grid. In each circle, the selected bright pixels are weighted by flux. Pair separation comes from the angular distance between centers and the angular diameter distance.</p><p>The two maps share observations. The differences measure sensitivity to processing for these three fields. <a href="#desk?topic=radio">See the papers and methods ↗</a></p></details>
+        </div>
+      </details>
       </div>
-      <div class="panel radio-series" id="radio-series" hidden>
-        <div class="panel-heading"><div><h3>What changes with aperture?</h3><p id="radio-series-subtitle">Pair separation difference for the current threshold and bright-pixel fraction</p></div></div>
-        <canvas id="radio-curve" role="img" aria-label="Signed pair separation difference for three aperture sizes"></canvas>
-        <p id="radio-curve-note" class="data-note"></p>
-        <details><summary>How the measurement works</summary><p>Both maps are smoothed to a nominal 135 kpc beam and sampled on the T50SUB grid. The estimator finds pixels in a circular region around each published relic position, removes pixels below the threshold, then weights the selected brightest pixels by their flux. Pair separation comes from the angular distance between the north and south centers and the angular diameter distance.</p><p>The two maps share observations. Circular regions, flux cuts and this choice of bright pixels are parameters of the experiment. The plotted differences measure processing sensitivity for these three fields. <a href="#desk?topic=radio">See the papers and methods ↗</a></p></details>
+    </section>
+
+    <section id="view-journal" class="frame view lab-view journal-view" data-view="journal" aria-labelledby="journal-heading" hidden>
+      <div class="lab-intro" id="journal-intro"><p class="kicker"><span class="tick"></span> Frontier physics</p><h1 id="journal-heading">The research journal.</h1><p>A timeline of what we measured, how to check it, and what to test next.</p></div>
+      <div class="journal-layout">
+        <aside class="journal-sidebar">
+          <div class="journal-sidebar-head"><h2>Timeline</h2><button id="journal-refresh" class="plain-link refresh-link" type="button">Refresh</button></div>
+          <p id="journal-sync-status" class="data-note" role="status"></p>
+          <ol id="journal-timeline" class="journal-timeline"></ol>
+          <button id="journal-more" class="button secondary small" type="button" hidden>Older run notes</button>
+          <a href="#desk" class="plain-link">Search papers and methods ↗</a>
+          <details class="journal-import">
+            <summary>Import a run note</summary>
+            <form id="journal-import-form">
+              <label for="journal-import-input">JSON from a scheduled run</label>
+              <textarea id="journal-import-input" maxlength="30000" rows="5" required></textarea>
+              <button class="button secondary small" type="submit">Add to this browser</button>
+              <p id="journal-import-status" role="status"></p>
+            </form>
+          </details>
+        </aside>
+        <article class="journal-article" id="journal-post" aria-live="polite"></article>
       </div>
     </section>
 

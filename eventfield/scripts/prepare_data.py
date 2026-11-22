@@ -21,6 +21,7 @@ ROOT = Path(__file__).resolve().parents[1]
 RESEARCH = ROOT.parent / "research"
 CATALOG_HASH = "d9d103b13a40cb8088914e025310fd2d8f99eb20f679e57e54b6eb5dcf78253d"
 RELIC_HASH = "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9"
+HOST_HASH = "9c5af9f24d8220228c58692b3b7d20777355e50f38ff484a50763a2c5afa39a2"
 BOX_CKPC_H = 680000
 H = 0.6774
 BEAM_KPC = 135
@@ -145,6 +146,23 @@ def copy_gallery(gas, radio, out):
             (gallery / dest).write_bytes(frame.read_bytes())
 
 
+def extract_hosts(tng, out):
+    path = tng / "additional-catalogs" / "TNG-Cluster_Catalog.hdf5"
+    if not path.is_file():
+        return
+    require_hash(path, HOST_HASH)
+    with h5py.File(path) as source:
+        ids = source["haloID"][:].astype(int)
+        fields = sorted(name for name, value in source.items() if isinstance(value, h5py.Dataset))
+        radii = source["r500c"][:]
+        if len(set(ids)) != 352 or radii.shape != (352,) or np.any(radii <= 0):
+            raise ValueError("Unexpected cluster inventory")
+        write_json(out / "hosts.json", {
+            "bytes": path.stat().st_size, "sha256": HOST_HASH, "fields": fields,
+            "halos": [[int(i), round(float(radius), 2)] for i, radius in zip(ids, radii)],
+        })
+
+
 def read_catalog_centers(path):
     require_hash(path, RELIC_HASH)
     lines = path.read_text().splitlines()
@@ -152,7 +170,7 @@ def read_catalog_centers(path):
     return list(csv.DictReader([lines[start], *lines[start + 3:]], delimiter="\t"))
 
 
-def smooth_to_beam(path, target_deg):
+def read_radio_map(path):
     with fits.open(path) as hdul:
         image = np.squeeze(hdul[0].data).astype(float)
         header = hdul[0].header.copy()
@@ -161,6 +179,10 @@ def smooth_to_beam(path, target_deg):
     with warnings.catch_warnings():
         warnings.simplefilter("ignore")
         wcs = WCS(header).celestial
+    return image, header, wcs
+
+
+def smooth_to_beam(image, header, wcs, target_deg):
     angle = np.radians(header["BPA"])
     major, minor = np.array([np.sin(angle), np.cos(angle)]), np.array([np.cos(angle), -np.sin(angle)])
     old_cov = header["BMAJ"]**2 * np.outer(major, major) + header["BMIN"]**2 * np.outer(minor, minor)
@@ -182,7 +204,7 @@ def smooth_to_beam(path, target_deg):
     result = fftconvolve(np.where(valid, image, 0), kernel, mode="same")
     result *= 1000 * target_deg**2 / (header["BMAJ"] * header["BMIN"])
     result[fftconvolve(valid.astype(float), kernel, mode="same") < 0.999] = np.nan
-    return result, wcs
+    return result
 
 
 def repeated_checks(wcs, cutouts, data, kpc_arcsec, pixel_arcsec, study, name):
@@ -218,6 +240,48 @@ def repeated_checks(wcs, cutouts, data, kpc_arcsec, pixel_arcsec, study, name):
     return test
 
 
+def build_panorama(radio, key, native_data, matched, grids, cutouts, pixel_kpc):
+    centers = [np.array(c["center"]) + np.array(c["origin"]) for c in cutouts]
+    midpoint = (centers[0] + centers[1]) / 2
+    direction = centers[1] - centers[0]
+    length = np.linalg.norm(direction)
+    along = direction / length
+    up = np.array([-along[1], along[0]])
+    margin = np.ceil(760 / pixel_kpc)
+    width = int(np.ceil(length + 2 * margin)) + 1
+    height = int(np.ceil(max(2 * margin, width * 0.45))) + 1
+    cy, cx = (height - 1) / 2, (width - 1) / 2
+    yy, xx = np.indices((height, width), dtype=float)
+    plane_x = midpoint[0] + (xx - cx) * along[0] + (cy - yy) * up[0]
+    plane_y = midpoint[1] + (xx - cx) * along[1] + (cy - yy) * up[1]
+    native, grid = grids
+    world = grid.pixel_to_world(plane_x, plane_y)
+    px, py = native.world_to_pixel(world)
+    north_end = grid.pixel_to_world(*midpoint).directional_offset_by(0 * u.deg, 30 * u.arcsec)
+    north = np.asarray(grid.world_to_pixel(north_end)) - midpoint
+    north /= np.linalg.norm(north)
+
+    products = {}
+    for mode, images in [("native", native_data), ("matched", matched)]:
+        before = map_coordinates(images[0], [py, px], order=1, mode="constant", cval=np.nan)
+        after = map_coordinates(images[1], [plane_y, plane_x], order=1, mode="constant", cval=np.nan)
+        values = np.stack([before, after]).astype("<f4")
+        noise = max(
+            1.4826 * np.nanmedian(np.abs(plane - np.nanmedian(plane))) for plane in values
+        )
+        noise = max(0.001, float(noise))
+        ceiling = max(10 * noise, float(np.nanpercentile(values, 99.7)))
+        filename = f"{key}-field-{mode}.bin"
+        (radio / filename).write_bytes(values.tobytes())
+        products[mode] = {"file": filename, "noise": noise, "ceiling": ceiling}
+
+    return {
+        "width": width, "height": height, "pixelKpc": pixel_kpc, "midpoint": midpoint.tolist(),
+        "along": along.tolist(), "up": up.tolist(), "north": [float(north @ along), float(-north @ up)],
+        "layers": products,
+    }
+
+
 def extract_radio(folder, out):
     entries = read_catalog_centers(folder / "rrsamp.tsv")
     radio = out / "radio"
@@ -228,13 +292,15 @@ def extract_radio(folder, out):
         ref = json.loads((RESEARCH / study / "summary.json").read_text())["clusters"][name]
         kpc_arcsec = cosmo.kpc_proper_per_arcmin(z).value / 60
         target_deg = BEAM_KPC / kpc_arcsec / 3600
-        images, grids = [], []
+        images, grids, native_data, beams = [], [], [], []
         for label in ("T50", "T50SUB"):
             path = folder / f"{key}-{label.lower()}.fits"
             require_hash(path, ref["input_sha256"][label])
-            image, wcs = smooth_to_beam(path, target_deg)
-            images.append(image)
+            image, header, wcs = read_radio_map(path)
+            images.append(smooth_to_beam(image, header, wcs, target_deg))
             grids.append(wcs)
+            native_data.append(image * 1000)
+            beams.append([round(header[name] * 3600, 2) for name in ("BMAJ", "BMIN")])
         native, wcs = grids
         cd = wcs.pixel_scale_matrix
         scales = np.sqrt(np.sum(cd**2, axis=0)) * 3600
@@ -273,6 +339,8 @@ def extract_radio(folder, out):
             })
             data.append(both)
         all_checks[key] = repeated_checks(wcs, cutouts, data, kpc_arcsec, pixel_arcsec, study, name)
+        panorama = build_panorama(radio, key, native_data, images, grids, cutouts, pixel_arcsec * kpc_arcsec)
+        panorama["beamsArcsec"] = beams
         write_json(radio / f"{key}.json", {
             "id": key, "cluster": name, "psZ2": identifier, "z": z,
             "inputSha256": ref["input_sha256"], "sourceCatalogSha256": RELIC_HASH,
@@ -283,6 +351,7 @@ def extract_radio(folder, out):
                 "refWorld": wcs.wcs.crval.tolist(),
             },
             "cutouts": cutouts,
+            "panorama": panorama,
         })
         print(f"Radio: matched all nine {name} reference configurations")
     write_json(radio / "validation.json", all_checks)
@@ -298,6 +367,7 @@ def main():
     out = ROOT / "data" / "local"
     out.mkdir(parents=True, exist_ok=True)
     extract_catalog(args.tng, out)
+    extract_hosts(args.tng, out)
     copy_gallery(args.gas_gallery, args.radio_gallery, out)
     extract_radio(args.fits, out)
 

@@ -260,6 +260,88 @@ export function drawRadio(canvas, cutout, measurement, radius, channel, miniatur
   }
 }
 
+const panoramaTiles = new WeakMap();
+
+function panoramaTile(map, channel, faint) {
+  const values = channel ? map.after : map.before;
+  if (!panoramaTiles.has(values)) panoramaTiles.set(values, new Map());
+  const cache = panoramaTiles.get(values);
+  if (cache.has(faint)) return cache.get(faint);
+  const tile = document.createElement("canvas");
+  tile.width = map.width;
+  tile.height = map.height;
+  const ctx = tile.getContext("2d");
+  const image = ctx.createImageData(map.width, map.height);
+  const floor = map.noise * (faint ? 0.7 : 2.7);
+  const stretch = map.noise * (faint ? 1 : 2);
+  const scale = Math.asinh((map.ceiling - floor) / stretch);
+  for (let i = 0; i < values.length; i++) {
+    const mapped = Number.isFinite(values[i]) ? Math.asinh(Math.max(0, values[i] - floor) / stretch) / scale : 0;
+    const [r, g, b] = lookup[Math.round(Math.min(1, mapped) * 255)];
+    image.data.set([r - 7, g - 8, b - 14, 255], i * 4);
+  }
+  ctx.putImageData(image, 0, 0);
+  cache.set(faint, tile);
+  return tile;
+}
+
+export function drawRadioPanorama(canvas, map, field, measurement, channel, faint) {
+  const surface = setup(canvas);
+  if (!surface) return;
+  const { ctx, width, height } = surface;
+  const unit = Math.min(width / map.width, height / map.height);
+  const left = (width - map.width * unit) / 2;
+  const top = (height - map.height * unit) / 2;
+  ctx.fillStyle = "#090b12";
+  ctx.fillRect(0, 0, width, height);
+  ctx.imageSmoothingEnabled = true;
+  ctx.imageSmoothingQuality = "high";
+  ctx.drawImage(panoramaTile(map, channel, faint), left, top, map.width * unit, map.height * unit);
+  const center = [width / 2, height / 2];
+  const at = (cut, [x, y]) => {
+    const dx = x + cut.origin[0] - map.midpoint[0], dy = y + cut.origin[1] - map.midpoint[1];
+    return [
+      center[0] + (dx * map.along[0] + dy * map.along[1]) * unit,
+      center[1] - (dx * map.up[0] + dy * map.up[1]) * unit,
+    ];
+  };
+  const bottom = top + map.height * unit - 14;
+  const bar = 500 * unit / map.pixelKpc;
+  line(ctx, left + 18, bottom - 11, left + 18 + bar, bottom - 11, "#f4eee8", 1.4);
+  label(ctx, "500 kpc", left + 18, bottom, "#f4eee8");
+
+  const compassX = left + map.width * unit - 56;
+  const compassY = top + map.height * unit - 30;
+  const [nx, ny] = map.north;
+  line(ctx, compassX - nx * 8, compassY - ny * 8, compassX + nx * 12, compassY + ny * 12, "#f4eee8", 1.4);
+  label(ctx, "N", compassX + nx * 21, compassY + ny * 21, "#f4eee8", "center");
+
+  if (!measurement) return;
+  const measured = [];
+  for (let i = 0; i < field.cutouts.length; i++) {
+    const cut = field.cutouts[i];
+    const seed = at(cut, cut.center);
+    ctx.setLineDash([4, 5]);
+    circle(ctx, ...seed, measurement.radiusPixels * unit, "#eee0eb8c", false);
+    ctx.setLineDash([]);
+    circle(ctx, ...seed, 4, MINT, false);
+    const point = measurement.points[i][channel].center;
+    if (point) measured.push(at(cut, point));
+  }
+  if (measured.length === 2) {
+    trace(ctx, measured, AMBER + "aa", 1.5);
+    const mx = (measured[0][0] + measured[1][0]) / 2;
+    const my = (measured[0][1] + measured[1][1]) / 2;
+    ctx.fillStyle = "#101118dd";
+    ctx.fillRect(mx - 40, my - 25, 80, 18);
+    label(ctx, `${formatted(measurement.separations[channel])} kpc`, mx, my - 16, AMBER, "center");
+  }
+  for (const [x, y] of measured) {
+    line(ctx, x - 6, y, x + 6, y, AMBER, 2);
+    line(ctx, x, y - 6, x, y + 6, AMBER, 2);
+  }
+}
+
 export function drawRadioCurve(canvas, readings) {
   const surface = setup(canvas);
   if (!surface) return;

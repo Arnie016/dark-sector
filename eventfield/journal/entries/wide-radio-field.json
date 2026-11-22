@@ -1,0 +1,55 @@
+{
+  "version": 1,
+  "id": "wide-radio-field",
+  "date": "2026-11-22",
+  "scope": "Data and tooling",
+  "status": "measurement",
+  "title": "Put both relics on one map",
+  "summary": "The northern and southern radio arcs now share one wide image, with measurement markers you can turn on when you need them.",
+  "sections": [
+    {
+      "heading": "What you’re looking at",
+      "body": [
+        "The radio view starts with the compact-source-subtracted release image, regridded at native pixel spacing so the two catalog centers lie on a horizontal line. The compass shows north. The default display suppresses low-level fluctuations. Show faint signal changes the display stretch.",
+        "Opening Measure the relic separation brings up the matched 135 kpc beam and draws the aperture circles, flux-weighted centers and separation on the map. In PSZ2 G181 the native T50SUB beam is about 19.56 × 19.19 arcseconds. A larger viewer makes the existing samples easier to see. The beam sets the physical resolving power."
+      ]
+    },
+    {
+      "heading": "The release is bigger than the view",
+      "body": [
+        "The atlas has a corrected 2,083-event merger file and three observed radio pairs. The archived 352-cluster z = 0 catalog has 36 numerical datasets, including masses, radii, cooling time, gas fractions and X-ray and SZ offsets.",
+        "The TNG-Cluster release also describes snapshot particles, group catalogs, merger trees and z = 0 projection products around 16 GB per file. A bulk projection file can contain all 352 targets for one quantity and viewing configuration. The first useful download for a clock test is a registered set of data for a single event."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Validate the matched maps against saved results",
+      "result": "The exporter checks hashes and reproduces nine apertures and thresholds per field before writing the cache.",
+      "command": "node eventfield/scripts/verify.mjs"
+    },
+    {
+      "title": "Verify the additional HDF5 inventory",
+      "result": "The local secondary file is 73,984 bytes and has 352 unique halo IDs and 36 datasets. The Data page shows the file fingerprint."
+    }
+  ],
+  "sources": [
+    {
+      "label": "IllustrisTNG · TNG-Cluster data documentation",
+      "url": "https://www.tng-project.org/data/cluster/"
+    },
+    {
+      "label": "LoTSS-DR2 · Planck-cluster images and catalogs",
+      "url": "https://lofar-surveys.org/planck_dr2.html"
+    },
+    {
+      "label": "Public analysis · Paired maps at 135 kpc",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/two-cluster-physical-beam"
+    }
+  ],
+  "next": "Verify a tight gas, shock and total-mass cutout at a known merger snapshot before spending bandwidth on full projection products.",
+  "action": {
+    "label": "Open the data library",
+    "href": "#data"
+  }
+}

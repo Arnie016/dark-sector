@@ -1,0 +1,62 @@
+{
+  "version": 1,
+  "id": "clock-pipeline",
+  "date": "2026-11-07",
+  "scope": "Dark sector",
+  "status": "proposal",
+  "title": "A paper we can test before we write it",
+  "summary": "Ask how much a validated merger clock changes when simulation predictions enter a real telescope’s measurement pipeline.",
+  "sections": [
+    {
+      "heading": "The claim with a benchmark",
+      "body": [
+        "Start by reproducing the published 3D TSC relationship for the exact selected events and fitting range. Separate training and held-out events by host and lineage. For the same events, generate projected mocks at fixed sightlines with survey beam and noise, then estimate the clock with the same definition of relic center used on the sky.",
+        "Compare paired residuals in Myr before and after changing one definition. Report the median and tail errors by separation, plus detection and exclusion counts. A large, repeatable shift would identify a measurement systematic. A small shift in held-out cases would validate the tested part of the pipeline."
+      ]
+    },
+    {
+      "heading": "What to acquire first",
+      "body": [
+        "Request or locate the clock’s row-level candidate table, including exclusions, snapshot and progenitor IDs, emissivity centers, R500c and first pericenter times. A set of registered radio, gas density, temperature or Mach, and projected total-mass maps for a single unambiguous event would make the first useful mock.",
+        "Test the CDM baseline and an observational counterpart before interpreting a dark-matter model. For an SIDM comparison, match the initial conditions, galaxy and gas model, epoch and sightline. Lensing requires source redshifts, shear, masks and its own uncertainties. TNGC-SIDM I says its publication data are on reasonable request and a suite release is planned."
+      ]
+    },
+    {
+      "heading": "Spend on discrimination",
+      "body": [
+        "Acquire data in order of what would change the verdict. A small ID crosswalk that pairs each relic with its merger can be worth more than a 16 GB image file with an ambiguous match. Record the source, exact field definitions, expected bytes, checksum when acquired, and reuse terms.",
+        "For each run, pick one decision, one verifier and one reversible next step. Store a short journal post with the result, even if the gate fails. A reviewable draft needs the same evidence someone else can rerun."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Baseline reproduction gate",
+      "result": "The public sources examined for this project describe the method. A verified event-by-event release of the exact 2026 clock sample is still needed.",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/relic-clock-source-audit"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Lee et al. · Double radio relic statistics, §IV.2 and §V.3",
+      "url": "https://arxiv.org/html/2510.21632"
+    },
+    {
+      "label": "Jee, Park & Lee · Double relics and SIDM, Tables 2–3",
+      "url": "https://arxiv.org/html/2605.00093"
+    },
+    {
+      "label": "Lee et al. · TNGC-SIDM I and data availability",
+      "url": "https://arxiv.org/html/2610.18957"
+    },
+    {
+      "label": "Project source comparison and promotion gate",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/relic-clock-literature-synthesis"
+    }
+  ],
+  "next": "Check the authors’ official repository and data release for the selected and excluded rows before acquiring a new large product.",
+  "action": {
+    "label": "See the required data",
+    "href": "#data"
+  }
+}

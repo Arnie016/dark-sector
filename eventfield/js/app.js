@@ -7,6 +7,8 @@ import { loadRadio, wireRadio } from "./radio.js";
 import { renderAnswer, search, topics } from "./evidence.js";
 import { wireCatalog } from "./catalog.js";
 import { answerMeasurement, parseMeasurement } from "./measurement-questions.js";
+import { wireInventory } from "./inventory.js";
+import { showJournal, wireJournal } from "./journal.js";
 
 const atlas = {
   band: "gas",
@@ -95,7 +97,8 @@ function route({ focus = false } = {}) {
   const [part, qs] = window.location.hash.slice(1).split("?");
   if (part === "main") return;
   const params = new URLSearchParams(qs);
-  const next = ["orbit", "radio", "desk"].includes(part) ? part : "atlas";
+  const next = part === "catalog" ? "data" :
+    ["orbit", "radio", "desk", "data", "journal"].includes(part) ? part : "atlas";
   const changed = next !== active;
   if (active === "orbit" && changed) stopOrbit();
   active = next;
@@ -126,9 +129,12 @@ function route({ focus = false } = {}) {
     for (const [input, key] of settings) {
       if (params.has(key) && Number.isFinite(Number(params.get(key)))) byId(input).value = params.get(key);
     }
+    if (params.has("radius")) byId("radio-measure").open = true;
     loadRadio(["g181", "macs", "g099"].includes(id) ? id : "g181");
   } else if (active === "desk") {
     showDesk(params);
+  } else if (active === "journal") {
+    showJournal(params.get("post"));
   } else {
     paintPreviews();
   }
@@ -188,6 +194,8 @@ wireOrbit();
 wireRadio();
 wireDesk();
 wireCatalog();
+wireInventory();
+wireJournal();
 gallery();
 route();
 window.addEventListener("hashchange", () => route({ focus: true }));
