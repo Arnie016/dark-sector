@@ -1,0 +1,45 @@
+# Exploratory sensitivity of radio-relic position estimates to image processing and pixel selection in two cluster fields
+
+**Research working draft; not submission-ready.** Two fields and all masks were selected after earlier inspection. We do not report a statistical uncertainty, reproduce an author pipeline or simulation clock, identify the physical origin of a source, infer a merger-age bias, or constrain dark matter. Authorship, independent scientific replication, original masks and noise covariance remain open.
+
+## Abstract
+
+Radio-relic separation can inform merger histories, but comparisons between simulated and observed positions depend on operational definitions. We evaluate a deliberately simple bright-pixel center estimator on two pairs of related LoTSS cluster images for MACS J1752.0+4440 and PSZ2 G181.06+48.47. After matching the nominal Gaussian restoring beam to 135 proper kpc, catalog-centered radii of 300, 450 and 600 kpc and three brightness cuts yield signed pair-separation differences between T50 and T50SUB spanning +0.36 to +1.20, −26.09 to −22.37 and −60.76 to −55.48 kpc in MACS, and −3.31 to −1.71, −2.32 to −1.50 and −284.96 to −254.76 kpc in PSZ2. In one post-hoc PSZ2 configuration, a symmetric 40-arcsecond exclusion around a selected difference peak changes the result from −270.58 to +6.50 kpc. A shared-pixel experiment finds strong dependence on the reference image and selected bright fraction. These are descriptive effects of particular image and estimator choices in correlated products, not published-separation corrections, uncertainty estimates, independent detections or merger-clock validation. The results motivate a preselected multi-field study with documented masks, matched transfer functions and independent verification.
+
+## 1. Context and question
+
+[Lee et al.](https://arxiv.org/html/2510.21632) measure simulated relic centers using radio-emissivity-weighted positions and report a double-relic separation relation with time since collision; their analysis also discusses projection and geometry. [Jee et al.](https://arxiv.org/html/2605.00093) infer merger parameters and a conditional self-interacting-dark-matter constraint with a separate forward model and sample. We reproduce neither model. The observational cluster maps and radio catalog used here are associated with [Botteon et al.](https://arxiv.org/abs/2202.11720) and the [LoTSS DR2 survey](https://arxiv.org/abs/2202.11733).
+
+Our question is deliberately narrower: **for the same cluster field, how does an explicitly specified brightness-center rule change when applied to the available T50 and T50SUB products?** Observed projected centers are not interchangeable with simulated 3D emissivity-weighted centers or published shock-front positions. This experiment cannot propagate its differences into the cited models without matched definitions, inputs and likelihoods.
+
+## 2. Data and exploratory estimator
+
+We use hash-pinned T50/T50SUB FITS products and published north/south relic coordinates for two fields. The maps share survey observations and are not independent. Each is convolved to a nominal circular Gaussian beam of 135 kpc FWHM, then the non-SUB image is bilinearly resampled onto the SUB grid with nominal beam-area conversion. At z = 0.366 and 0.234, adopting flat H0 = 70 km s⁻¹ Mpc⁻¹ and Ωm = 0.3, the angular target beams are approximately 26.55 and 36.27 arcseconds. This does not match full interferometric transfer functions or noise. The [geometry audit](../aperture-edge-audit/README.md) confirms that all 600 kpc reference-grid circles fit within the arrays; the image processing checks common finite coverage.
+
+For each catalog-seeded relic, we try radii of 300, 450 and 600 kpc and cuts of 0.1, 0.2 and 0.3 mJy per target beam. In each image and circle, eligible pixels exceed the cut; the brightest 10% of those pixels are used for a flux-weighted center. Eligibility and ranking are independent in the two maps. We report the T50 minus T50SUB difference in projected north–south center separation. These circles, cuts and rankings are illustrative and selected after inspection, not original author masks, detection probabilities, independent error bars or a prespecified study. The survey authors describe polygonal 2σ regions for relic flux and a brightest-10% position definition, and their linked decision records answer no to significant calibration/subtraction artifacts for these fields; our circles do not reproduce those author decisions ([source audit](../survey-regions-and-decisions/README.md)). [Jones et al.](https://arxiv.org/html/2301.07814) describe manually selected relic regions and a 2σ RMS threshold; their [CDS image index](../jones-image-release/README.md) lists both fields but does not itself provide their region geometries. The full configurations and map hashes are in [the physical-beam analysis](../two-cluster-physical-beam/README.md).
+
+## 3. Descriptive results
+
+| Aperture radius | MACS J1752 | PSZ2 G181 |
+| --- | ---: | ---: |
+| 300 kpc | +0.36 to +1.20 kpc | −3.31 to −1.71 kpc |
+| 450 kpc | −26.09 to −22.37 kpc | −2.32 to −1.50 kpc |
+| 600 kpc | −60.76 to −55.48 kpc | −284.96 to −254.76 kpc |
+
+Ranges span the three chosen cuts and are not confidence intervals. Different morphology, observing noise, redshift, sensitivity, pixel scale and image processing remain even at a matched nominal physical beam. The two fields were selected after previous exploration and cannot establish population behavior.
+
+In PSZ2 the maximum positive T50 − T50SUB pixel within the southern 600 kpc aperture is near its boundary. For the 0.2 mJy/beam configuration, removing a 40-arcsecond circle around that post-hoc location from both images changes the paired separation difference from −270.58 to +6.50 kpc. A 20-arcsecond exclusion yields −92.36 kpc and a 60-arcsecond exclusion +5.50 kpc. This demonstrates influence on the selected estimator, not physical causality. A nearby extended cataloged radio source is a positional association only ([localization](../two-cluster-physical-beam/README.md), [exclusion](../psz2-boundary-ablation/README.md)). A [rotated-mask sweep](../psz2-rotated-mask-sweep/README.md) does not provide independent matched controls: the one similarly populated alternative overlaps the selected region and the locations were not randomized.
+
+## 4. Selection mechanism
+
+For a complementary test, retain pixels above threshold in both images and choose the same brightest fraction for both using either reference image, while preserving each image's own brightness weights. With T50 ranking and no exclusion, the paired difference is −1.34 kpc at 1%, −300.36 kpc at 5%, and −213.46 kpc at 10%; the corresponding T50SUB-ranked 5% result is +0.09 kpc. At T50-ranked 1%, all 70 selected southern pixels lie in the post-hoc boundary circle. At 5%, 153 of 347 lie there, supplying 59.2% of the T50 position weight and 4.2% of the T50SUB weight. Thus the 1% centers are confined to the same region, whereas the mixed 5% selection permits differently weighted centers to separate. These correlated pixel weights are not integrated fluxes or independent measurements ([fraction sweep](../psz2-bright-fraction-sensitivity/README.md), [weight decomposition](../psz2-selection-mechanism/README.md)).
+
+## 5. Interpretation and next test
+
+The supported conclusion is **conditional, post-hoc sensitivity of this particular projected position estimator** to image product, aperture, ranking and local emission. It is not a measurement of the uncertainty or bias of the published clocks, or a causal demonstration that a cataloged source generates the radio difference. A stronger study requires original author masks and source-processing documentation; calibrated beam, transfer-function, astrometric and noise covariance; fields and failure outcomes selected before inspection; cluster-level holdout; matched simulation event/relic identities; and reproduction of a published baseline before testing changes to its predictions. The [research protocol](../merger-paper-protocol/README.md) describes the intended controls. A null result after such controls remains scientifically meaningful.
+
+## 6. Reproducibility and provenance
+
+The referenced analysis notes include code, map hashes, coordinates, assumptions and plots; original images remain in the private Azure archive. `python research/two-cluster-working-draft/assemble.py` reconciles the central numbers and SHA-256 hashes of five saved derived files in `evidence.json`. That is a traceability check, not independent scientific replication. An analyst must independently rerun the map processing and assess publication readiness. No manuscript has been submitted and no email has been sent.
+
+A [third targeted field](../g099-paired-positions/README.md) applies the existing physical-beam aperture grid to Abell 1925. Selection occurred after the initial two-field exploration and is not an independent or population validation.

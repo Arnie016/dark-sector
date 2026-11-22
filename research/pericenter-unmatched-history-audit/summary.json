@@ -1,0 +1,8 @@
+{
+  "prior_input_sha256": "873ede5430eeb75bad6bf21ad7786d26e7b85048f589fe0e24f4b0c75169c0b9",
+  "nonmatching_nearby_rows": 549,
+  "match_any_valid_snapshot": 1,
+  "match_history_min": 0,
+  "median_best_difference_numeric": 6.076171522795676,
+  "warning": "Broad search is exploratory, uses same catalog and does not establish field units or interpolation."
+}

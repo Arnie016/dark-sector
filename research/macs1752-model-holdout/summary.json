@@ -1,0 +1,27 @@
+{
+  "region": "45 to 240 arcsec from previously selected difference peak",
+  "selection": "fixed unconvolved-components predicted brightness > 0.5 mJy/target beam",
+  "selected_pixels": 991,
+  "restored_beam": {
+    "rms_residual_mjy_per_beam": 2.6073965574676015,
+    "median_absolute_residual_mjy_per_beam": 1.138778712629414,
+    "pixel_correlation": 0.996616499828844
+  },
+  "unconvolved_components": {
+    "rms_residual_mjy_per_beam": 0.03605949834958535,
+    "median_absolute_residual_mjy_per_beam": 0.02668342854463268,
+    "pixel_correlation": 0.9998769544987622
+  },
+  "all_finite_pixels": 77567,
+  "all_finite_restored_beam": {
+    "rms_residual_mjy_per_beam": 0.29945479770173333,
+    "median_absolute_residual_mjy_per_beam": 0.021810252131896603,
+    "pixel_correlation": 0.9943241460973642
+  },
+  "all_finite_unconvolved_components": {
+    "rms_residual_mjy_per_beam": 0.02840422731453592,
+    "median_absolute_residual_mjy_per_beam": 0.01923118065556427,
+    "pixel_correlation": 0.9971259300824776
+  },
+  "limitation": "Spatial holdout from same image and model, correlated pixels; selection conditions on one hypothesis; no independent observation or statistical significance."
+}

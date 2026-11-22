@@ -1,0 +1,76 @@
+{
+  "version": 1,
+  "id": "relic-clock",
+  "date": "2026-11-22",
+  "scope": "Dark sector",
+  "status": "measurement",
+  "title": "How much can a merger clock slip?",
+  "summary": "The same radio observations can give two different separations. We measured how large that lever is before using relics to infer anything about dark matter.",
+  "sections": [
+    {
+      "heading": "Two hands on one clock",
+      "body": [
+        "After a close passage, outward-moving shocks can light up arcs of radio emission. Farther-apart arcs tend to mark later times in the simulated sample. Lee et al. fitted the time since first passage to the 3D distance between two radio-emissivity-weighted centers, divided by the main cluster’s R500c.",
+        "R500c is the radius within which the mean density is 500 times the critical density. Dividing by it makes the separation dimensionless. The 0.52 Gyr slope gives the change in clock reading per unit of that ratio. The −0.24 Gyr intercept is a fit parameter. The reported double-relic fit covers d/R500c from 1 to 3.5."
+      ]
+    },
+    {
+      "heading": "Calibration and the telescope",
+      "body": [
+        "Rotate the toy pair below. The encounter stays fixed while its projected center-to-center distance contracts. At 30° the same pair reads about 167 Myr younger if you feed that shadow into the fit.",
+        "Real relics are curved, and a measured brightness edge can sit farther out than an emissivity center. In their projection examples, Lee et al. found projected shock-edge separations typically around 15% larger than the 3D center separation. That result concerns a different marker from the two points in this diagram."
+      ]
+    },
+    {
+      "heading": "A lever measured in real pixels",
+      "body": [
+        "We held the nominal 135 kpc beam, 0.20 mJy/beam threshold and brightest 10% selection fixed. At PSZ2 G181 the T50-minus-T50SUB difference was −3.31 kpc for a 300 kpc aperture and −270.58 kpc for a 600 kpc aperture. In Abell 1925 it changed from +116.05 to −197.08 kpc across the same two radii.",
+        "Putting only the G181 distance difference through the published slope at a stated example radius of 1,000 kpc gives −0.52 × 270.58 Myr, or about −141 Myr. This is a sensitivity calculation at a fixed example radius. Estimating a merger age requires a calibrated definition of the observed relic marker, projection, R500c and the scatter."
+      ]
+    },
+    {
+      "heading": "What’s already in the literature",
+      "body": [
+        "Lee et al. measured the simulated relic clock and reported about 0.2 Gyr scatter as a practical scale for many double-relic systems. Jee, Park and Lee used a separate forward model and weak lensing with an 11-system sample. They report a 95% upper bound of 0.63 cm²/g under their model and priors.",
+        "The next test is whether the same clock transfers when the very same simulated systems are turned into telescope-like maps and measured using the observation pipeline."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Recreate the nine aperture calculations",
+      "result": "The signed separations and the fixed-radius sensitivity follow from versioned tables for three fields.",
+      "command": "python3 eventfield/scripts/clock_probe.py"
+    },
+    {
+      "title": "Re-run the pixel estimator",
+      "result": "The browser cache reproduced all 27 saved aperture and threshold settings.",
+      "command": "node eventfield/scripts/verify.mjs",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/two-cluster-physical-beam"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Lee et al. · Double radio relic statistics, §IV.2 and §V.3",
+      "url": "https://arxiv.org/html/2510.21632"
+    },
+    {
+      "label": "Jee, Park & Lee · Double relics and SIDM, Tables 2–3",
+      "url": "https://arxiv.org/html/2605.00093"
+    },
+    {
+      "label": "Public analysis · Paired maps at 135 kpc",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/two-cluster-physical-beam"
+    },
+    {
+      "label": "Public analysis · Abell 1925 paired positions",
+      "url": "https://github.com/Arnie016/dark-sector/tree/514745c/research/g099-paired-positions"
+    }
+  ],
+  "next": "Start with one same-definition mock, then hold out entire cluster histories before comparing residuals across sightlines.",
+  "action": {
+    "label": "Try the 600 kpc measurement",
+    "href": "#radio?field=g181&radius=600&cut=0.2&fraction=10"
+  },
+  "demo": "relic-clock"
+}

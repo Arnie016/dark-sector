@@ -1,0 +1,84 @@
+{
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "cosmology": "FlatLambdaCDM H0=70 km/s/Mpc, Om0=0.3, Tcmb0=0",
+  "target_beam_kpc": 135,
+  "apertures_kpc": [
+    300,
+    450,
+    600
+  ],
+  "thresholds_mjy_per_target_beam": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "clusters": {
+    "MACS J1752": {
+      "z": 0.366,
+      "kpc_per_arcsec": 5.083789227981204,
+      "beam_fwhm_kpc": 135,
+      "beam_fwhm_arcsec": 26.55499548583943,
+      "center_difference_arcsec": {
+        "N": [
+          0.05095007856307318,
+          0.43625302717658193
+        ],
+        "S": [
+          0.03734127013912157,
+          11.991787463654783
+        ]
+      },
+      "pair_difference_arcsec": [
+        -11.95245547436241,
+        0.23514141418064582
+      ],
+      "pair_difference_kpc": [
+        -60.76376438848859,
+        1.195409388463834
+      ],
+      "min_coverage": 1.0,
+      "input_sha256": {
+        "T50": "ad491b8e9df67889f1e9ee8f3e9f323052698705ca553c8875e3b7d0262bd124",
+        "T50SUB": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+      }
+    },
+    "PSZ2 G181": {
+      "z": 0.234,
+      "kpc_per_arcsec": 3.7223342261615215,
+      "beam_fwhm_kpc": 135,
+      "beam_fwhm_arcsec": 36.26756540323147,
+      "center_difference_arcsec": {
+        "N": [
+          1.4292596413185255,
+          19.96389779436811
+        ],
+        "S": [
+          0.1728696376968059,
+          78.50012194848804
+        ]
+      },
+      "pair_difference_arcsec": [
+        -76.5534217438319,
+        -0.4026809924664576
+      ],
+      "pair_difference_kpc": [
+        -284.9574218868431,
+        -1.498913240482585
+      ],
+      "min_coverage": 1.0,
+      "input_sha256": {
+        "T50": "d08c263b83712bdc40b13357ef297ce6e389437d666aee870fdf68f8489ce5b4",
+        "T50SUB": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+      }
+    }
+  },
+  "psz2_southern_difference_peak": {
+    "ra_deg": 144.8571200701199,
+    "dec_deg": 40.72670460105244,
+    "positive_difference_mjy_per_beam": 32.105238265906685,
+    "offset_south_catalog_arcsec": 160.59482575902075,
+    "search_radius_kpc": 600,
+    "selection": "maximum positive T50 minus T50SUB in southern catalog-centered aperture"
+  },
+  "caveat": "Post-hoc two-field case study; common nominal physical beam and physical apertures, arbitrary thresholds and regions; no calibrated uncertainty or merger-age inference."
+}

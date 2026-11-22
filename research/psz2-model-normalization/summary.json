@@ -1,0 +1,33 @@
+{
+  "target_fwhm_arcsec": 25,
+  "radius_arcsec": 180,
+  "all_finite": {
+    "restored": {
+      "pixels": 25452,
+      "rms_mjy_per_beam": 2.0399802796550257,
+      "median_abs_mjy_per_beam": 0.07024963829899988,
+      "pixel_correlation": 0.9994398543689712
+    },
+    "per_pixel": {
+      "pixels": 25452,
+      "rms_mjy_per_beam": 0.05556869435467386,
+      "median_abs_mjy_per_beam": 0.036097472936913996,
+      "pixel_correlation": 0.9996791891777456
+    }
+  },
+  "model_signal_above_0_5_mjy_per_beam": {
+    "restored": {
+      "pixels": 2617,
+      "rms_mjy_per_beam": 6.35041056365508,
+      "median_abs_mjy_per_beam": 1.229368983584406,
+      "pixel_correlation": 0.9996380800920438
+    },
+    "per_pixel": {
+      "pixels": 2617,
+      "rms_mjy_per_beam": 0.06825447097349584,
+      "median_abs_mjy_per_beam": 0.04461789840196717,
+      "pixel_correlation": 0.9999280067121232
+    }
+  },
+  "limits": "Same survey processing family; approximate Gaussian beams and interpolation; model-selected pixels correlated; model units and processing unverified."
+}

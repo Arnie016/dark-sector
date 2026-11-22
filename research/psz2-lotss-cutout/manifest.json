@@ -1,0 +1,9 @@
+{
+  "cutout_source": "https://lofar-surveys.org/dr2-low-cutout.fits?pos=144.8706%2040.7810&size=30",
+  "cutout_request": "LoTSS DR2 low-resolution; center ICRS 144.8706 40.7810 degrees, size 30 arcmin",
+  "cutout_sha256": "2574c86a4514f921fa2608d48f397b3e79851bc8cfb8bbc0f73ab6deefc948fa",
+  "cutout_bytes": 1272960,
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "catalog_source": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J%2FA%2BA%2F660%2FA78%2Frrsamp&-out.all&-out.max=100",
+  "retrieval_date_utc": "2026-11-06"
+}

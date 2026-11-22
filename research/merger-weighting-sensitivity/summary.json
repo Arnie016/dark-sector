@@ -1,0 +1,15 @@
+{
+  "collision_csv_sha256": "a20e39c685edc0e2ab4d46f836a03d4e747ab7c4c5b01506320b10663147f3ca",
+  "grouping_csv_sha256": "d237443232d9d5835eb6f8269904ec6c483a5c781f9bfaf327fa93e7ad0cf03d",
+  "all_collision_rows": 1977,
+  "full_collision_sample_median_km_s": 407.39090188958664,
+  "matched_subset_rows": 1475,
+  "missing_from_fingerprint_subset": 502,
+  "excluded_subset_event_median_km_s": 572.0081282249532,
+  "matched_subset_event_median_km_s": 351.78211237643404,
+  "recorded_labels": 317,
+  "median_of_label_medians_km_s": 349.30222632816015,
+  "fingerprint_groups": 358,
+  "median_of_fingerprint_group_medians_km_s": 341.292142982736,
+  "warning": "Group medians use distinct estimands and unverified grouping keys; no causal or independent-cluster interpretation."
+}

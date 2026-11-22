@@ -1,0 +1,25 @@
+{
+  "input_sha256": "70c0f3a3dfbe00dabb458d69da9929f1c1f59775b06d0a9035284b5cce74d2f6",
+  "n_snapshots": 70,
+  "median_spacing_gyr": 0.15733132507164216,
+  "models": {
+    "0.1": {
+      "median_error_km_s": 127.76828355099849,
+      "p90_error_km_s": 303.8913000722118,
+      "median_error_midpoint_grid_km_s": 36.52231561598222,
+      "snap70_error_km_s": 264.81115914239854
+    },
+    "0.3": {
+      "median_error_km_s": 16.44471460670937,
+      "p90_error_km_s": 37.03131383882242,
+      "median_error_midpoint_grid_km_s": 4.164153069414795,
+      "snap70_error_km_s": 33.05279711785829
+    },
+    "1.0": {
+      "median_error_km_s": 1.5342332529746159,
+      "p90_error_km_s": 3.1255356285016553,
+      "median_error_midpoint_grid_km_s": 0.381827979690712,
+      "snap70_error_km_s": 3.0142578587965545
+    }
+  }
+}

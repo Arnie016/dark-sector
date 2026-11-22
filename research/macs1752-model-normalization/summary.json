@@ -1,0 +1,18 @@
+{
+  "pixels": 1251,
+  "region_radius_arcsec": 30,
+  "difference_peak_mjy_per_beam": 26.547684057732113,
+  "A_restored_beam_hypothesis": {
+    "peak_mjy_per_beam": 2.5225739389179065,
+    "difference_to_model_peak_ratio": 10.524045954871045,
+    "rms_residual_mjy_per_beam": 5.326162997182522,
+    "pixel_pearson_r": 0.9980165319582625
+  },
+  "B_unconvolved_components_hypothesis": {
+    "peak_mjy_per_beam": 26.48861364843151,
+    "difference_to_model_peak_ratio": 1.0022300302342966,
+    "rms_residual_mjy_per_beam": 0.06933015012086276,
+    "pixel_pearson_r": 0.9999113580995583
+  },
+  "warning": "Post-hoc unit hypotheses, same data and correlated pixels; actual model provenance, units and processing remain unverified."
+}

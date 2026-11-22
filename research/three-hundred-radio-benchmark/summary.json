@@ -1,0 +1,38 @@
+{
+  "parameters_sha256": "8c96a3cec8ff60ab2b56ed668c4e1db92e354cef94b9db114909f2a45e0680c6",
+  "interval_gyr": [
+    0,
+    1.5
+  ],
+  "curves": {
+    "groups/R200": {
+      "peak_gyr": 0.2929697172315987,
+      "peak_power_1e20_w_hz": 170.51904368127518,
+      "at_0_5_gyr": 157.92423387266555,
+      "at_1_0_gyr": 103.25584093344837,
+      "at_1_5_gyr": 54.158348768482064
+    },
+    "clusters/R200": {
+      "peak_gyr": 0.6171169817823557,
+      "peak_power_1e20_w_hz": 8316.96272024643,
+      "at_0_5_gyr": 7604.115545518978,
+      "at_1_0_gyr": 4102.946611567108,
+      "at_1_5_gyr": 513.3002389348802
+    },
+    "groups/2R200": {
+      "peak_gyr": 0.5150140410450254,
+      "peak_power_1e20_w_hz": 338.5006044594542,
+      "at_0_5_gyr": 338.39541394006295,
+      "at_1_0_gyr": 298.43179016494344,
+      "at_1_5_gyr": 241.70572081584794
+    },
+    "clusters/2R200": {
+      "peak_gyr": 0.6732709248470791,
+      "peak_power_1e20_w_hz": 10634.591060870798,
+      "at_0_5_gyr": 9357.52459259909,
+      "at_1_0_gyr": 8428.12644264615,
+      "at_1_5_gyr": 4046.4328036934985
+    }
+  },
+  "limitations": "Published fitted medians, not raw light curves or new simulation; correlated parameters and selection unmodeled; total shock emission is not individual relic luminosity."
+}

@@ -1,0 +1,42 @@
+{
+  "five_point_csv_sha256": "3adbe2f97a1d3733a7af1326a1d75826edf290e7ad4dc5bf1d12845a2f496d7b",
+  "sampled_minimum_csv_sha256": "873ede5430eeb75bad6bf21ad7786d26e7b85048f589fe0e24f4b0c75169c0b9",
+  "joined_rows": 1932,
+  "groups": {
+    "nearby_match": {
+      "fit_proper_minus_catalog_numeric": {
+        "n": 1423,
+        "median_absolute_numeric_difference": 38.763923431623226,
+        "within_0_01_count": 1
+      },
+      "fit_comoving_minus_catalog_numeric": {
+        "n": 1423,
+        "median_absolute_numeric_difference": 69.81546476129284,
+        "within_0_01_count": 0
+      },
+      "sampled_min_minus_catalog_numeric": {
+        "n": 1423,
+        "median_absolute_numeric_difference": 2.842170943040401e-14,
+        "within_0_01_count": 1423
+      }
+    },
+    "nearby_nonmatch": {
+      "fit_proper_minus_catalog_numeric": {
+        "n": 509,
+        "median_absolute_numeric_difference": 17.332896604394932,
+        "within_0_01_count": 2
+      },
+      "fit_comoving_minus_catalog_numeric": {
+        "n": 509,
+        "median_absolute_numeric_difference": 82.49763542002597,
+        "within_0_01_count": 0
+      },
+      "sampled_min_minus_catalog_numeric": {
+        "n": 509,
+        "median_absolute_numeric_difference": 7.327753920525311,
+        "within_0_01_count": 0
+      }
+    }
+  },
+  "warning": "Comparisons assume incompatible possible distance units and a provisional fit; do not infer error, true units, or author method."
+}

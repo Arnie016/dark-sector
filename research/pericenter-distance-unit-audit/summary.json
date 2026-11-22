@@ -1,0 +1,20 @@
+{
+  "scale_separated_subset": 1442,
+  "scale_separated_proper_matches": 1023,
+  "scale_separated_comoving_matches": 0,
+  "catalog_rows": 2083,
+  "selected": 1977,
+  "rejections": {
+    "missing_unique_snapshot": 37,
+    "invalid_position_or_catalog_distance": 38,
+    "outside_range": 31
+  },
+  "threshold_numeric": 0.01,
+  "within_0_01_comoving_any": 0,
+  "within_0_01_proper_any": 1428,
+  "within_0_01_both": 0,
+  "median_best_comoving_delta": 31.95531273294847,
+  "median_best_proper_delta": 5.684341886080802e-14,
+  "redshift_sha256": "1782eede062252844a7d528fed28b3421ed8fc49edde8e4c1377b8c5d2c57ccc",
+  "warning": "Numeric pattern cannot establish units, event identity, or catalog construction; do not use as conversion."
+}

@@ -1,0 +1,35 @@
+{
+  "target_fwhm_arcsec": 25,
+  "radii_arcsec": [
+    60,
+    90,
+    120
+  ],
+  "thresholds_mjy_per_target_beam": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "configurations": 9,
+  "paired_center_delta_arcsec": {
+    "N": [
+      0.19245073436883287,
+      5.461289731326274
+    ],
+    "S": [
+      0.15161680166723818,
+      0.7462387996000671
+    ]
+  },
+  "signed_pair_delta_arcsec": [
+    -0.8781088390564946,
+    0.5769115510229312
+  ],
+  "minimum_common_coverage_fraction": 1.0,
+  "inputs_sha256": {
+    "T50": "d08c263b83712bdc40b13357ef297ce6e389437d666aee870fdf68f8489ce5b4",
+    "T50SUB": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+  },
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "caveat": "Post-hoc two-field comparison; related images, arbitrary masks, 25 arcsec target beam and bilinear interpolation; no physical clock or independent uncertainty."
+}

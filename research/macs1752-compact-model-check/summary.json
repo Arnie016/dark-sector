@@ -1,0 +1,11 @@
+{
+  "comparison_region_radius_arcsec": 30,
+  "pixels": 1251,
+  "pixel_pearson_r": 0.9980165319582626,
+  "model_peak_offset_from_difference_peak_arcsec": 0.02171516398461432,
+  "model_peak_mjy_per_target_beam": 2.5225739389179065,
+  "difference_peak_mjy_per_beam": 26.547684057732113,
+  "peak_amplitude_ratio_difference_to_smoothed_model": 10.524045954871045,
+  "beam_area_ratio": 6.724223273869664,
+  "warning": "Same survey products and correlated pixels; Gaussian beam approximation; nominal model data semantics unverified. Correlation is descriptive, not significance or evidence of a physical source identity."
+}

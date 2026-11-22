@@ -1,0 +1,12 @@
+# Association between pericenter-distance matches and collision-time sampling
+
+The [nearby sampled-minimum audit](../pericenter-sampled-minimum/README.md) separated 1,977 eligible merger-event rows into 1,428 whose catalog `d_peri` numerically matches one of three nearby proper-scaled separations and 549 that do not, using an absolute tolerance of 0.01. This analysis reuses those groups and compares the catalog `T_coll` with cosmic ages calculated for `Snap_coll-1`, `Snap_coll`, and `Snap_coll+1`. The flat matter-plus-Lambda age calculation uses h=0.6774, Omega_m=0.3089 and Omega_Lambda=0.6911, neglecting radiation, and **assumes** `T_coll` is on this cosmic-age scale. The exact catalog convention is not independently established. The [field documentation](https://www.tng-project.org/data/cluster/) calls `T_coll` the first pericenter time and labels `d_peri` ckpc/h; the [Lee et al. paper](https://arxiv.org/html/2311.06340) describes a five-point separation fit.
+
+| Existing group | Events | Median absolute difference to nearest of three snapshot ages | Within 0.01 Gyr |
+|---|---:|---:|---:|
+| Nearby proper-scaled distance match | 1,428 | 0.0050 Gyr | 1,199 (84.0%) |
+| No nearby distance match | 549 | 0.0650 Gyr | 26 (4.7%) |
+
+The association is strong in this exploratory, selected sample and is consistent with—but does not prove—different snapshot/interpolation behavior. The two quantities are derived from the same catalog and the same nearby snapshot definitions. The age conversion, threshold choices, documented unit ambiguity, repeated halo labels and history selection can affect results. No causal interpretation, independent physical validation, catalog-defect claim or population rate follows. A 0.01 Gyr threshold is a numerical diagnostic, not a measurement uncertainty. A systematic ~0.005 Gyr offset may reflect age-model or construction details and is not resolved here.
+
+Run `python analyze.py /path/to/cluster_mergers.hdf5` with NumPy/h5py and the prior audit CSV and redshift table in adjacent directories. The catalog digest is checked, the selection CSV digest recorded, and `comparison.csv` contains row-level values. A separate standard-library check reproduced the group sizes and threshold counts. Exact source construction or author clarification is needed before manuscript-level interpretation; an email draft exists but must not be sent without user approval.

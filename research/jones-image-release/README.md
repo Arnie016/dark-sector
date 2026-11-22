@@ -1,0 +1,11 @@
+# Jones et al. relic-image release and region provenance
+
+[Jones et al. (2023), §2.2](https://arxiv.org/html/2301.07814) describe manually defining a region for each relic by inspecting radio and X-ray images and avoiding non-relic emission, then generally measuring emission above twice the image RMS in the region on 50 kpc-taper, compact-source-subtracted images. This makes the difference from our post-hoc catalog-centered circles concrete. The related [Botteon et al. position and flux procedures](../survey-regions-and-decisions/README.md) remain separate definitions; none of our circles is the authors' region.
+
+The official [CDS release J/A+A/680/A31](https://cdsarc.cds.unistra.fr/viz-bin/ReadMe/J/A%2BA/680/A31?format=html&tex=true) describes 46 radio and X-ray FITS images and a 26-source list. The saved 46-row image index includes **one LOFAR and one X-ray image for each** of MACS J1752 (`PSZ2 G071.21+28.86`) and PSZ2 G181.06+48.47. The indexed LOFAR dimensions match our previously archived subtracted maps: 1614 × 1614 and 656 × 656 pixels, respectively. Dimensions are only metadata consistency, not proof that the images are byte-identical or have identical processing. The index does not list region files; this does not prove they are unavailable elsewhere. We did not obtain or compare the individual FITS files in this check, and direct fetch attempts timed out from this environment.
+
+This source strengthens the case for obtaining the original region geometry, per-image RMS and processing settings before testing the published position method. It does not establish a discrepancy with the survey, an astrophysical source identity or any merger-age bias.
+
+## Reproduce
+
+Retrieve the image index from VizieR ASU TSV with source `J/A+A/680/A31/list`, all columns and a 100-row maximum; the exact request is in the preserved response. Run `python research/jones-image-release/analyze.py /path/index.tsv /path/macs-T50kpcSUB.fits /path/psz2-T50kpcSUB.fits` with NumPy and Astropy. The script checks both archived map hashes, verifies the 46-row count and source identifiers, and records the index SHA-256, image dimensions, listed names and sizes. The raw 9,214-byte index is archived privately in Azure. Cite [Jones et al.](https://arxiv.org/abs/2301.07814), the CDS release and [Botteon et al.](https://arxiv.org/abs/2202.11720).

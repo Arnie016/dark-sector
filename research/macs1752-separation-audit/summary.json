@@ -1,0 +1,13 @@
+{
+  "recomputed_scale_kpc_per_arcsec": 5.074941173458905,
+  "recomputed_length_kpc": 1936.90367142882,
+  "scale_difference_percent": 0.9469829284413089,
+  "input_sha256": "707087427facd2ca01a9b83bd6864601358043451597f8bd115ad0ab8745552f",
+  "published_coordinate_separation_arcmin": 6.3610053306578305,
+  "finner_reported_scale_kpc_per_arcsec": 5.123,
+  "coordinate_length_using_finner_scale_kpc": 1955.245818537604,
+  "finner_reported_axis_projected_length_kpc": 2323,
+  "finner_length_equivalent_axis_angle_arcmin_at_stated_scale": 7.557420782093825,
+  "catalog_length_kpc": 1941,
+  "caveat": "Finner reports an axis-projected separation; Botteon coordinates give a full sky separation. Their inferred angles are different geometric quantities and are not directly comparable."
+}

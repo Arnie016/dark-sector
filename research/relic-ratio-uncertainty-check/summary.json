@@ -1,0 +1,22 @@
+{
+  "input_sha256": "7ac1c7b6cb51eb8cd01188d7c655a5549cffd7ca4a154af1f6838834c38ec4e6",
+  "seed": 20261107,
+  "draws_per_scenario": 200000,
+  "systems": 11,
+  "correlation_values": [
+    -0.5,
+    0,
+    0.5
+  ],
+  "low_snr_example": {
+    "name": "ZWCL1447.2+2619",
+    "rho_assumed": 0.0,
+    "draws": 200000,
+    "discarded_nonpositive_fraction": 0.008140000000000036,
+    "q16": 0.10702369883906358,
+    "median": 0.1797757120488876,
+    "q84": 0.25380312279032424,
+    "linear_sigma": 0.07464814185191472
+  },
+  "warning": "Toy bivariate normal draws centered on published estimates, conditional on positive distances, are not posterior samples; correlations are hypothetical."
+}

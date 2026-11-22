@@ -1,0 +1,33 @@
+{
+  "radio_sha256": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de",
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "radii_arcsec": [
+    60,
+    90,
+    120
+  ],
+  "thresholds_mjy_per_beam": [
+    0.1,
+    0.2,
+    0.3
+  ],
+  "estimator": "flux-weighted center of brightest 10% of selected positive pixels in a catalog-centered circle",
+  "offset_arcsec_range": {
+    "N": [
+      0.17808397461826395,
+      4.666679256854569
+    ],
+    "S": [
+      0.21113506610430846,
+      1.7877425627975994
+    ]
+  },
+  "pair_delta_kpc_range": [
+    -7.884875232544313,
+    -2.615804883806817
+  ],
+  "limitations": "Invented circular masks and intensity cuts, not author regions or measured noise; catalog-seeded and hence not independent; no calibrated uncertainty or merger age.",
+  "wcs_warnings": [
+    "'datfix' made the change 'Set MJD-OBS to 58466.330914 from DATE-OBS'."
+  ]
+}

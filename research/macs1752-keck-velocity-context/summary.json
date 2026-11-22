@@ -1,0 +1,30 @@
+{
+  "source": "Golovich et al. 2019, Fig. 29, arXiv:1806.10619",
+  "formula": "c * (z_galaxy - z_component) / (1 + z_component)",
+  "galaxy_z": 0.3708639,
+  "galaxy_z_uncertainty": 2.17e-05,
+  "components": [
+    {
+      "name": "Subcluster 1",
+      "z": 0.36482,
+      "z_uncertainty": 0.00046,
+      "dispersion_km_s": 1006,
+      "dispersion_uncertainty_km_s": 68,
+      "n": 93,
+      "relative_velocity_km_s": 1327.5857892661406,
+      "velocity_in_dispersion_units": 1.3196677825707164
+    },
+    {
+      "name": "Subcluster 2",
+      "z": 0.3643,
+      "z_uncertainty": 0.00055,
+      "dispersion_km_s": 1038,
+      "dispersion_uncertainty_km_s": 77,
+      "n": 69,
+      "relative_velocity_km_s": 1442.3570439538248,
+      "velocity_in_dispersion_units": 1.3895539922483862
+    }
+  ],
+  "c_km_s": 299792.458,
+  "caveat": "Descriptive velocity offsets only; published fit may use this spectrum. No membership probability, independent test, or radio association inferred."
+}

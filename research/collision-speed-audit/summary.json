@@ -1,0 +1,31 @@
+{
+  "input_csv_sha256": "a20e39c685edc0e2ab4d46f836a03d4e747ab7c4c5b01506320b10663147f3ca",
+  "threshold_km_s": 0.1,
+  "all": {
+    "n": 1977,
+    "distinct_halos": 337,
+    "matches_current": 1020,
+    "matches_previous": 565,
+    "matches_next": 88,
+    "matches_any_adjacent": 1673,
+    "median_current_difference_km_s": 0.00020486217999859946
+  },
+  "same_full_snapshot": {
+    "n": 239,
+    "distinct_halos": 156,
+    "matches_current": 126,
+    "matches_previous": 70,
+    "matches_next": 11,
+    "matches_any_adjacent": 207,
+    "median_current_difference_km_s": 0.0002199482928517682
+  },
+  "different_full_snapshot": {
+    "n": 1738,
+    "distinct_halos": 328,
+    "matches_current": 894,
+    "matches_previous": 495,
+    "matches_next": 77,
+    "matches_any_adjacent": 1466,
+    "median_current_difference_km_s": 0.00020185721018606273
+  }
+}

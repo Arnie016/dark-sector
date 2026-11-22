@@ -1,0 +1,72 @@
+{
+  "simulation": "TNG-Cluster",
+  "snapshot": 99,
+  "subhalo_id": 0,
+  "galleries": {
+    "gas": "https://www.tng-project.org/cluster/gallery/nelson23/",
+    "xray": "https://www.tng-project.org/cluster/gallery/nelson23xray/"
+  },
+  "images": [
+    {
+      "quantity": "gas",
+      "axis": "x",
+      "filename": "gas_x.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23//TNG-Cluster.99.00000000.gas-coldens_msunkpc2_2r200_d=r200_x.png",
+      "bytes": 514670,
+      "sha256": "e0c1418f3118ffb991901cf4cf1c1ac0cb655c041520d2686207874372114a7e",
+      "width_px": 800,
+      "height_px": 886
+    },
+    {
+      "quantity": "gas",
+      "axis": "y",
+      "filename": "gas_y.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23//TNG-Cluster.99.00000000.gas-coldens_msunkpc2_2r200_d=r200_y.png",
+      "bytes": 501391,
+      "sha256": "79d7644d752df697e711b7c44256443e11cc4cb96c4bb5e42b865521bfedd00c",
+      "width_px": 800,
+      "height_px": 886
+    },
+    {
+      "quantity": "gas",
+      "axis": "z",
+      "filename": "gas_z.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23//TNG-Cluster.99.00000000.gas-coldens_msunkpc2_2r200_d=r200_z.png",
+      "bytes": 539935,
+      "sha256": "6328634e12948c6521c99fe0877c765a984b62a2d778204492b2d4700ce6399c",
+      "width_px": 800,
+      "height_px": 886
+    },
+    {
+      "quantity": "xray",
+      "axis": "x",
+      "filename": "xray_x.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23xray//TNG-Cluster.99.00000000.gas-xray_lum_05-5kev_2r200_d=r200_x.png",
+      "bytes": 473909,
+      "sha256": "3a08808f7281e9dec6882f076367d2712f9b891351a551a47044acfe9a998794",
+      "width_px": 800,
+      "height_px": 886
+    },
+    {
+      "quantity": "xray",
+      "axis": "y",
+      "filename": "xray_y.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23xray//TNG-Cluster.99.00000000.gas-xray_lum_05-5kev_2r200_d=r200_y.png",
+      "bytes": 461729,
+      "sha256": "3f66cbd153c114ecd6a7c3b253bf882793d029880ac6a076a41105046ad89bf5",
+      "width_px": 800,
+      "height_px": 886
+    },
+    {
+      "quantity": "xray",
+      "axis": "z",
+      "filename": "xray_z.png",
+      "url": "https://www.tng-project.org/exp/galleries/nelson23xray//TNG-Cluster.99.00000000.gas-xray_lum_05-5kev_2r200_d=r200_z.png",
+      "bytes": 517403,
+      "sha256": "f16be599d0e65b2140133a5a44f5e4a631330f069388694df0cdb2c972be5655",
+      "width_px": 800,
+      "height_px": 886
+    }
+  ],
+  "scope": "Rendered public images; not verified aligned scientific arrays or an event-specific shock measurement."
+}

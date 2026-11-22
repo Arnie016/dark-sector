@@ -1,0 +1,179 @@
+{
+  "input_fraction_summary_sha256": "323b52e4192b5c92d259aeb03a8503f3da4899000ea33fef1a0eece933d21aa7",
+  "region": "40 arcsec around post-hoc PSZ2 difference peak",
+  "southern_region_contributions": {
+    "T50": {
+      "0.01": {
+        "T50": {
+          "selected": 70,
+          "in_region": 70,
+          "selected_fraction": 1.0,
+          "weight_fraction": 1.0
+        },
+        "T50SUB": {
+          "selected": 70,
+          "in_region": 70,
+          "selected_fraction": 1.0,
+          "weight_fraction": 1.0
+        }
+      },
+      "0.05": {
+        "T50": {
+          "selected": 347,
+          "in_region": 153,
+          "selected_fraction": 0.4409221902017291,
+          "weight_fraction": 0.592150864316419
+        },
+        "T50SUB": {
+          "selected": 347,
+          "in_region": 153,
+          "selected_fraction": 0.4409221902017291,
+          "weight_fraction": 0.042115678880605766
+        }
+      },
+      "0.1": {
+        "T50": {
+          "selected": 694,
+          "in_region": 174,
+          "selected_fraction": 0.2507204610951009,
+          "weight_fraction": 0.39756726861368047
+        },
+        "T50SUB": {
+          "selected": 694,
+          "in_region": 174,
+          "selected_fraction": 0.2507204610951009,
+          "weight_fraction": 0.02026626328149031
+        }
+      },
+      "0.2": {
+        "T50": {
+          "selected": 1387,
+          "in_region": 215,
+          "selected_fraction": 0.15501081470800288,
+          "weight_fraction": 0.277773357326636
+        },
+        "T50SUB": {
+          "selected": 1387,
+          "in_region": 215,
+          "selected_fraction": 0.15501081470800288,
+          "weight_fraction": 0.012560888687246677
+        }
+      },
+      "0.5": {
+        "T50": {
+          "selected": 3467,
+          "in_region": 239,
+          "selected_fraction": 0.06893567926160946,
+          "weight_fraction": 0.18874956955216413
+        },
+        "T50SUB": {
+          "selected": 3467,
+          "in_region": 239,
+          "selected_fraction": 0.06893567926160946,
+          "weight_fraction": 0.007775413521723331
+        }
+      },
+      "1.0": {
+        "T50": {
+          "selected": 6934,
+          "in_region": 239,
+          "selected_fraction": 0.03446783963080473,
+          "weight_fraction": 0.16044203829134127
+        },
+        "T50SUB": {
+          "selected": 6934,
+          "in_region": 239,
+          "selected_fraction": 0.03446783963080473,
+          "weight_fraction": 0.006410288132123128
+        }
+      }
+    },
+    "T50SUB": {
+      "0.01": {
+        "T50": {
+          "selected": 70,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        },
+        "T50SUB": {
+          "selected": 70,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        }
+      },
+      "0.05": {
+        "T50": {
+          "selected": 347,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        },
+        "T50SUB": {
+          "selected": 347,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        }
+      },
+      "0.1": {
+        "T50": {
+          "selected": 694,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        },
+        "T50SUB": {
+          "selected": 694,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        }
+      },
+      "0.2": {
+        "T50": {
+          "selected": 1387,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        },
+        "T50SUB": {
+          "selected": 1387,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        }
+      },
+      "0.5": {
+        "T50": {
+          "selected": 3467,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        },
+        "T50SUB": {
+          "selected": 3467,
+          "in_region": 0,
+          "selected_fraction": 0.0,
+          "weight_fraction": 0.0
+        }
+      },
+      "1.0": {
+        "T50": {
+          "selected": 6934,
+          "in_region": 239,
+          "selected_fraction": 0.03446783963080473,
+          "weight_fraction": 0.16044203829134127
+        },
+        "T50SUB": {
+          "selected": 6934,
+          "in_region": 239,
+          "selected_fraction": 0.03446783963080473,
+          "weight_fraction": 0.006410288132123127
+        }
+      }
+    }
+  },
+  "limitations": "Same correlated images, source region selected after inspection; weights are sums of correlated pixel values, not integrated flux. No inference about source physics, measurement uncertainty or clock bias."
+}

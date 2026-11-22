@@ -1,0 +1,20 @@
+{
+  "catalog_sha256": "d9d103b13a40cb8088914e025310fd2d8f99eb20f679e57e54b6eb5dcf78253d",
+  "prior_csv_sha256": "19a3d33c088d8d77a2ee4307640df79faa646b6daf47f1b99df693f4cb843ad1",
+  "all_rows": 2083,
+  "unique_time_values": 635,
+  "rows_with_duplicate_time": 1686,
+  "selected_groups": {
+    "1": {
+      "events": 1428,
+      "modal_time_events": 1193,
+      "distinct_recorded_halo_labels": 330
+    },
+    "0": {
+      "events": 549,
+      "modal_time_events": 16,
+      "distinct_recorded_halo_labels": 238
+    }
+  },
+  "caution": "Exploratory association, pooled events not independent clusters; modal time is not proven to be snapshot age or error."
+}

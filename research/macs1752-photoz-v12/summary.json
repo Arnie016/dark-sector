@@ -1,0 +1,17 @@
+{
+  "source_id": "ILTJ175159.28+443849.6",
+  "version": "v1.2",
+  "radio_ra_deg": 267.99699456543635,
+  "radio_dec_deg": 44.64713476780804,
+  "z_best": 0.3469112,
+  "z_source": "Phot",
+  "zphot": 0.3469112,
+  "zphot_err": 0.030810085729320768,
+  "photo_quality_flag": 1,
+  "sdss_spectroscopic_available": false,
+  "desi_spectroscopic_available": false,
+  "hetdex_spectroscopic_available": false,
+  "v1_1_z_best": 0.3469112,
+  "v1_1_z_source": "Phot",
+  "warning": "Catalog association and photometric redshift do not establish membership; other spectroscopy or catalogs may exist."
+}

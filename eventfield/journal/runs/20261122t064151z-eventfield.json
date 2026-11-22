@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "id": "20261122t064151z-eventfield",
+  "date": "2026-11-22",
+  "scope": "Eventfield · Interactive run",
+  "status": "measurement",
+  "title": "The new sky view reproduces the original measurement",
+  "summary": "The wide radio viewer, its matched-beam overlay and the journal clock passed the local browser checks.",
+  "sections": [
+    {
+      "heading": "Three ways to check the view",
+      "body": [
+        "At a 1,440 px viewport the PSZ2 G181 image was 1,382 × 625 display pixels. The rotated field has 562 × 254 samples and retains the release beam. Clicking Measure the relic separation switches to the matched beam.",
+        "The displayed T50-minus-T50SUB measurements remained −270.58 kpc at 600 kpc and −3.31 kpc at 300 kpc. The Abell 1925 view showed +116.05 kpc at the tighter aperture. Same settings and unchanged numerical results are the regression check for the viewer.",
+        "The journal projection demo went from 30° to 0° and back to the same −167 Myr reading. At 75° it stopped outside the calibrated range. A test run note imported into a separate test browser and survived a reload. Tested widths were 1,440, 390 and 320 px. Human review remains pending."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Numerical regression",
+      "result": "All 27 radio cases matched the saved tables. The largest absolute difference was 3.12 × 10⁻⁷ kpc.",
+      "command": "node eventfield/scripts/verify.mjs"
+    },
+    {
+      "title": "Public clock check",
+      "result": "The standard-library calculation reproduces a −140.704 Myr sensitivity at the example 1,000 kpc radius.",
+      "command": "python3 eventfield/scripts/clock_probe.py"
+    }
+  ],
+  "sources": [
+    {
+      "label": "Published catalog and projections",
+      "url": "https://www.tng-project.org/data/cluster/"
+    },
+    {
+      "label": "Lee et al. simulated relic fit",
+      "url": "https://arxiv.org/html/2510.21632"
+    }
+  ],
+  "next": "Check whether the exact event and relic crosswalk can anchor a same-definition simulated mock.",
+  "action": {
+    "label": "Try the clock",
+    "href": "#journal?post=relic-clock"
+  }
+}

@@ -1,0 +1,22 @@
+{
+  "input_sha256": "59c1830217d437564b241ae60788de303d4eace250208d11b8f7dc5450ab664f",
+  "eligible_rows_mass_ratio_ge_0_1": 1199,
+  "selected_points": {
+    "0.5": {
+      "tcoll": 61,
+      "tsc_full": 65,
+      "different_rows": 4
+    },
+    "1.0": {
+      "tcoll": 107,
+      "tsc_full": 103,
+      "different_rows": 4
+    },
+    "1.4": {
+      "tcoll": 163,
+      "tsc_full": 163,
+      "different_rows": 2
+    }
+  },
+  "warning": "Descriptive threshold sensitivity, not uncertainty, observed rate, or independent verification."
+}

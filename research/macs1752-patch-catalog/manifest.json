@@ -1,0 +1,9 @@
+{
+  "radio_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/659/A1",
+  "radio_query": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J%2FA%2BA%2F659%2FA1%2Fcatalog&-c=267.99604077+%2B44.64843417&-c.rs=20&-out.max=30&-out=Source%2CRAJ2000%2CDEJ2000%2Ce_RAJ2000%2Ce_DEJ2000%2CSpeak%2CSpeakTot%2CMaj%2CMin%2CSCode&-out.add=_r&-sort=_r",
+  "radio_query_sha256": "89b45ae6e4ce377f3e141be29656523a5398a8a94519f7195354a0282e564ec4",
+  "value_added_catalog": "https://cdsarc.cds.unistra.fr/viz-bin/cat/J/A%2BA/678/A151",
+  "value_added_query": "https://vizier.cfa.harvard.edu/viz-bin/asu-tsv?-source=J%2FA%2BA%2F678%2FA151%2Fcatalog&-c=267.99699+%2B44.64713&-c.rs=5&-out.max=10&-out.all=&-out.add=_r",
+  "value_added_query_sha256": "a74b874023ae00c52f0b8c57256ee4b397f955b25487165c051def84f8837af0",
+  "retrieved_utc": "2026-11-07"
+}

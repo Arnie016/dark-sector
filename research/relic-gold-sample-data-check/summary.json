@@ -1,0 +1,10 @@
+{
+  "input_sha256": "7ac1c7b6cb51eb8cd01188d7c655a5549cffd7ca4a154af1f6838834c38ec4e6",
+  "observed_systems": 11,
+  "median_ratio": 0.4230769230769231,
+  "min_ratio": 0.17910447761194032,
+  "max_ratio": 0.6335403726708074,
+  "median_halo_fractional_sigma": 0.14545454545454545,
+  "median_shock_fractional_sigma": 0.009615384615384616,
+  "warning": "Derived descriptive ratios only. Independent Gaussian first-order propagation is assumed and may fail for low S/N; no posterior, covariance or selection correction."
+}

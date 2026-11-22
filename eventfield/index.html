@@ -1,0 +1,355 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#101118">
+  <meta name="description" content="Explore simulated cluster encounters, measure radio relics, and trace the astronomy back to its sources.">
+  <title>Eventfield · Cluster Merger Atlas</title>
+  <link rel="icon" href="mark.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="style.css">
+  <script type="module" src="js/app.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <header class="masthead">
+    <div class="frame masthead-inner">
+      <a class="brand" href="#atlas" aria-label="Eventfield atlas"><img src="mark.svg" alt="" width="30" height="30"><span>eventfield<span class="brand-dot">.</span></span></a>
+      <nav aria-label="Main navigation" class="main-nav">
+        <a href="#atlas" data-nav="atlas" aria-current="page">Atlas</a>
+        <a href="#radio" data-nav="radio">Radio</a>
+        <a href="#orbit" data-nav="orbit">Orbits</a>
+        <a href="#data" data-nav="data">Data</a>
+        <a href="#journal" data-nav="journal">Journal</a>
+      </nav>
+      <span class="mast-source">Frontier physics</span>
+    </div>
+  </header>
+  <main id="main">
+    <section id="view-atlas" class="frame view" data-view="atlas" aria-label="Cluster merger atlas">
+      <div class="hero">
+        <div class="hero-copy">
+          <div class="kicker"><span class="tick"></span> Frontier physics · Galaxy clusters</div>
+          <h1>When clusters<br><em>collide.</em></h1>
+          <p>Follow a collision in TNG-Cluster, then measure the radio relics left by mergers in the real sky.</p>
+          <div class="hero-actions">
+            <a class="button primary" href="#radio">Explore the radio sky <span aria-hidden="true">↗</span></a>
+            <a class="text-action" href="#journal">Read the journal <span aria-hidden="true">↗</span></a>
+          </div>
+        </div>
+        <figure class="hero-figure">
+          <div class="hero-image" id="hero-image">
+            <img id="hero-render" alt="TNG-Cluster halo 0 gas column density. A bright central cluster is surrounded by diffuse purple filaments." width="800" height="886" fetchpriority="high">
+            <div class="image-top">
+              <span class="image-label"><i></i> Simulated projection</span>
+              <span class="image-index" id="hero-view-label">z-axis · z = 0</span>
+            </div>
+            <div class="image-bottom"><div><span id="hero-band-label">Gas column density</span><strong>Halo 0</strong></div></div>
+            <p id="hero-empty" class="asset-empty" hidden>Prepare the local gallery images to view this projection.</p>
+          </div>
+          <figcaption class="hero-caption">
+            <div class="seg compact" role="group" aria-label="Projection quantity" id="gallery-mode">
+              <button type="button" data-band="gas" aria-pressed="true">Gas</button>
+              <button type="button" data-band="xray" aria-pressed="false">X-ray</button>
+              <button type="button" data-band="radio" aria-pressed="false">Radio</button>
+            </div>
+            <div class="gallery-axes">
+              <label for="gallery-axis">Sightline</label>
+              <select id="gallery-axis">
+                <option value="x">X</option><option value="y">Y</option><option value="z" selected>Z</option>
+              </select>
+              <a id="gallery-source" class="source-arrow" href="https://www.tng-project.org/cluster/gallery/nelson23/" target="_blank" rel="noopener" aria-label="Open original projection and scale">↗</a>
+            </div>
+          </figcaption>
+        </figure>
+      </div>
+
+      <div class="stat-strip" aria-label="Atlas data coverage">
+        <div><strong id="atlas-count">2,083</strong><span>catalog merger events</span></div>
+        <div><strong>352</strong><span>TNG-Cluster zoom targets</span></div>
+        <div><strong>70</strong><span>possible snapshots per track</span></div>
+        <div><strong>03</strong><span>LoTSS fields with paired maps</span></div>
+      </div>
+
+      <section class="atlas-story" aria-labelledby="story-heading">
+        <div class="section-head">
+          <div>
+            <p class="kicker"><span class="tick"></span> Explore the evidence</p>
+            <h2 id="story-heading">From motion to measurement.</h2>
+          </div>
+          <p>Follow the two halos in three dimensions. Then see how image processing changes where you place a relic in the sky.</p>
+        </div>
+        <div class="story-grid">
+          <a class="story-card story-orbit" href="#orbit">
+            <div class="story-art"><canvas id="atlas-track" aria-label="Merger trajectory from event 5" role="img"></canvas></div>
+            <span class="card-label"><span class="kind simulation">Simulation</span><span aria-hidden="true">↗</span></span>
+            <h3>Replay the encounter</h3>
+            <p>Scrub recorded snapshots, rotate the line of sight, or seed a gravity model from the catalog.</p>
+          </a>
+          <a class="story-card story-radio" href="#radio">
+            <div class="story-art"><canvas id="atlas-radio" aria-label="Radio flux in the southern PSZ2 G181 relic cutout" role="img"></canvas></div>
+            <span class="card-label"><span class="kind observation">Observation</span><span aria-hidden="true">↗</span></span>
+            <h3>Move the aperture</h3>
+            <p>Measure relic positions on the same sky field with two different treatments of compact sources.</p>
+          </a>
+          <a class="story-card story-desk" href="#journal">
+            <div class="story-art story-refs" aria-hidden="true"><span>Lee et al. · TNG-Cluster</span><span>Botteon et al. · LoTSS</span><span>Ahn et al. · weak lensing</span></div>
+            <span class="card-label"><span class="kind literature">Literature</span><span aria-hidden="true">↗</span></span>
+            <h3>Test a merger clock</h3>
+            <p>Follow the papers, equations and verifiers behind the research timeline.</p>
+          </a>
+        </div>
+      </section>
+
+    </section>
+
+    <section id="view-data" class="frame view lab-view" data-view="data" aria-labelledby="data-heading" hidden>
+      <div class="lab-intro"><p class="kicker"><span class="tick"></span> Data library</p><h1 id="data-heading">Beyond the merger file.</h1><p>Browse the files we can inspect today and the source products needed for the next experiment.</p></div>
+      <div id="data-inventory" class="inventory-grid"></div>
+      <section class="panel inventory-hosts" aria-labelledby="hosts-heading">
+        <div class="panel-heading"><div><h3 id="hosts-heading">Inside the 352-cluster catalog</h3><p id="host-caption">Loading the local file inventory…</p></div><a class="plain-link" href="https://www.tng-project.org/data/cluster/" target="_blank" rel="noopener">TNG-Cluster release ↗</a></div>
+        <details><summary>See the real HDF5 fields and fingerprint</summary><p id="host-hash"></p><ul id="host-fields" class="field-list"></ul></details>
+      </section>
+      <section class="catalog-section" id="catalog" aria-labelledby="catalog-heading">
+        <div class="section-head">
+          <div><p class="kicker"><span class="tick"></span> Dataset guide</p><h2 id="catalog-heading">What’s in the file?</h2></div>
+          <p>Each row describes a merger event. A primary halo can appear in several rows across its assembly history.</p>
+        </div>
+        <div class="catalog-grid">
+          <div class="panel schema-panel">
+            <div class="panel-heading"><div><h3>Cluster Mergers</h3><p>Corrected <code>cluster_mergers.hdf5</code></p></div><a class="plain-link" href="https://www.tng-project.org/data/cluster/" target="_blank" rel="noopener">Catalog docs ↗</a></div>
+            <div class="schema-actions"><button data-browse-events type="button" class="button secondary small">Browse events <span aria-hidden="true">↗</span></button></div>
+            <div class="table-scroll">
+              <table><thead><tr><th>HDF5 field</th><th>Shape</th><th>Use in the atlas</th></tr></thead>
+                <tbody id="schema-body">
+                  <tr><td><code>Mhistory_orbit</code></td><td>2,083 × 70 × 6</td><td>Positions of both subhalos</td></tr>
+                  <tr><td><code>Mhistory_vel</code></td><td>2,083 × 70 × 6</td><td>Peculiar velocities of both subhalos</td></tr>
+                  <tr><td><code>Mhistory_snap</code></td><td>2,083 × 70</td><td>Recorded snapshot for each sample</td></tr>
+                  <tr><td><code>Mhistory_mass</code></td><td>2,083 × 70 × 2</td><td>Subhalo masses in both tracks</td></tr>
+                  <tr><td><code>HaloID</code></td><td>2,083</td><td>Primary halo identifier</td></tr>
+                  <tr><td><code>Snap_coll</code></td><td>2,083</td><td>First stored snapshot after pericenter</td></tr>
+                </tbody>
+              </table>
+            </div>
+            <details id="catalog-provenance"><summary>Full field list and file fingerprint</summary><p id="catalog-file"></p><ul id="catalog-fields" class="field-list"></ul></details>
+          </div>
+          <div class="panel data-sources">
+            <h3>How the data layers fit together</h3>
+            <dl>
+              <div><dt><span class="status-dot violet"></span> Simulated halos</dt><dd>Track relative positions and velocities. TNG gas, X-ray and radio renders show the present-day gallery target.</dd></div>
+              <div><dt><span class="status-dot mint"></span> Observed radio sky</dt><dd>LoTSS-DR2 images for MACS J1752, PSZ2 G181 and Abell 1925. Each field has a pair with different source subtraction.</dd></div>
+              <div><dt><span class="status-dot amber"></span> Inputs for the next model</dt><dd>Co-registered gas temperature, density and Mach maps for shocks. Projected total mass, background galaxy shapes and redshifts for weak lensing.</dd></div>
+            </dl>
+            <a href="#journal?post=clock-pipeline" class="plain-link">Read the proposed experiment ↗</a>
+          </div>
+        </div>
+      </section>
+    </section>
+
+    <section id="view-orbit" class="frame view lab-view" data-view="orbit" aria-labelledby="orbit-heading" hidden>
+      <div class="lab-intro">
+        <p class="kicker"><span class="tick"></span> Orbit lab</p>
+        <h1 id="orbit-heading">Put a merger in motion.</h1>
+        <p>Change your viewpoint to see how the same encounter looks in projection.</p>
+      </div>
+      <div class="lab-toolbar">
+        <div class="seg" id="orbit-mode" role="group" aria-label="Orbit mode">
+          <button type="button" data-mode="replay" aria-pressed="true">Catalog replay</button>
+          <button type="button" data-mode="model" aria-pressed="false">Gravity experiment</button>
+        </div>
+        <div class="event-picker">
+          <form id="event-form" class="mini-form">
+            <label for="event-number">Catalog row</label>
+            <input id="event-number" type="number" min="0" max="2082" step="1" value="5" required>
+            <button type="submit" class="button secondary">Load</button>
+          </form>
+          <button class="button secondary" type="button" data-browse-events>Browse</button>
+        </div>
+      </div>
+      <p class="state-message" id="orbit-status" role="status">Loading the local catalog…</p>
+      <div class="orbit-layout" id="orbit-layout" hidden>
+        <div class="panel orbit-panel">
+          <div class="panel-heading plot-heading">
+            <div><span class="kind simulation" id="orbit-kind">TNG-Cluster simulation</span><h2 id="event-title">Halo 0 · Event 5</h2></div>
+            <button class="button secondary small" id="orbit-export" type="button">Export CSV <span aria-hidden="true">↓</span></button>
+          </div>
+          <div class="orbit-scene">
+            <canvas id="orbit-canvas" role="img" aria-label="Projected orbit of the secondary halo relative to the primary"></canvas>
+            <div class="scene-label"><i></i><span id="scene-mode">Primary halo frame</span></div>
+            <span class="scene-hint" id="orbit-hint">Orbit samples are recorded snapshots</span>
+          </div>
+          <div class="timeline">
+            <button id="play" type="button" class="button play" aria-label="Play snapshots" title="Play snapshots">▶</button>
+            <div class="timeline-track">
+              <div class="output-row"><label for="time-input" id="time-label">Snapshot</label><output for="time-input" id="time-output"></output></div>
+              <input id="time-input" type="range" min="0" max="69" value="40">
+            </div>
+            <button id="jump" type="button" class="button secondary" title="Jump to first snapshot after pericenter">Closest pass ↗</button>
+          </div>
+        </div>
+        <aside class="panel orbit-controls" aria-label="Orbit measurements and controls">
+          <div class="aside-top"><span class="kicker">At the cursor</span><button id="orbit-question" class="help-button" type="button" title="Look up velocity and projection" aria-label="Look up velocity and projection">i</button></div>
+          <dl class="metric-grid orbit-metrics">
+            <div><dt>3D separation</dt><dd><strong id="r3">—</strong> <span>kpc</span></dd></div>
+            <div><dt>Sky-plane separation</dt><dd><strong id="r2">—</strong> <span>kpc</span></dd></div>
+            <div><dt>3D relative speed</dt><dd><strong id="v3">—</strong> <span>km/s</span></dd></div>
+            <div><dt>Line-of-sight velocity</dt><dd><strong id="vlos">—</strong> <span>km/s</span></dd></div>
+          </dl>
+          <div class="sliders">
+            <div class="output-row"><label for="yaw">Rotate view</label><output for="yaw" id="yaw-out">35°</output></div>
+            <input id="yaw" type="range" min="-180" max="180" value="35">
+            <div class="output-row"><label for="pitch">Tilt view</label><output for="pitch" id="pitch-out">55°</output></div>
+            <input id="pitch" type="range" min="-90" max="90" value="55">
+            <div class="output-row"><label for="zoom">Zoom</label><output for="zoom" id="zoom-out">1.0×</output></div>
+            <input id="zoom" type="range" min="1" max="5" step="0.1" value="1">
+            <div class="seg compact view-presets" role="group" aria-label="Sightline presets">
+              <button type="button" data-camera="0,90">XY</button><button type="button" data-camera="0,0">XZ</button><button type="button" data-camera="90,0">YZ</button>
+            </div>
+          </div>
+          <div class="event-detail" id="event-detail"></div>
+        </aside>
+      </div>
+      <section class="panel model-settings" id="model-settings" aria-labelledby="model-label" hidden>
+        <div class="panel-heading"><div><span class="kind model">Two-body model</span><h2 id="model-label">Change the encounter</h2></div><button class="button secondary" id="seed-model" type="button">Seed from replay ↗</button></div>
+        <p class="muted" id="model-seed"></p>
+        <div class="model-sliders sliders">
+          <div><div class="output-row"><label for="mass-scale">Total mass multiplier</label><output for="mass-scale" id="mass-out">1.00×</output></div><input id="mass-scale" type="range" min="0.5" max="2" step="0.05" value="1"></div>
+          <div><div class="output-row"><label for="softening">Softening length</label><output for="softening" id="soft-out">150 kpc</output></div><input id="softening" type="range" min="50" max="300" step="10" value="150"></div>
+          <div><div class="output-row"><label for="sideways">Tangential velocity</label><output for="sideways" id="side-out">1.00×</output></div><input id="sideways" type="range" min="0" max="2" step="0.05" value="1"></div>
+        </div>
+        <p id="model-report" class="data-note" aria-live="polite"></p>
+      </section>
+      <div class="panel orbit-series" id="orbit-series" hidden>
+        <div class="panel-heading"><div><h3 id="series-title">Separation and speed</h3><p id="series-subtitle">Recorded samples in approximate cosmic time</p></div>
+          <span class="chart-key"><i class="mint"></i> Distance <i class="amber"></i> Speed</span>
+        </div>
+        <canvas id="series-canvas" role="img" aria-label="Time series of 3D separation and relative speed"></canvas>
+        <p id="series-note" class="data-note"></p>
+      </div>
+    </section>
+
+    <section id="view-radio" class="frame view lab-view radio-view" data-view="radio" aria-labelledby="radio-heading" hidden>
+      <div class="radio-header">
+        <div><p class="kicker">LoTSS-DR2 · Observed radio sky</p><h1 id="radio-heading">Two relics, one field.</h1></div>
+        <div class="radio-field-picker">
+          <label for="radio-field">Cluster</label>
+          <select id="radio-field">
+            <option value="g181" selected>PSZ2 G181</option>
+            <option value="macs">MACS J1752</option>
+            <option value="g099">Abell 1925</option>
+          </select>
+        </div>
+      </div>
+      <p id="radio-status" class="state-message" role="status">Loading radio field…</p>
+      <div id="radio-layout" hidden>
+        <figure class="radio-panorama">
+          <div class="panorama-image">
+            <canvas id="radio-sky" role="img" aria-label="Wide LoTSS radio field"></canvas>
+            <button class="sky-fullscreen" id="radio-fullscreen" type="button" aria-label="Enter full screen" title="Enter full screen">⤢</button>
+          </div>
+          <figcaption>
+            <div><strong id="radio-cluster">PSZ2 G181</strong> <span id="radio-id"></span><small id="radio-color-label"></small></div>
+            <div class="sky-options">
+              <div class="seg compact" id="radio-image-mode" role="group" aria-label="Image processing">
+                <button type="button" data-image="1" aria-pressed="true">Sources subtracted</button>
+                <button type="button" data-image="0" aria-pressed="false">Original</button>
+              </div>
+              <button class="button secondary small" type="button" id="radio-faint" aria-pressed="false">Show faint signal</button>
+            </div>
+          </figcaption>
+        </figure>
+        <div class="radio-action-row">
+          <p>Radio relics are diffuse arcs of emission. The gap between them can help date a collision.</p>
+          <a class="plain-link" href="#journal?post=relic-clock">Read the relic clock ↗</a>
+        </div>
+      <details class="panel measure-panel" id="radio-measure">
+        <summary>Measure the relic separation</summary>
+        <div class="measure-grid">
+        <div class="radio-controls" aria-label="Measured separations">
+          <div class="aside-top"><span class="kicker">Difference between maps</span></div>
+          <div class="delta-readout"><strong id="radio-delta">—</strong> <span>kpc</span></div>
+          <p class="muted delta-caption">T50 separation minus T50SUB separation</p>
+          <dl class="metric-grid radio-metrics"><div><dt>T50 pair</dt><dd id="radio-before">—</dd></div><div><dt>T50SUB pair</dt><dd id="radio-after">—</dd></div></dl>
+          <p class="data-note">The open circles mark catalog seeds and the crosses mark flux-weighted centers. A line connects the measured pair.</p>
+        </div>
+        <div class="radio-controls" aria-label="Measurement settings">
+          <div class="sliders">
+            <div class="output-row"><label for="aperture">Aperture radius</label><output for="aperture" id="aperture-out">600 kpc</output></div>
+            <input id="aperture" type="range" min="300" max="600" step="25" value="600">
+            <div id="aperture-presets" class="seg compact view-presets" role="group" aria-label="Aperture presets">
+              <button type="button" data-radius="300">300</button><button type="button" data-radius="450">450</button><button type="button" data-radius="600">600</button>
+            </div>
+            <div class="output-row"><label for="threshold">Flux threshold</label><output for="threshold" id="threshold-out">0.20 mJy/beam</output></div>
+            <input id="threshold" type="range" min="0.1" max="0.3" step="0.025" value="0.2">
+            <div class="output-row"><label for="bright-fraction">Brightest pixels kept</label><output for="bright-fraction" id="fraction-out">10%</output></div>
+            <input id="bright-fraction" type="range" min="5" max="25" step="1" value="10">
+          </div>
+          <button id="radio-export" class="button secondary small" type="button">Export measurement <span aria-hidden="true">↓</span></button>
+        </div>
+        </div>
+        <div class="radio-series">
+          <div class="panel-heading"><div><h3>What changes with aperture?</h3><p>Pair separation difference for the current threshold and bright-pixel fraction</p></div></div>
+          <canvas id="radio-curve" role="img" aria-label="Signed pair separation difference for three aperture sizes"></canvas>
+          <p id="radio-curve-note" class="data-note"></p>
+          <details><summary>How the measurement works</summary><p>Both maps are smoothed to a nominal 135 kpc beam and sampled on the T50SUB grid. In each circle, the selected bright pixels are weighted by flux. Pair separation comes from the angular distance between centers and the angular diameter distance.</p><p>The two maps share observations. The differences measure sensitivity to processing for these three fields. <a href="#desk?topic=radio">See the papers and methods ↗</a></p></details>
+        </div>
+      </details>
+      </div>
+    </section>
+
+    <section id="view-journal" class="frame view lab-view journal-view" data-view="journal" aria-labelledby="journal-heading" hidden>
+      <div class="lab-intro" id="journal-intro"><p class="kicker"><span class="tick"></span> Frontier physics</p><h1 id="journal-heading">The research journal.</h1><p>A timeline of what we measured, how to check it, and what to test next.</p></div>
+      <div class="journal-layout">
+        <aside class="journal-sidebar">
+          <div class="journal-sidebar-head"><h2>Timeline</h2><button id="journal-refresh" class="plain-link refresh-link" type="button">Refresh</button></div>
+          <p id="journal-sync-status" class="data-note" role="status"></p>
+          <ol id="journal-timeline" class="journal-timeline"></ol>
+          <button id="journal-more" class="button secondary small" type="button" hidden>Older run notes</button>
+          <a href="#desk" class="plain-link">Search papers and methods ↗</a>
+          <details class="journal-import">
+            <summary>Import a run note</summary>
+            <form id="journal-import-form">
+              <label for="journal-import-input">JSON from a scheduled run</label>
+              <textarea id="journal-import-input" maxlength="30000" rows="5" required></textarea>
+              <button class="button secondary small" type="submit">Add to this browser</button>
+              <p id="journal-import-status" role="status"></p>
+            </form>
+          </details>
+        </aside>
+        <article class="journal-article" id="journal-post" aria-live="polite"></article>
+      </div>
+    </section>
+
+    <section id="view-desk" class="frame view lab-view desk-view" data-view="desk" aria-labelledby="desk-heading" hidden>
+      <div class="lab-intro"><p class="kicker"><span class="tick"></span> Research desk</p><h1 id="desk-heading">Ask the evidence.</h1><p>Search curated notes from the TNG-Cluster catalog, radio survey, lensing studies and the project’s own analyses.</p></div>
+      <form class="search-form" id="search-form">
+        <label for="query">What would you like to look up?</label>
+        <div class="search-input"><input id="query" type="search" placeholder="Can a radio relic tell us when clusters collided?" autocomplete="off" maxlength="240" required><button class="button primary" type="submit">Find evidence <span aria-hidden="true">↗</span></button></div>
+      </form>
+      <div class="suggestions" id="suggestions" aria-label="Suggested questions"></div>
+      <div id="desk-results" class="desk-results" aria-live="polite"></div>
+      <noscript>The research desk and labs require JavaScript.</noscript>
+    </section>
+  </main>
+  <dialog id="event-browser" aria-labelledby="browser-title">
+    <div class="panel-heading">
+      <div><p class="kicker">Cluster Mergers catalog</p><h2 id="browser-title">Find an encounter</h2></div>
+      <form method="dialog"><button type="submit" class="button secondary small" aria-label="Close catalog browser">Close</button></form>
+    </div>
+    <div class="browser-filters">
+      <div><label for="browser-filter">Catalog row, halo or subhalo ID</label><input type="text" id="browser-filter" inputmode="numeric" placeholder="e.g. 0" autocomplete="off" autofocus></div>
+      <div><label for="browser-sort">Sort by</label><select id="browser-sort"><option value="row">Catalog row</option><option value="speed">Passage speed</option><option value="ratio">Mass ratio</option><option value="frames">Recorded samples</option></select></div>
+    </div>
+    <p id="browser-status" class="state-message" role="status"></p>
+    <div id="browser-table" class="table-scroll" hidden>
+      <table><thead><tr><th>Row</th><th>Halo</th><th>Mass ratio</th><th>Speed<br>km/s</th><th>Samples</th><th>Open</th></tr></thead><tbody id="browser-rows"></tbody></table>
+    </div>
+    <div class="browser-pages"><button class="button secondary small" id="browser-prev" type="button">← Previous</button><button class="button secondary small" id="browser-next" type="button">Next →</button></div>
+  </dialog>
+  <footer class="site-footer frame">
+    <span class="footer-brand"><img src="mark.svg" alt="" width="23" height="23"> Eventfield</span>
+    <span>Built from TNG-Cluster and LoTSS-DR2 research</span>
+    <a href="#desk?topic=sources">Sources and methods ↗</a>
+  </footer>
+</body>
+</html>

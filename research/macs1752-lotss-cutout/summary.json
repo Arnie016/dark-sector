@@ -1,0 +1,27 @@
+{
+  "catalog_identifier": "PSZ2 G071.21+28.86",
+  "cluster": "MACS J1752.0+4440",
+  "image_shape": [
+    266,
+    266
+  ],
+  "beam_fwhm_arcsec": [
+    20.0,
+    20.0
+  ],
+  "frequency_hz": 143650000.0,
+  "coordinates_deg": {
+    "N": [
+      268.0816,
+      44.7043
+    ],
+    "S": [
+      267.9735,
+      44.6313
+    ]
+  },
+  "catalog_separation_kpc": 1941,
+  "catalog_separation_error_kpc": 39,
+  "angular_separation_arcmin": 6.3610053306578305,
+  "caveat": "Markers are published coordinates, not positions measured in this image; no flux, shock, uncertainty, or merger age inferred."
+}

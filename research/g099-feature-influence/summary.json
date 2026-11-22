@@ -1,0 +1,31 @@
+{
+  "target_beam_kpc": 135,
+  "mask_radius_arcsec": 70.11359206949601,
+  "aperture_kpc": 600,
+  "threshold_mjy_per_beam": 0.2,
+  "peaks": {
+    "N": {
+      "x": 413,
+      "y": 394,
+      "ra_deg_fk5": 216.97897800140112,
+      "dec_deg_fk5": 56.990694140978334,
+      "difference_mjy_per_beam": 269.2377669149515,
+      "offset_catalog_arcsec": 271.08806779197573
+    },
+    "S": {
+      "x": 290,
+      "y": 188,
+      "ra_deg_fk5": 217.29183582873577,
+      "dec_deg_fk5": 56.70473572615595,
+      "difference_mjy_per_beam": 47.07992985234656,
+      "offset_catalog_arcsec": 192.64136312584986
+    }
+  },
+  "pair_delta_kpc": {
+    "none": -197.07912897734678,
+    "north": -30.681780349391868,
+    "south": -362.3558050148038,
+    "both": -190.2821786475977
+  },
+  "warning": "Peak locations and exclusions chosen after data inspection; two products share observations. Masks are not author regions; no causal source identification, uncertainty or physical clock inference."
+}

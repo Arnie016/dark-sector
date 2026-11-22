@@ -1,0 +1,63 @@
+{
+  "table_snapshot_sha256": "eabeac998a2094b900bfc6a301d8bf926f89e61a35067baf75b0f186f96f8483",
+  "survey_source": "https://lofar-surveys.org/planck_dr2.html",
+  "paper_methods_source": "https://arxiv.org/html/2202.11720#S3.SS3",
+  "clusters": {
+    "PSZ2 G071.21+28.86": {
+      "published_reference_rms_mjy_per_beam": 0.101,
+      "twice_reference_rms_mjy_per_beam": 0.202,
+      "reference_description": "Botteon et al. Table 1 reference image, robust=-0.5, no uv taper",
+      "archived_t50sub_beam_arcsec": [
+        14.72520605101877,
+        10.642842435543336
+      ],
+      "archived_t50sub_shape": [
+        1614,
+        1614
+      ],
+      "archived_t50sub_sha256": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+    },
+    "PSZ2 G181.06+48.47": {
+      "published_reference_rms_mjy_per_beam": 0.066,
+      "twice_reference_rms_mjy_per_beam": 0.132,
+      "reference_description": "Botteon et al. Table 1 reference image, robust=-0.5, no uv taper",
+      "archived_t50sub_beam_arcsec": [
+        19.562438937059785,
+        19.192067823123395
+      ],
+      "archived_t50sub_shape": [
+        656,
+        656
+      ],
+      "archived_t50sub_sha256": "021144b3d9118b607e851ed9851f97efe149d220903ddb0c64d0617083d369f6"
+    }
+  },
+  "additional_psz2_paper_values_transcribed_from": "https://arxiv.org/html/2501.08390",
+  "psz2_later_lofar_maps": [
+    {
+      "id": "IM1",
+      "beam_arcsec": [
+        8.1,
+        5.3
+      ],
+      "rms_microjy_per_beam": 70
+    },
+    {
+      "id": "IM2",
+      "beam_arcsec": [
+        20,
+        20
+      ],
+      "rms_microjy_per_beam": 200
+    },
+    {
+      "id": "IM3",
+      "beam_arcsec": [
+        20,
+        20
+      ],
+      "rms_microjy_per_beam": 210
+    }
+  ],
+  "warning": "Values are for explicitly described published products, not verified RMS for our archived T50SUB or 135 kpc smoothed maps. Source regions, spatial covariance and correlated noise remain missing."
+}

@@ -1,0 +1,61 @@
+{
+  "catalog_sha256": "4a46302883b9308a771eb2ebf914f8b0a22a22a10f6280f33477568689d70db9",
+  "apertures": [
+    {
+      "cluster": "MACS J1752",
+      "relic": "N",
+      "image_shape": [
+        1614,
+        1614
+      ],
+      "aperture_radius_pixels": 78.68146810619083,
+      "minimum_margin_pixels": 618.3313506382201,
+      "minimum_margin_arcsec": 927.497025957331
+    },
+    {
+      "cluster": "MACS J1752",
+      "relic": "S",
+      "image_shape": [
+        1614,
+        1614
+      ],
+      "aperture_radius_pixels": 78.68146810619083,
+      "minimum_margin_pixels": 652.815866173185,
+      "minimum_margin_arcsec": 979.2237992597784
+    },
+    {
+      "cluster": "PSZ2 G181",
+      "relic": "N",
+      "image_shape": [
+        656,
+        656
+      ],
+      "aperture_radius_pixels": 80.59458978495876,
+      "minimum_margin_pixels": 124.06614309483179,
+      "minimum_margin_arcsec": 248.1322861896638
+    },
+    {
+      "cluster": "PSZ2 G181",
+      "relic": "S",
+      "image_shape": [
+        656,
+        656
+      ],
+      "aperture_radius_pixels": 80.59458978495876,
+      "minimum_margin_pixels": 34.547714420525026,
+      "minimum_margin_arcsec": 69.09542884105011
+    }
+  ],
+  "edge_guard_scripts": [
+    "two-cluster-common-beam",
+    "two-cluster-physical-beam",
+    "psz2-paired-positions",
+    "psz2-boundary-ablation",
+    "psz2-rotated-mask-sweep",
+    "psz2-shared-pixel-test",
+    "psz2-bright-fraction-sensitivity",
+    "psz2-selection-mechanism"
+  ],
+  "guard_tests": "Each actual AST condition accepts an interior synthetic aperture and rejects a left-edge clipped one.",
+  "limitations": "This verifies image-plane containment and the newly added guards, not survey masks, beam/noise covariance, or physical inference."
+}

@@ -1,0 +1,20 @@
+{
+  "input_sha256": "873ede5430eeb75bad6bf21ad7786d26e7b85048f589fe0e24f4b0c75169c0b9",
+  "warning": "Cosmic time convention is an assumption; association does not establish causality or construction.",
+  "groups": {
+    "distance_match": {
+      "n": 1428,
+      "median_signed_center_delta_gyr": 0.00500388061324486,
+      "median_nearest_abs_delta_gyr": 0.00500388061324486,
+      "p90_nearest_abs_delta_gyr": 0.05640626849635719,
+      "nearest_within_0_01_gyr": 1199
+    },
+    "distance_nonmatch": {
+      "n": 549,
+      "median_signed_center_delta_gyr": 0.0904941351802453,
+      "median_nearest_abs_delta_gyr": 0.06504129679101656,
+      "p90_nearest_abs_delta_gyr": 0.0896217366267912,
+      "nearest_within_0_01_gyr": 26
+    }
+  }
+}

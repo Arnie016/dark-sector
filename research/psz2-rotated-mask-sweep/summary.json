@@ -1,0 +1,61 @@
+{
+  "angles_deg": [
+    0,
+    10,
+    20,
+    30,
+    40,
+    50,
+    60,
+    70,
+    80,
+    90,
+    100,
+    110,
+    120,
+    130,
+    140,
+    150,
+    160,
+    170,
+    180,
+    190,
+    200,
+    210,
+    220,
+    230,
+    240,
+    250,
+    260,
+    270,
+    280,
+    290,
+    300,
+    310,
+    320,
+    330,
+    340,
+    350
+  ],
+  "mask_radius_arcsec": 40,
+  "baseline_pair_delta_kpc": -270.58443347829956,
+  "selected_peak_pair_delta_kpc": 6.502575282579137,
+  "peak_removed_eligible_south": {
+    "T50": 605,
+    "T50SUB": 239
+  },
+  "other_angles_pair_delta_kpc_range": [
+    -282.59937523624865,
+    -66.76508311226037
+  ],
+  "other_angles_at_least_as_close_to_zero": 0,
+  "eligible_count_matching_rule": "For each image, southern threshold-eligible pixels removed within 25% of selected peak count; post-hoc descriptive filter.",
+  "matching_angles": [
+    10
+  ],
+  "matching_angle_pair_deltas_kpc": {
+    "10": -66.76508311226037
+  },
+  "prior_summary_sha256": "d02f35a3d9eed920b80f4cf2bf40436ef891c3c201e38fed68d1a4bf88eb937a",
+  "warning": "Post-hoc peak selection, overlapping masks, related maps and nonrandom control angles: counts and ranking are descriptive, not p-values, causal identification or population inference."
+}

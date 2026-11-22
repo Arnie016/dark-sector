@@ -1,0 +1,12 @@
+{
+  "pixels": 10057,
+  "median_difference_mjy_per_target_beam": 0.034230053865135904,
+  "rms_difference_mjy_per_target_beam": 0.9262792008690975,
+  "median_absolute_difference_mjy_per_target_beam": 0.1686043118331559,
+  "beam_area_ratio": 5.402067182903291,
+  "kernel_covariance_eigenvalues_pixels2": [
+    45.89018360263322,
+    63.940193199401726
+  ],
+  "limits": "Gaussian beam approximation and bilinear interpolation only; differing imaging, subtraction and noise remain. Catalog-centered regions and pixels are not independent."
+}

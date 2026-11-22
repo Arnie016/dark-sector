@@ -1,0 +1,38 @@
+{
+  "input_sha256": {
+    "T50kpc.fits": "ad491b8e9df67889f1e9ee8f3e9f323052698705ca553c8875e3b7d0262bd124",
+    "T50kpcSUB.fits": "d89cf4f1f58e6d369d0ae928bd5115bce7b2189c63c7d476ef12e489160e59de"
+  },
+  "beam_arcsec": [
+    14.725205848636271,
+    10.642844036620764
+  ],
+  "plot_width_arcsec": 120,
+  "positions": {
+    "difference peak": {
+      "offset_from_peak_arcsec": 0.0,
+      "nearest_pixel_difference_mjy_per_beam": 26.547684057732113,
+      "nearest_pixel_x": 843,
+      "nearest_pixel_y": 774
+    },
+    "LoTSS radio": {
+      "offset_from_peak_arcsec": 5.277285666491392,
+      "nearest_pixel_difference_mjy_per_beam": 19.52649891609326,
+      "nearest_pixel_x": 841,
+      "nearest_pixel_y": 771
+    },
+    "LoTSS optical": {
+      "offset_from_peak_arcsec": 3.869200206599696,
+      "nearest_pixel_difference_mjy_per_beam": 23.167561186710373,
+      "nearest_pixel_x": 844,
+      "nearest_pixel_y": 776
+    },
+    "Keck galaxy": {
+      "offset_from_peak_arcsec": 3.9191424748935724,
+      "nearest_pixel_difference_mjy_per_beam": 23.167561186710373,
+      "nearest_pixel_x": 844,
+      "nearest_pixel_y": 776
+    }
+  },
+  "warning": "Nearest-pixel samples are correlated with the selected peak, beam-limited, post-hoc diagnostics, not fluxes or evidence of physical association."
+}

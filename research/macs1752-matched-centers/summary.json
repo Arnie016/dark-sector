@@ -1,0 +1,18 @@
+{
+  "configurations": 9,
+  "center_difference_arcsec": {
+    "N": [
+      1.665877670667861,
+      2.668379118038084
+    ],
+    "S": [
+      1.6489395261002509,
+      2.4165068206896003
+    ]
+  },
+  "signed_pair_separation_difference_arcsec": [
+    -0.32945853353066923,
+    0.25127711659632723
+  ],
+  "warning": "Same data and catalog-centered illustrative masks; correlated pixels, beam model approximation and different imaging; not a systematic uncertainty or physical result."
+}

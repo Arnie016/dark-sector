@@ -1,0 +1,47 @@
+{
+  "version": 1,
+  "id": "shared-speed",
+  "date": "2026-11-12",
+  "scope": "Dark sector",
+  "status": "negative",
+  "title": "Two velocity estimates shared the same ingredient",
+  "summary": "A simulated association changed sign when the usable comparison set shrank. The algebra explains why the contrast cannot identify a separate physical effect.",
+  "sections": [
+    {
+      "heading": "Follow the shared input",
+      "body": [
+        "The analysis compared the catalog peak speed v with the relative speed u stored around first passage. The exposure of interest was A = |v − u|. The other discrepancy compared a center-position finite difference with a member-weighted velocity. It also depends on the velocity used to make u.",
+        "At fixed v and u, A has only one possible value. A comparison between high and low A at those same exact speeds has no overlap. Coarse bins permit a descriptive comparison but leave some of the speed dependence in place."
+      ]
+    },
+    {
+      "heading": "What the table shows",
+      "body": [
+        "The published run checked 1,977 simulation rows. The unadjusted high-minus-low contrast was +165.89 km/s. Among 986 rows in coarsened joint bins with both groups, the weighted contrast was −39.28 km/s. Requiring at least two events per group retained 759 rows.",
+        "The changing sign and strongly different retention fractions point to a test with independent tracers. These are simulation-derived event rows that can share a host history."
+      ]
+    }
+  ],
+  "checks": [
+    {
+      "title": "Identification and overlap gate",
+      "result": "The source records the input columns, bin definitions, row counts, derived contrasts and reproduction pseudocode.",
+      "url": "https://github.com/Arnie016/dark-sector/blob/53415aa/research/2026-11-12-c23-joint-speed-overlap/C23_VELOCITY_POSITIVITY_GATE.md"
+    }
+  ],
+  "sources": [
+    {
+      "label": "IllustrisTNG · TNG-Cluster data documentation",
+      "url": "https://www.tng-project.org/data/cluster/"
+    },
+    {
+      "label": "Research record · C-23 joint-speed overlap",
+      "url": "https://github.com/Arnie016/dark-sector/blob/53415aa/research/2026-11-12-c23-joint-speed-overlap/C23_VELOCITY_POSITIVITY_GATE.md"
+    }
+  ],
+  "next": "Compare independently specified tracers at the same snapshot and verify host lineage before assessing whether any model differs.",
+  "action": {
+    "label": "Inspect a recorded encounter",
+    "href": "#orbit?event=5"
+  }
+}

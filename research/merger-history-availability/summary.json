@@ -1,0 +1,47 @@
+{
+  "collision_input_sha256": "a20e39c685edc0e2ab4d46f836a03d4e747ab7c4c5b01506320b10663147f3ca",
+  "grouping_input_sha256": "d237443232d9d5835eb6f8269904ec6c483a5c781f9bfaf327fa93e7ad0cf03d",
+  "groups": [
+    {
+      "snap_lo": 30,
+      "snap_hi": 49,
+      "n": 135,
+      "available": 22,
+      "unavailable": 113,
+      "available_fraction": 0.16296296296296298,
+      "available_median_discrepancy": 375.8543710341573,
+      "unavailable_median_discrepancy": 537.6082728227412
+    },
+    {
+      "snap_lo": 50,
+      "snap_hi": 69,
+      "n": 684,
+      "available": 366,
+      "unavailable": 318,
+      "available_fraction": 0.5350877192982456,
+      "available_median_discrepancy": 335.0737721559417,
+      "unavailable_median_discrepancy": 559.6665490748242
+    },
+    {
+      "snap_lo": 70,
+      "snap_hi": 84,
+      "n": 568,
+      "available": 504,
+      "unavailable": 64,
+      "available_fraction": 0.8873239436619719,
+      "available_median_discrepancy": 332.7264187788264,
+      "unavailable_median_discrepancy": 693.3949737274634
+    },
+    {
+      "snap_lo": 85,
+      "snap_hi": 98,
+      "n": 590,
+      "available": 583,
+      "unavailable": 7,
+      "available_fraction": 0.988135593220339,
+      "available_median_discrepancy": 383.7833124115341,
+      "unavailable_median_discrepancy": 690.3822821286923
+    }
+  ],
+  "warning": "Exploratory, selected catalog events; availability is not proven causal and halo IDs not independently mapped."
+}

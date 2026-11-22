@@ -1,0 +1,9 @@
+# Cross-checking two present-day merger clocks
+
+For the pinned corrected TNG-Cluster merger catalog, compare two estimates of time since first pericenter at z=0. Estimate A assumes `T_coll` is cosmic age: `age(z=0) - T_coll`. Estimate B uses the [documented](https://www.tng-project.org/data/cluster/) `TSC_full` at `Snap_full_coll`, adding the computed age difference from that snapshot to z=0. Both use the same flat matter-plus-Lambda cosmology (h=0.6774, Omega_m=0.3089); this is not an independent validation of the cosmology or of the field semantics.
+
+All 2,083 rows have finite usable values. Across them, the 90th percentile absolute difference is 0.0818 Gyr and the largest is 0.3082 Gyr. A diagnostic threshold `Mass_ratio >= 0.1` and elapsed time in [0,1] Gyr returns 107 rows with A and 103 with B, with 103 in common. The four A-only rows are 343, 421, 1243, 1821. All have `Snap_full_coll == 99`, estimate B approximately 1.0084 Gyr and estimate A approximately 0.911–0.925 Gyr. Consequently, their classification depends on the convention near the threshold; these values are not statistical error bars.
+
+For this catalog and cut, the 103 B-selected events exactly match the earlier snapshot-99 selection. This is an observed equality in this version, not a general identity. These are merger-event counts, not independent present-day clusters or cosmic merger rates. The meaning and construction of `T_coll` still need confirmation against the Lee et al. methods or provider data. Additional errors in snapshot-age convention, halo-identity mapping, and selection remain possible.
+
+Reproduce with `python analyze.py /path/to/cluster_mergers.hdf5` and h5py/NumPy. The script verifies the input catalog SHA-256 and uses the saved redshifts in the adjacent `merger-collision-ensemble` directory; its CSV records all row-level estimates. The analysis extends the preceding timing correction and does not establish a catalog error or a novel physics result.

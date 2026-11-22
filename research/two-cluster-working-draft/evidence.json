@@ -1,0 +1,70 @@
+{
+  "source_sha256": {
+    "research/two-cluster-physical-beam/variants.csv": "449227fd08ff1e080eed86987916261d6d69cefda7be16ea70b3557568934a40",
+    "research/psz2-boundary-ablation/variants.csv": "c8b2b9c3254ba577d2fa90d436bdf42dff15ed361bebf04bddc1c36dbd99b7a9",
+    "research/psz2-bright-fraction-sensitivity/variants.csv": "9f96f472ffca3a919ea1f64839f8b5f4ad27e290127fa54abd45d7f5ccad59df",
+    "research/psz2-selection-mechanism/contributions.csv": "024db49653adb1d6e7bcb9d3649c3e81563f427656fae637983da860d9a13870",
+    "research/aperture-edge-audit/summary.json": "92fb00142177ef3488610eed3f81b40f8242c0461b3d3d3a580e6e9f7d7f5f3b"
+  },
+  "physical_beam_pair_difference_kpc": {
+    "MACS J1752": {
+      "300": [
+        0.36245348274085887,
+        1.195409388463834
+      ],
+      "450": [
+        -26.090053610330116,
+        -22.374698214198062
+      ],
+      "600": [
+        -60.76376438848859,
+        -55.4754764178705
+      ]
+    },
+    "PSZ2 G181": {
+      "300": [
+        -3.3131574321948833,
+        -1.705035196786348
+      ],
+      "450": [
+        -2.31883161512119,
+        -1.498913240482585
+      ],
+      "600": [
+        -284.9574218868431,
+        -254.76328087099313
+      ]
+    }
+  },
+  "psz2_exclusion_pair_difference_kpc": {
+    "none_0": -270.58443347829956,
+    "peak_20": -92.36456957703125,
+    "peak_40": 6.502575282579137,
+    "peak_60": 5.495978687596752
+  },
+  "psz2_selection": {
+    "0.01": {
+      "pair_difference_kpc": -1.3381232642276757,
+      "selected_count": 70,
+      "boundary_selected_count": 70,
+      "boundary_weight_fraction_T50": 1.0,
+      "boundary_weight_fraction_T50SUB": 1.0
+    },
+    "0.05": {
+      "pair_difference_kpc": -300.36239938648134,
+      "selected_count": 347,
+      "boundary_selected_count": 153,
+      "boundary_weight_fraction_T50": 0.592150864316419,
+      "boundary_weight_fraction_T50SUB": 0.042115678880605766
+    },
+    "0.1": {
+      "pair_difference_kpc": -213.4646702034065,
+      "selected_count": 694,
+      "boundary_selected_count": 174,
+      "boundary_weight_fraction_T50": 0.39756726861368047,
+      "boundary_weight_fraction_T50SUB": 0.02026626328149031
+    }
+  },
+  "min_reference_image_margin_arcsec": 69.09542884105011,
+  "limitations": "Summary and source-hash reconciliation only; not an independent analysis, uncertainty estimate, simulation-clock reproduction or manuscript approval."
+}

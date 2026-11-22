@@ -1,0 +1,13 @@
+{
+  "catalog": "J/A+A/659/A1/catalog",
+  "catalog_doi": "10.26093/cds/vizier.36590001",
+  "query_radius_arcsec": 30,
+  "response_sha256": "048f02d6aba1bd5723e55a5c61379e4adeea03bb6e0baecd388e11e1ce04f257",
+  "rows": 1,
+  "source_id": "ILTJ093927.01+404350.3",
+  "offset_from_difference_peak_arcsec": 20.54226141812029,
+  "catalog_morphology_code": "M",
+  "catalog_major_fwhm_arcsec": 36.95,
+  "catalog_minor_fwhm_arcsec": 21.77,
+  "caveat": "Nearby extended catalog source; related survey observations; separation and post-hoc search do not identify the physical origin of the image difference."
+}

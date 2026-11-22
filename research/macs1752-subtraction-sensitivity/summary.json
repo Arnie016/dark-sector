@@ -1,0 +1,18 @@
+{
+  "configurations": 9,
+  "center_delta_arcsec": {
+    "N": [
+      0.06377562908221918,
+      0.4082711510211032
+    ],
+    "S": [
+      0.011315788228250653,
+      15.897679051994475
+    ]
+  },
+  "pair_delta_arcsec": [
+    -15.802343525321191,
+    0.19957032035705424
+  ],
+  "note": "Catalog-centered illustrative masks and cuts; maps share data. SUB versus non-SUB processing not independently documented. No uncertainty or physical inference."
+}

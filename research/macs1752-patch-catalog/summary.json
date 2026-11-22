@@ -1,0 +1,11 @@
+{
+  "query_radius_arcsec": 20,
+  "radio_catalog_returned_rows": 1,
+  "source_id": "ILTJ175159.28+443849.6",
+  "separation_from_difference_peak_arcsec": 5.2871192526541355,
+  "radio_value_added_coordinate_difference_arcsec": 0.02076859860497317,
+  "radio_catalog_scode": "M",
+  "radio_catalog_major_fwhm_arcsec": 20.69,
+  "radio_catalog_minor_fwhm_arcsec": 14.41,
+  "warning": "Positional association only; same survey data, extended/multiple-component catalog fit; no proof of identity, subtraction mechanism, redshift type, cluster membership or causation."
+}

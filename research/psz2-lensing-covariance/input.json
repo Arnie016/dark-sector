@@ -1,0 +1,9 @@
+{
+  "source": "https://arxiv.org/html/2501.09067",
+  "source_detail": "Ahn et al., Tables 1 and 2, fiducial Ishiyama mass-concentration relation",
+  "mass_unit": "1e14 solar masses, M200c",
+  "north": {"central": 0.88, "lower_error": 0.30, "upper_error": 0.35},
+  "south": {"central": 2.71, "lower_error": 0.48, "upper_error": 0.51},
+  "pearson_correlation": -0.574,
+  "approximation": "Use mean of each asymmetric quoted error as a proxy for standard deviation; use first-order uncertainty propagation. This does not reconstruct the posterior."
+}
